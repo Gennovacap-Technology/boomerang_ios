@@ -1,0 +1,18 @@
+//
+//  Bangarang-PrefixHeader.pch
+//  Bangarang
+//
+//  Created by Nielson Rolim on 8/19/15.
+//  Copyright (c) 2015 Gennovacap. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_1
+    #warning "This project uses features only available in iOS SDK 7.1 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
