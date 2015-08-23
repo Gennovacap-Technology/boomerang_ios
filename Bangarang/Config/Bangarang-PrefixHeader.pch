@@ -15,4 +15,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <FBSDKCoreKit/FBSDKCoreKit.h>
+    #import <Parse/Parse.h>
+    #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+    #import "Underscore.h"
+    #define _ Underscore
 #endif
