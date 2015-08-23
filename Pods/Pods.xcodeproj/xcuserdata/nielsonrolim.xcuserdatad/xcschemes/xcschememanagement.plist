@@ -19,6 +19,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +45,11 @@
 			<false/>
 		</dict>
 		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseFacebookUtilsV4.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,27 +72,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>072109B352A1326800EBADB8FC7E3150</key>
+		<key>0CAA639E5D4959643150C69659A32A49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43CA0785A2FC62F2971F7BBB223D2317</key>
+		<key>34F79303285A88D363BFC7CBBADDE600</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BE75A55EF2BF4D2D3F7E93A9E4EB584</key>
+		<key>480FD88EC7024930C8E5E8302E55E246</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>644B175C5279CDEF5B270248711F0368</key>
+		<key>5356EA25CA29F818100D9D6FC5442B60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4F8B3140C4FA5EC4EABDA718A6552CF</key>
+		<key>64C3F68AD8C553AA59CE6C0A7F59663D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E3156A74A60A08BADB02FDBD82FE2F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>949E7DF40FE9DCD354A8C6AA9A4F0857</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +112,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB4DE1F74B9156E01E5531EB43942CE0</key>
+		<key>B47B04872E555459255492A3F2492CB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D19FEED84EF0576D593171864355473F</key>
+		<key>BAE3E40583E6E8AF71250D7753DCFAE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB76CE212D254D251A45BED92E7A7682</key>
+		<key>CF804385559B24321D1F5447A967BEC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDE037CD42B1610A6FADD5E854CEAC65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE86B32166E15236CD763E7260AB8D52</key>
 		<dict>
 			<key>primary</key>
 			<true/>
