@@ -18,6 +18,7 @@
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
 		26375D131B8537AC00AEA146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26375D111B8537AC00AEA146 /* Main.storyboard */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
+		26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A419341B89EA4600F3A0DA /* Login.storyboard */; };
 		27B1F24441FFE931339494B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFFE774792DD2CAB712A7AB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		26375D141B8537CD00AEA146 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26375D151B8537CD00AEA146 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangarang-Bridging-Header.h"; sourceTree = "<group>"; };
+		26A419341B89EA4600F3A0DA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3EFFE774792DD2CAB712A7AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		631848CD498E94CA4F5D1274 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		89FBB097B59F6A1F138A5736 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				26375D101B8537AC00AEA146 /* LaunchScreen.xib */,
 				26375D111B8537AC00AEA146 /* Main.storyboard */,
+				26A419341B89EA4600F3A0DA /* Login.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */,
 				26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */,
 				26375CF91B85378D00AEA146 /* Images.xcassets in Resources */,
 				26375D131B8537AC00AEA146 /* Main.storyboard in Resources */,
