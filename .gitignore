@@ -5,6 +5,10 @@
 ## MacOS Files
 .DS_Store
 
+## Ruby
+.ruby-gemset   
+.ruby-version
+
 ## Build generated
 build/
 DerivedData
