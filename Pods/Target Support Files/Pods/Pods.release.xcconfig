@@ -1,6 +1,0 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/APLKeyboardControls" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/NSData+Base64" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/APLKeyboardControls" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/NSData+Base64" -isystem "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-AFNetworking" -l"Pods-APLKeyboardControls" -l"Pods-MBProgressHUD" -l"Pods-NSData+Base64" -l"Pods-TPKeyboardAvoiding" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
-PODS_ROOT = ${SRCROOT}/Pods
