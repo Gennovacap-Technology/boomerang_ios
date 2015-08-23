@@ -22,21 +22,30 @@ PODS:
     - AFNetworking/NSURLSession
   - APLKeyboardControls (0.1.3):
     - NSData+Base64 (~> 1.0.0)
+  - Bolts/Tasks (1.2.0)
   - MBProgressHUD (0.9.1)
   - NSData+Base64 (1.0.0)
+  - Parse (1.8.1):
+    - Bolts/Tasks (>= 1.2.0)
+  - ParseModel (1.2.0):
+    - Parse
   - TPKeyboardAvoiding (1.2.9)
 
 DEPENDENCIES:
   - AFNetworking
   - APLKeyboardControls
   - MBProgressHUD (~> 0.9.1)
+  - ParseModel
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   APLKeyboardControls: f4de354783a94c0d3c65cd42cab72c2512a15783
+  Bolts: d176cb1e0012175589e389a9db49b85e27787576
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
+  Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
+  ParseModel: e9fb801cfca78f389241e367d025476c24fafe8d
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
