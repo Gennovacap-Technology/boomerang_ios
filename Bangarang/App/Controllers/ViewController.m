@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TestObject.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    // Using Raw PFObject
+//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//    testObject[@"foo"] = @"bar";
+//    [testObject saveInBackground];
+
+    //Using ParseModel
+//    TestObject* testObject = [TestObject parseModel];
+//    testObject.foo = @"this is a test";
+//    [testObject.parseObject saveInBackground];
     
+    // Listing all test objects
+    NSArray* tests = [TestObject findAll];
+    for (TestObject* testObject in tests) {
+        NSLog(@"foo: %@", testObject.foo);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

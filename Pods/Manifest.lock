@@ -53,6 +53,7 @@ PODS:
   - ParseModel (1.2.0):
     - Parse
   - TPKeyboardAvoiding (1.2.9)
+  - Underscore.m (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -65,6 +66,7 @@ DEPENDENCIES:
   - ParseFacebookUtilsV4
   - ParseModel
   - TPKeyboardAvoiding
+  - Underscore.m
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
@@ -79,5 +81,6 @@ SPEC CHECKSUMS:
   ParseFacebookUtilsV4: 2c54f1c9756f4827417984f42b64bc38571d626b
   ParseModel: e9fb801cfca78f389241e367d025476c24fafe8d
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
+  Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 
 COCOAPODS: 0.38.2

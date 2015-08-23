@@ -18,4 +18,6 @@
     #import <FBSDKCoreKit/FBSDKCoreKit.h>
     #import <Parse/Parse.h>
     #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+    #import "Underscore.h"
+    #define _ Underscore
 #endif
