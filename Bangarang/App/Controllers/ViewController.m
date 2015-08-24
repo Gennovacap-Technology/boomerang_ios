@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "TestObject.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "User.h"
 
 @interface ViewController ()
 
@@ -19,21 +21,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    // Using Raw PFObject
+    // Parse - Using Raw PFObject
 //    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
 
-    //Using ParseModel
+    // Parse - Using ParseModel
 //    TestObject* testObject = [TestObject parseModel];
 //    testObject.foo = @"this is a test";
 //    [testObject.parseObject saveInBackground];
     
-    // Listing all test objects
-    NSArray* tests = [TestObject findAll];
-    for (TestObject* testObject in tests) {
-        NSLog(@"foo: %@", testObject.foo);
-    }
+    // Parse - Listing all test objects
+//    NSArray* tests = [TestObject findAll];
+//    for (TestObject* testObject in tests) {
+//        NSLog(@"foo: %@", testObject.foo);
+//    }
+    
+    // Facebook Login test
+//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    loginButton.center = self.view.center;
+//    [self.view addSubview:loginButton];
+    
+    NSLog(@"username: %@", [User currentUser].username);
 }
 
 - (void)didReceiveMemoryWarning {

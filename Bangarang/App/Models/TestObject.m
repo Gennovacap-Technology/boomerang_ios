@@ -17,7 +17,7 @@
 }
 
 + (NSArray*) findAll {
-    PFQuery *query = [PFQuery queryWithClassName:[self parseModelClass]];
+    PFQuery *query = [PFQuery queryWithClassName:[TestObject parseModelClass]];
     query.cachePolicy = kPFCachePolicyNetworkElseCache; //kPFCachePolicyCacheElseNetwork
     [query orderByAscending:@"foo"];
     
@@ -26,7 +26,7 @@
     // Using Underscore to map PFObject objects to TestObject objects
     // http://underscorem.org/#arraymap-underscorearraymapnsarray-array-underscorearraymapblock-block
     NSArray *allTestObjects = _.arrayMap(allPFObjects, ^(PFObject *parseObject) {
-        return [self parseModelWithParseObject:parseObject];
+        return [TestObject parseModelWithParseObject:parseObject];
     });
     
     return allTestObjects;
