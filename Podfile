@@ -21,4 +21,6 @@ pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Underscore.m'
 
+pod 'NYSegmentedControl'
+
 #pod 'MagicalRecord'

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
+		12D957721B8A45B4002D6A7A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D957711B8A45B4002D6A7A /* SegmentedControl.swift */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CE61B85376200AEA146 /* BangarangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CE51B85376200AEA146 /* BangarangTests.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		12D9576E1B8A4220002D6A7A /* Booms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booms.storyboard; sourceTree = "<group>"; };
+		12D957711B8A45B4002D6A7A /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		26375CC61B85376200AEA146 /* Bangarang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangarang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CCA1B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CCB1B85376200AEA146 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12D957701B8A45A3002D6A7A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				12D957711B8A45B4002D6A7A /* SegmentedControl.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		26375CBD1B85376200AEA146 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 				26375CF21B85378D00AEA146 /* Controllers */,
 				26375CF51B85378D00AEA146 /* Models */,
 				26375CF61B85378D00AEA146 /* Views */,
+				12D957701B8A45A3002D6A7A /* Utils */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -372,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */,
+				12D957721B8A45B4002D6A7A /* SegmentedControl.swift in Sources */,
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
 				26375D0E1B85379C00AEA146 /* RWTUIImageExtras.m in Sources */,
