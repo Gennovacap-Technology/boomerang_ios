@@ -11,7 +11,7 @@ platform :ios, '7.1'
 
 pod 'AFNetworking'
 pod 'APLKeyboardControls'
-pod 'MBProgressHUD', '~> 0.9.1'
+pod 'MBProgressHUD'
 pod 'TPKeyboardAvoiding'
 pod 'Parse'
 pod 'ParseModel'

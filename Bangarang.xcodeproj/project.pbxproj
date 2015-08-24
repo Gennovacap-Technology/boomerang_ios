@@ -13,11 +13,18 @@
 		26375CFA1B85378D00AEA146 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CF41B85378D00AEA146 /* ViewController.m */; };
 		26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D051B85379C00AEA146 /* NRDateField.m */; };
 		26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D071B85379C00AEA146 /* NRPickerField.m */; };
-		26375D0E1B85379C00AEA146 /* RWTUIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D091B85379C00AEA146 /* RWTUIImageExtras.m */; };
 		26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D0B1B85379C00AEA146 /* UIColor+Helper.m */; };
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
 		26375D131B8537AC00AEA146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26375D111B8537AC00AEA146 /* Main.storyboard */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
+		264EF9951B8B2FF90095B861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9941B8B2FF90095B861 /* User.m */; };
+		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
+		264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */; };
+		264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */; };
+		264EFA371B8B512F0095B861 /* RWTUIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */; };
+		264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */; };
+		264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */; };
+		264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA471B8B5D7C0095B861 /* LoggedViewController.m */; };
 		26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A419341B89EA4600F3A0DA /* Login.storyboard */; };
 		26A419761B89FBC500F3A0DA /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A419751B89FBC500F3A0DA /* TestObject.m */; };
 		27B1F24441FFE931339494B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFFE774792DD2CAB712A7AB /* libPods.a */; };
@@ -48,8 +55,6 @@
 		26375D051B85379C00AEA146 /* NRDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDateField.m; sourceTree = "<group>"; };
 		26375D061B85379C00AEA146 /* NRPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRPickerField.h; sourceTree = "<group>"; };
 		26375D071B85379C00AEA146 /* NRPickerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRPickerField.m; sourceTree = "<group>"; };
-		26375D081B85379C00AEA146 /* RWTUIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTUIImageExtras.h; sourceTree = "<group>"; };
-		26375D091B85379C00AEA146 /* RWTUIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTUIImageExtras.m; sourceTree = "<group>"; };
 		26375D0A1B85379C00AEA146 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		26375D0B1B85379C00AEA146 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		26375D101B8537AC00AEA146 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -57,6 +62,24 @@
 		26375D141B8537CD00AEA146 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26375D151B8537CD00AEA146 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangarang-Bridging-Header.h"; sourceTree = "<group>"; };
+		264EF9931B8B2FF90095B861 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		264EF9941B8B2FF90095B861 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		264EF9961B8B417B0095B861 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		264EF9971B8B417B0095B861 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		264EF99E1B8B4E4A0095B861 /* MyiOSLogicBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyiOSLogicBlocks.h; sourceTree = "<group>"; };
+		264EF9E31B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MyAdditions.h"; sourceTree = "<group>"; };
+		264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MyAdditions.m"; sourceTree = "<group>"; };
+		264EF9E51B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyMBProgressHUD_Additions.h"; sourceTree = "<group>"; };
+		264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyMBProgressHUD_Additions.m"; sourceTree = "<group>"; };
+		264EF9E71B8B4E4A0095B861 /* MyiOSThirdPartyViewHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyiOSThirdPartyViewHelpers.h; sourceTree = "<group>"; };
+		264EFA351B8B512F0095B861 /* RWTUIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTUIImageExtras.h; sourceTree = "<group>"; };
+		264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTUIImageExtras.m; sourceTree = "<group>"; };
+		264EFA3B1B8B518A0095B861 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		264EFA431B8B52050095B861 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		264EFA461B8B5D7C0095B861 /* LoggedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedViewController.h; sourceTree = "<group>"; };
+		264EFA471B8B5D7C0095B861 /* LoggedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedViewController.m; sourceTree = "<group>"; };
 		26A419341B89EA4600F3A0DA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		26A419741B89FBC500F3A0DA /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		26A419751B89FBC500F3A0DA /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
@@ -110,6 +133,7 @@
 				26375CEF1B85378D00AEA146 /* App */,
 				26375CFD1B85379600AEA146 /* Config */,
 				26375D031B85379C00AEA146 /* Libs */,
+				264EF99B1B8B4E4A0095B861 /* Vendor */,
 				26375CC91B85376200AEA146 /* Supporting Files */,
 			);
 			path = Bangarang;
@@ -165,6 +189,10 @@
 			children = (
 				26375CF31B85378D00AEA146 /* ViewController.h */,
 				26375CF41B85378D00AEA146 /* ViewController.m */,
+				264EF9961B8B417B0095B861 /* LoginViewController.h */,
+				264EF9971B8B417B0095B861 /* LoginViewController.m */,
+				264EFA461B8B5D7C0095B861 /* LoggedViewController.h */,
+				264EFA471B8B5D7C0095B861 /* LoggedViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +202,8 @@
 			children = (
 				26A419741B89FBC500F3A0DA /* TestObject.h */,
 				26A419751B89FBC500F3A0DA /* TestObject.m */,
+				264EF9931B8B2FF90095B861 /* User.h */,
+				264EF9941B8B2FF90095B861 /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,12 +236,85 @@
 				26375D051B85379C00AEA146 /* NRDateField.m */,
 				26375D061B85379C00AEA146 /* NRPickerField.h */,
 				26375D071B85379C00AEA146 /* NRPickerField.m */,
-				26375D081B85379C00AEA146 /* RWTUIImageExtras.h */,
-				26375D091B85379C00AEA146 /* RWTUIImageExtras.m */,
 				26375D0A1B85379C00AEA146 /* UIColor+Helper.h */,
 				26375D0B1B85379C00AEA146 /* UIColor+Helper.m */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		264EF99B1B8B4E4A0095B861 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				264EF99C1B8B4E4A0095B861 /* MyiOSHelpers */,
+				264EF99F1B8B4E4A0095B861 /* MyiOSViewHelpers */,
+				264EFA351B8B512F0095B861 /* RWTUIImageExtras.h */,
+				264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */,
+				264EFA3A1B8B518A0095B861 /* UIActionSheet+Blocks */,
+				264EFA421B8B52050095B861 /* UIAlertView+Blocks */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		264EF99C1B8B4E4A0095B861 /* MyiOSHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				264EF99D1B8B4E4A0095B861 /* Blocks */,
+			);
+			path = MyiOSHelpers;
+			sourceTree = "<group>";
+		};
+		264EF99D1B8B4E4A0095B861 /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				264EF99E1B8B4E4A0095B861 /* MyiOSLogicBlocks.h */,
+			);
+			path = Blocks;
+			sourceTree = "<group>";
+		};
+		264EF99F1B8B4E4A0095B861 /* MyiOSViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				264EF9E11B8B4E4A0095B861 /* ThirdPartyHelpers */,
+			);
+			path = MyiOSViewHelpers;
+			sourceTree = "<group>";
+		};
+		264EF9E11B8B4E4A0095B861 /* ThirdPartyHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				264EF9E21B8B4E4A0095B861 /* MBProgressHUD */,
+				264EF9E71B8B4E4A0095B861 /* MyiOSThirdPartyViewHelpers.h */,
+			);
+			path = ThirdPartyHelpers;
+			sourceTree = "<group>";
+		};
+		264EF9E21B8B4E4A0095B861 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				264EF9E31B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.h */,
+				264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */,
+				264EF9E51B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.h */,
+				264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		264EFA3A1B8B518A0095B861 /* UIActionSheet+Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				264EFA3B1B8B518A0095B861 /* UIActionSheet+Blocks.h */,
+				264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */,
+			);
+			path = "UIActionSheet+Blocks";
+			sourceTree = "<group>";
+		};
+		264EFA421B8B52050095B861 /* UIAlertView+Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				264EFA431B8B52050095B861 /* UIAlertView+Blocks.h */,
+				264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */,
+			);
+			path = "UIAlertView+Blocks";
 			sourceTree = "<group>";
 		};
 		391A7C438953F53438B820E7 /* Pods */ = {
@@ -368,10 +471,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */,
+				264EFA371B8B512F0095B861 /* RWTUIImageExtras.m in Sources */,
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
+				264EF9951B8B2FF90095B861 /* User.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
-				26375D0E1B85379C00AEA146 /* RWTUIImageExtras.m in Sources */,
+				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
+				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
+				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
+				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
+				264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */,
+				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				26375CFA1B85378D00AEA146 /* ViewController.m in Sources */,
 				26A419761B89FBC500F3A0DA /* TestObject.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
@@ -433,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -470,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

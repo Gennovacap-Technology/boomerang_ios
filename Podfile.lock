@@ -61,7 +61,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
-  - MBProgressHUD (~> 0.9.1)
+  - MBProgressHUD
   - Parse
   - ParseFacebookUtilsV4
   - ParseModel
