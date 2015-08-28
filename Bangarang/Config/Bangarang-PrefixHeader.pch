@@ -20,4 +20,8 @@
     #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
     #import "Underscore.h"
     #define _ Underscore
+    #import "MyiOSLogicBlocks.h"
+    #import "MyiOSThirdPartyViewHelpers.h"
+    #import <AFNetworking/AFNetworking.h>
+    #import <AFNetworking/UIImageView+AFNetworking.h>
 #endif

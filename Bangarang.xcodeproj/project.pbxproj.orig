@@ -486,7 +486,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */,
+<<<<<<< HEAD
 				12D957721B8A45B4002D6A7A /* SegmentedControl.swift in Sources */,
+=======
+				264EFA371B8B512F0095B861 /* RWTUIImageExtras.m in Sources */,
+>>>>>>> nielsonrolim
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
 				264EF9951B8B2FF90095B861 /* User.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
