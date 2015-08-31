@@ -25,6 +25,8 @@
     
     self.greetingsLabel.text = [NSString stringWithFormat:@"Hello, %@!", currentUser.firstName];
     [self.userPhoto setImageWithURL:[NSURL URLWithString:currentUser.photoURL]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

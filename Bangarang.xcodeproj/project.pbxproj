@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126297191B93E6A7009B5747 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126297181B93E6A7009B5747 /* SegmentedControl.swift */; };
+		1262971B1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */; };
+		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
+		12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */; };
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
-		12D957721B8A45B4002D6A7A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D957711B8A45B4002D6A7A /* SegmentedControl.swift */; };
+		12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */; };
+		12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CE61B85376200AEA146 /* BangarangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CE51B85376200AEA146 /* BangarangTests.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
@@ -23,7 +28,6 @@
 		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
 		264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */; };
 		264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */; };
-		264EFA371B8B512F0095B861 /* RWTUIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */; };
 		264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */; };
 		264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */; };
 		264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA471B8B5D7C0095B861 /* LoggedViewController.m */; };
@@ -43,8 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126297181B93E6A7009B5747 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFPLinkedStoryboardSegue.swift; sourceTree = "<group>"; };
+		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
+		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
+		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
+		12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
 		12D9576E1B8A4220002D6A7A /* Booms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booms.storyboard; sourceTree = "<group>"; };
-		12D957711B8A45B4002D6A7A /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
+		12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderTableViewCell.h; sourceTree = "<group>"; };
+		12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderTableViewCell.m; sourceTree = "<group>"; };
 		26375CC61B85376200AEA146 /* Bangarang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangarang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CCA1B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CCB1B85376200AEA146 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,7 +127,10 @@
 		12D957701B8A45A3002D6A7A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				12D957711B8A45B4002D6A7A /* SegmentedControl.swift */,
+				126297181B93E6A7009B5747 /* SegmentedControl.swift */,
+				1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */,
+				129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */,
+				129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -206,6 +222,12 @@
 				264EF9971B8B417B0095B861 /* LoginViewController.m */,
 				264EFA461B8B5D7C0095B861 /* LoggedViewController.h */,
 				264EFA471B8B5D7C0095B861 /* LoggedViewController.m */,
+				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
+				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
+				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
+				12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */,
+				12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */,
+				12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -485,19 +507,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1262971B1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift in Sources */,
+				129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */,
 				26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */,
-				12D957721B8A45B4002D6A7A /* SegmentedControl.swift in Sources */,
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
 				264EF9951B8B2FF90095B861 /* User.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
+				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
+				126297191B93E6A7009B5747 /* SegmentedControl.swift in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
 				264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */,
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
+				12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */,
 				26375CFA1B85378D00AEA146 /* ViewController.m in Sources */,
+				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26A419761B89FBC500F3A0DA /* TestObject.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
 			);
