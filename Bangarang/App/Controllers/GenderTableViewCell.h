@@ -10,4 +10,10 @@
 
 @interface GenderTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *dudesButton;
+@property (weak, nonatomic) IBOutlet UIButton *ladiesButton;
+
+- (IBAction)dudesButtonAction:(id)sender;
+- (IBAction)ladiesButtonAction:(id)sender;
+
 @end

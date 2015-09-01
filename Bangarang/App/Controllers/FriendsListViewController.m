@@ -50,7 +50,6 @@
         }
         
         cell.name.text = [tableData objectAtIndex:indexPath.row - 1];
-        [cell.bombImage setHighlighted:YES];
         
         return cell;
     }
@@ -58,7 +57,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return 100.0;
+        return 154.0;
     } else {
         return 93.0;
     }

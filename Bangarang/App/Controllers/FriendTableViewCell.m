@@ -10,4 +10,8 @@
 
 @implementation FriendTableViewCell
 
+- (IBAction)bombAction:(id)sender {
+    [_bombButton setImage:[UIImage imageNamed:@"BombPinkBackground"] forState:UIControlStateNormal];    
+}
+
 @end

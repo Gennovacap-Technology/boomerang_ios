@@ -11,8 +11,10 @@
 @interface FriendTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
-@property (weak, nonatomic) IBOutlet UIImageView *bombImage;
+@property (weak, nonatomic) IBOutlet UIButton *bombButton;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *status;
+
+- (IBAction)bombAction:(id)sender;
 
 @end
