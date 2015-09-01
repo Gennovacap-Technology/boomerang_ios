@@ -43,7 +43,6 @@ PODS:
     - FBSDKCoreKit
   - MBProgressHUD (0.9.1)
   - NSData+Base64 (1.0.0)
-  - NYSegmentedControl (1.0.6)
   - Parse (1.8.1):
     - Bolts/Tasks (>= 1.2.0)
   - ParseFacebookUtilsV4 (1.8.1):
@@ -53,6 +52,7 @@ PODS:
     - Parse (~> 1.8.0)
   - ParseModel (1.2.0):
     - Parse
+  - SVSegmentedControl (0.2)
   - TPKeyboardAvoiding (1.2.9)
   - Underscore.m (0.2.1)
 
@@ -63,10 +63,10 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - MBProgressHUD
-  - NYSegmentedControl
   - Parse
   - ParseFacebookUtilsV4
   - ParseModel
+  - SVSegmentedControl
   - TPKeyboardAvoiding
   - Underscore.m
 
@@ -79,10 +79,10 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 642034ac9f30793dfd897851b724bb4281750266
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
-  NYSegmentedControl: b5a1a4e22d1daae8e118a83a5d6410d7c9f84d4b
   Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
   ParseFacebookUtilsV4: 2c54f1c9756f4827417984f42b64bc38571d626b
   ParseModel: e9fb801cfca78f389241e367d025476c24fafe8d
+  SVSegmentedControl: cc585b217cd1bc43a14a96a8fdfd16a1c3845b25
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
   Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 
