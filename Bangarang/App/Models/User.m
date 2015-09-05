@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+#import "PINCache.h"
 
 static User* _currentUser = nil;
 
@@ -38,6 +39,7 @@ static User* _currentUser = nil;
 
 + (void) facebookLoginWithCompletion:(MYCompletionBlock)completion {
     NSArray *permissions = @[@"public_profile", @"email", @"user_friends", @"user_photos", @"user_relationships"];
+    
     [PFFacebookUtils logInInBackgroundWithReadPermissions:permissions block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -56,10 +58,16 @@ static User* _currentUser = nil;
             } else {
                 NSLog(@"User logged in through Facebook!");
             }
+            
+            // User info request
 
             NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
             [parameters setValue:@"id,email,gender,first_name,last_name" forKey:@"fields"];
-            FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:parameters];
+            
+            FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                          initWithGraphPath:@"me"
+                                          parameters:parameters];
+            
             [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
                     // result is a dictionary with the user's Facebook data
@@ -86,6 +94,37 @@ static User* _currentUser = nil;
                         completion(self, error == nil, error, [User currentUser]);
                     }
                 }
+            }];
+            
+            // Friends Request
+            [parameters setValue:@"id" forKey:@"fields"];
+            
+            FBSDKGraphRequest *requestFriends = [[FBSDKGraphRequest alloc]
+                                                 initWithGraphPath:@"/me/friends"
+                                                 parameters:parameters
+                                                 HTTPMethod:@"GET"];
+            
+            [requestFriends startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                                         id result,
+                                                         NSError *error) {
+                
+                if (error) {
+                    // We must erase the cache
+                    //[[PINCache sharedCache] setObject: forKey:@"facebookFriends" block:nil];
+                } else {
+                    NSArray *data = [result objectForKey:@"data"];
+                    NSMutableArray *facebookFriends = [[NSMutableArray alloc] initWithCapacity:[data count]];
+                    
+                    for (NSDictionary *friendData in data) {
+                        if (friendData[@"id"]) {
+                            [facebookFriends addObject:friendData[@"id"]];
+                        }
+                    }
+                    
+                    [[PINCache sharedCache] setObject:facebookFriends forKey:@"facebookFriends" block:nil];
+                }
+                
+                
             }];
         }
     }];

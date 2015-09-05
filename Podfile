@@ -20,6 +20,7 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Underscore.m'
+pod 'PINCache', '~> 2.0'
 
 pod 'SVSegmentedControl'
 #pod 'NYSegmentedControl'
