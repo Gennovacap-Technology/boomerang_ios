@@ -97,7 +97,7 @@ static User* _currentUser = nil;
             }];
             
             // Friends Request
-            [parameters setValue:@"id" forKey:@"fields"];
+            /*[parameters setValue:@"id" forKey:@"fields"];
             
             FBSDKGraphRequest *requestFriends = [[FBSDKGraphRequest alloc]
                                                  initWithGraphPath:@"/me/friends"
@@ -122,10 +122,29 @@ static User* _currentUser = nil;
                     }
                     
                     [[PINCache sharedCache] setObject:facebookFriends forKey:@"facebookFriends" block:nil];
+                    
+                    NSArray *facebookFriendsFromCache = [[PINCache sharedCache] objectForKey:@"facebookFriends"];
+                    
+                    PFQuery *friends = [PFUser query];
+                    [friends whereKey:@"facebookId" containedIn:facebookFriendsFromCache];
+                    
+                    [friends findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                        if (!error) {
+                            // The find succeeded.
+                            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+                            // Do something with the found objects
+                            for (PFObject *object in objects) {
+                                NSLog(@"%@", object.objectId);
+                            }
+                        } else {
+                            // Log details of the failure
+                            NSLog(@"Error: %@ %@", error, [error userInfo]);
+                        }
+                    }];
                 }
                 
                 
-            }];
+            }];*/
         }
     }];
 }

@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GenderTabDelegate
+
+- (void)dudesButtonPressed;
+- (void)ladiesButtonPressed;
+
+@end
+
 @interface GenderTableViewCell : UITableViewCell
+
+@property (nonatomic, assign) id  delegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *dudesButton;
 @property (weak, nonatomic) IBOutlet UIButton *ladiesButton;
