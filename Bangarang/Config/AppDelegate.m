@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Constants.h"
+
 @interface AppDelegate ()
 
 @end
@@ -24,8 +26,8 @@
     //[Parse enableLocalDatastore];
     
     // Initialize Parse.
-    [Parse setApplicationId:@"oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2"
-                  clientKey:@"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC"];
+    [Parse setApplicationId:kParseApplicationId
+                  clientKey:kParseClientKey];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

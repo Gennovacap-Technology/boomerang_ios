@@ -24,3 +24,8 @@ extern NSString *const kUserPhotoURLKey;
 
 extern NSString *const kFacebookMaleString;
 extern NSString *const kFacebookFemaleString;
+
+#pragma mark - Parse
+
+extern NSString *const kParseApplicationId;
+extern NSString *const kParseClientKey;

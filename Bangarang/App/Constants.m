@@ -27,3 +27,8 @@ NSString *const kUserPhotoURLKey   = @"photoURL";
 
 NSString *const kFacebookMaleString   = @"male";
 NSString *const kFacebookFemaleString = @"female";
+
+#pragma mark - Parse
+
+NSString *const kParseApplicationId = @"oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2";
+NSString *const kParseClientKey     = @"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC";
