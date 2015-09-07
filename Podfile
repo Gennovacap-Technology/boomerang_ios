@@ -20,8 +20,8 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Underscore.m'
-pod 'PINCache', '~> 2.0'
 
+pod 'PINCache', '~> 2.0'
 pod 'UIView+Rounded', '~> 0.1'
 pod 'SDWebImage', '~> 3.7'
 

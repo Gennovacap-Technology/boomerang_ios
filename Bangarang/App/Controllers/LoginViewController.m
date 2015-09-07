@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "User.h"
 
+#import "UIView+LoadingScreen.h"
+
 @interface LoginViewController ()
 
 @end
@@ -25,14 +27,19 @@
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
-    [self.view showProgressHUD];
+    //[self.view showProgressHUD];
+    [self.view showLoading];
+    
     [User facebookLoginWithCompletion:^(id sender, BOOL success, NSError *error, id result) {
-        //
         if (success) {
-            [self.view hideProgressHUD];
+            //[self.view hideProgressHUD];
+            [self.view hideLoading];
+            
             [self loginSuccessfull];
         } else {
-            [self.view hideProgressHUD];
+            //[self.view hideProgressHUD];
+            [self.view hideLoading];
+            
             NSLog(@"Error trying to log in with Facebook");
         }
     }];

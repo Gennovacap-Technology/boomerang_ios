@@ -11,6 +11,8 @@
 		1262971B1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */; };
 		129810801B9CD43D0028E165 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298107F1B9CD43D0028E165 /* Constants.m */; };
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
+		129810891B9E3BCE0028E165 /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 129810881B9E3BCE0028E165 /* UIView+LoadingScreen.m */; };
+		1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298108E1B9E45700028E165 /* LoadingViewController.m */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
 		12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */; };
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
@@ -52,6 +54,10 @@
 		1298107E1B9CD43D0028E165 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1298107F1B9CD43D0028E165 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
+		129810871B9E3BCE0028E165 /* UIView+LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadingScreen.h"; path = "Utils/UIView+LoadingScreen.h"; sourceTree = "<group>"; };
+		129810881B9E3BCE0028E165 /* UIView+LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadingScreen.m"; path = "Utils/UIView+LoadingScreen.m"; sourceTree = "<group>"; };
+		1298108D1B9E43CD0028E165 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Utils/LoadingViewController.h; sourceTree = "<group>"; };
+		1298108E1B9E45700028E165 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Utils/LoadingViewController.m; sourceTree = "<group>"; };
 		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
@@ -146,12 +152,16 @@
 		12D957701B8A45A3002D6A7A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				126297181B93E6A7009B5747 /* SegmentedControl.swift */,
-				1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */,
 				129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */,
 				129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */,
 				1298107E1B9CD43D0028E165 /* Constants.h */,
 				1298107F1B9CD43D0028E165 /* Constants.m */,
+				1298108D1B9E43CD0028E165 /* LoadingViewController.h */,
+				1298108E1B9E45700028E165 /* LoadingViewController.m */,
+				126297181B93E6A7009B5747 /* SegmentedControl.swift */,
+				1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */,
+				129810871B9E3BCE0028E165 /* UIView+LoadingScreen.h */,
+				129810881B9E3BCE0028E165 /* UIView+LoadingScreen.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -528,6 +538,7 @@
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
 				126297191B93E6A7009B5747 /* SegmentedControl.swift in Sources */,
+				1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
@@ -537,6 +548,7 @@
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26A419761B89FBC500F3A0DA /* TestObject.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
+				129810891B9E3BCE0028E165 /* UIView+LoadingScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
