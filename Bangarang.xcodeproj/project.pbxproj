@@ -121,6 +121,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		129810811B9E231D0028E165 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				264EF9961B8B417B0095B861 /* LoginViewController.h */,
+				264EF9971B8B417B0095B861 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		129810821B9E23230028E165 /* Friends List */ = {
+			isa = PBXGroup;
+			children = (
+				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
+				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
+				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
+				12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */,
+				12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */,
+				12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */,
+			);
+			name = "Friends List";
+			sourceTree = "<group>";
+		};
 		12D957701B8A45A3002D6A7A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,14 +237,8 @@
 		26375CF21B85378D00AEA146 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				264EF9961B8B417B0095B861 /* LoginViewController.h */,
-				264EF9971B8B417B0095B861 /* LoginViewController.m */,
-				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
-				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
-				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
-				12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */,
-				12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */,
-				12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */,
+				129810821B9E23230028E165 /* Friends List */,
+				129810811B9E231D0028E165 /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
