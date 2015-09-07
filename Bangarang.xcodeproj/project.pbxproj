@@ -23,7 +23,6 @@
 		26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D071B85379C00AEA146 /* NRPickerField.m */; };
 		26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D0B1B85379C00AEA146 /* UIColor+Helper.m */; };
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
-		26375D131B8537AC00AEA146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26375D111B8537AC00AEA146 /* Main.storyboard */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
 		264EF9951B8B2FF90095B861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9941B8B2FF90095B861 /* User.m */; };
 		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
@@ -77,7 +76,6 @@
 		26375D0A1B85379C00AEA146 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		26375D0B1B85379C00AEA146 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		26375D101B8537AC00AEA146 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		26375D111B8537AC00AEA146 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		26375D141B8537CD00AEA146 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26375D151B8537CD00AEA146 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangarang-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				26A419341B89EA4600F3A0DA /* Login.storyboard */,
-				26375D111B8537AC00AEA146 /* Main.storyboard */,
 				12D9576E1B8A4220002D6A7A /* Booms.storyboard */,
 				26375D101B8537AC00AEA146 /* LaunchScreen.xib */,
 				129810851B9E2FB50028E165 /* LoadingScreen.xib */,
@@ -471,7 +468,6 @@
 				26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */,
 				26375CF91B85378D00AEA146 /* Images.xcassets in Resources */,
 				129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */,
-				26375D131B8537AC00AEA146 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
