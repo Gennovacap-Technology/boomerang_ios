@@ -15,6 +15,15 @@
 
 @implementation LoginViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    // Perform segue if user is already logged
+    if ([PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"loginSuccessful" sender:self];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
