@@ -18,7 +18,6 @@
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CE61B85376200AEA146 /* BangarangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CE51B85376200AEA146 /* BangarangTests.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
-		26375CFA1B85378D00AEA146 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CF41B85378D00AEA146 /* ViewController.m */; };
 		26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D051B85379C00AEA146 /* NRDateField.m */; };
 		26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D071B85379C00AEA146 /* NRPickerField.m */; };
 		26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D0B1B85379C00AEA146 /* UIColor+Helper.m */; };
@@ -31,7 +30,6 @@
 		264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */; };
 		264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */; };
 		264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */; };
-		264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA471B8B5D7C0095B861 /* LoggedViewController.m */; };
 		26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A419341B89EA4600F3A0DA /* Login.storyboard */; };
 		26A419761B89FBC500F3A0DA /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A419751B89FBC500F3A0DA /* TestObject.m */; };
 		C741FE2F9FEF25AF1F9489BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
@@ -69,8 +67,6 @@
 		26375CE41B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CE51B85376200AEA146 /* BangarangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BangarangTests.m; sourceTree = "<group>"; };
 		26375CF11B85378D00AEA146 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		26375CF31B85378D00AEA146 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		26375CF41B85378D00AEA146 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		26375D011B85379600AEA146 /* Bangarang-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bangarang-PrefixHeader.pch"; sourceTree = "<group>"; };
 		26375D041B85379C00AEA146 /* NRDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDateField.h; sourceTree = "<group>"; };
 		26375D051B85379C00AEA146 /* NRDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDateField.m; sourceTree = "<group>"; };
@@ -99,8 +95,6 @@
 		264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
 		264EFA431B8B52050095B861 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
-		264EFA461B8B5D7C0095B861 /* LoggedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedViewController.h; sourceTree = "<group>"; };
-		264EFA471B8B5D7C0095B861 /* LoggedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedViewController.m; sourceTree = "<group>"; };
 		26A419341B89EA4600F3A0DA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		26A419741B89FBC500F3A0DA /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		26A419751B89FBC500F3A0DA /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
@@ -221,12 +215,8 @@
 		26375CF21B85378D00AEA146 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				26375CF31B85378D00AEA146 /* ViewController.h */,
-				26375CF41B85378D00AEA146 /* ViewController.m */,
 				264EF9961B8B417B0095B861 /* LoginViewController.h */,
 				264EF9971B8B417B0095B861 /* LoginViewController.m */,
-				264EFA461B8B5D7C0095B861 /* LoggedViewController.h */,
-				264EFA471B8B5D7C0095B861 /* LoggedViewController.m */,
 				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
 				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
 				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
@@ -526,10 +516,8 @@
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
-				264EFA481B8B5D7C0095B861 /* LoggedViewController.m in Sources */,
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */,
-				26375CFA1B85378D00AEA146 /* ViewController.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26A419761B89FBC500F3A0DA /* TestObject.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,

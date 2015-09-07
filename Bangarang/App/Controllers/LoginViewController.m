@@ -20,18 +20,8 @@
 
     // Perform segue if user is already logged
     if ([PFUser currentUser]) {
-        [self performSegueWithIdentifier:@"loginSuccessful" sender:self];
+        [self loginSuccessfull];
     }
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
@@ -40,7 +30,7 @@
         //
         if (success) {
             [self.view hideProgressHUD];
-            [self performSegueWithIdentifier:@"loginSuccessful" sender:self];
+            [self loginSuccessfull];
         } else {
             [self.view hideProgressHUD];
             NSLog(@"Error trying to log in with Facebook");
@@ -48,14 +38,11 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loginSuccessfull {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Booms" bundle:nil];
+    UIViewController *scene = [storyboard instantiateInitialViewController];
+    
+    [self presentViewController:scene animated:YES completion:nil];
 }
-*/
 
 @end
