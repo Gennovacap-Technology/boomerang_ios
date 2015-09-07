@@ -10,6 +10,7 @@
 		126297191B93E6A7009B5747 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126297181B93E6A7009B5747 /* SegmentedControl.swift */; };
 		1262971B1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */; };
 		129810801B9CD43D0028E165 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298107F1B9CD43D0028E165 /* Constants.m */; };
+		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
 		12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */; };
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
@@ -51,6 +52,7 @@
 		1262971A1B93F6AE009B5747 /* TFPLinkedStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFPLinkedStoryboardSegue.swift; sourceTree = "<group>"; };
 		1298107E1B9CD43D0028E165 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1298107F1B9CD43D0028E165 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
 		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				26375D111B8537AC00AEA146 /* Main.storyboard */,
 				12D9576E1B8A4220002D6A7A /* Booms.storyboard */,
 				26375D101B8537AC00AEA146 /* LaunchScreen.xib */,
+				129810851B9E2FB50028E165 /* LoadingScreen.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */,
 				26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */,
 				26375CF91B85378D00AEA146 /* Images.xcassets in Resources */,
+				129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */,
 				26375D131B8537AC00AEA146 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
