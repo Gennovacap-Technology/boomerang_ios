@@ -32,6 +32,9 @@
     friends = [[NSMutableArray alloc] init];
     friendsOfGender = [[NSMutableArray alloc] init];
     
+    UIImage* logoImage = [UIImage imageNamed:@"Browse"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
+    
     [self loadFriends];
 }
 

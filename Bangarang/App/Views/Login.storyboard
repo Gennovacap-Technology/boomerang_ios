@@ -22,7 +22,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-MU-709">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp9-hK-VMt">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp9-hK-VMt">
                                 <rect key="frame" x="66" y="244" width="160" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dp9-hK-VMt" secondAttribute="height" multiplier="338:77" id="og9-KV-wZQ"/>
@@ -122,11 +122,12 @@
                                 <exclude reference="P0U-zr-ivs"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="9yp-oh-CjV"/>
+                                <exclude reference="6JF-MD-rIY"/>
+                                <exclude reference="Prg-tJ-3rR"/>
                                 <exclude reference="5LA-MJ-7Vb"/>
                                 <exclude reference="hag-Ja-XtB"/>
                                 <exclude reference="sv5-K1-ceB"/>
-                                <exclude reference="6JF-MD-rIY"/>
-                                <exclude reference="Prg-tJ-3rR"/>
                                 <exclude reference="1zL-95-BHg"/>
                                 <exclude reference="IdK-Vz-DQ6"/>
                                 <exclude reference="McJ-8d-lh5"/>
@@ -135,7 +136,6 @@
                                 <exclude reference="cnc-2S-lmv"/>
                                 <exclude reference="hzU-LK-Dwn"/>
                                 <exclude reference="wEf-nM-a3M"/>
-                                <exclude reference="9yp-oh-CjV"/>
                                 <exclude reference="m5C-vs-6lW"/>
                                 <exclude reference="oc4-fW-ZH7"/>
                             </mask>
@@ -148,11 +148,12 @@
                                 <include reference="P0U-zr-ivs"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="9yp-oh-CjV"/>
+                                <include reference="6JF-MD-rIY"/>
+                                <include reference="Prg-tJ-3rR"/>
                                 <include reference="5LA-MJ-7Vb"/>
                                 <include reference="hag-Ja-XtB"/>
                                 <include reference="sv5-K1-ceB"/>
-                                <include reference="6JF-MD-rIY"/>
-                                <include reference="Prg-tJ-3rR"/>
                                 <include reference="1zL-95-BHg"/>
                                 <include reference="IdK-Vz-DQ6"/>
                                 <include reference="McJ-8d-lh5"/>
@@ -161,7 +162,6 @@
                                 <include reference="cnc-2S-lmv"/>
                                 <include reference="hzU-LK-Dwn"/>
                                 <include reference="wEf-nM-a3M"/>
-                                <include reference="9yp-oh-CjV"/>
                                 <include reference="m5C-vs-6lW"/>
                                 <include reference="oc4-fW-ZH7"/>
                             </mask>
