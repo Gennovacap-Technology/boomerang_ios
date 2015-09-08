@@ -334,7 +334,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Browse" id="s5d-ss-Ynl"/>
+                    <navigationItem key="navigationItem" title="Browse" id="s5d-ss-Ynl">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="M5y-jW-pY6">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="yyx-KU-9Yh" id="ZsO-mj-QSU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="cBS-ub-ncL" id="X8l-Xf-xnf"/>

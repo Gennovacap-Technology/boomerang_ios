@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)logoutButtonPressed:(id)sender;
+
 @end

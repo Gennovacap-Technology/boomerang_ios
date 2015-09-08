@@ -166,4 +166,13 @@
     [[self tableView] reloadData];
 }
 
+- (IBAction)logoutButtonPressed:(id)sender {
+    [PFUser logOut];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UIViewController *scene = [storyboard instantiateInitialViewController];
+    
+    [self presentViewController:scene animated:YES completion:nil];
+}
+
 @end
