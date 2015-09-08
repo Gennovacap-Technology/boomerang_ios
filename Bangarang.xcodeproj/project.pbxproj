@@ -144,21 +144,12 @@
 		129810821B9E23230028E165 /* Friends List */ = {
 			isa = PBXGroup;
 			children = (
-				12BB5FE71B9E790800333726 /* Chat */,
-				12BB5FE61B9E78FD00333726 /* Friends List */,
 				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
 				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
 				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
 				12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */,
 				12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */,
 				12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */,
-			);
-			name = "Friends List";
-			sourceTree = "<group>";
-		};
-		12BB5FE61B9E78FD00333726 /* Friends List */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = "Friends List";
 			sourceTree = "<group>";
@@ -268,6 +259,7 @@
 		26375CF21B85378D00AEA146 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				12BB5FE71B9E790800333726 /* Chat */,
 				129810821B9E23230028E165 /* Friends List */,
 				129810811B9E231D0028E165 /* Login */,
 			);

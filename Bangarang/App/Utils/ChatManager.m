@@ -11,8 +11,6 @@
 #import <Parse/Parse.h>
 #import <Firebase/Firebase.h>
 
-#define FIREBASE_URL @"https://appcraft-chat-test.firebaseio.com/messages/"
-
 @interface ChatManager()
 {
     NSString *groupId;
@@ -37,7 +35,7 @@
     
     groupId = [self chatRoomIdFor:currentUser and:friend];
     
-    NSString *firebaseURL = [NSString stringWithFormat:@"%@/%@", FIREBASE_URL, groupId];
+    NSString *firebaseURL = [NSString stringWithFormat:@"%@/%@", kFirebaseUrl, groupId];
     
     myRootRef = [[Firebase alloc] initWithUrl:firebaseURL];
     

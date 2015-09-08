@@ -32,3 +32,7 @@ NSString *const kFacebookFemaleString = @"female";
 
 NSString *const kParseApplicationId = @"oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2";
 NSString *const kParseClientKey     = @"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC";
+
+#pragma mark - Firebase
+
+NSString *const kFirebaseUrl = @"https://appcraft-chat-test.firebaseio.com/messages/";

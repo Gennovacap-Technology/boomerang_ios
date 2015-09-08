@@ -29,3 +29,7 @@ extern NSString *const kFacebookFemaleString;
 
 extern NSString *const kParseApplicationId;
 extern NSString *const kParseClientKey;
+
+#pragma mark - Firebase
+
+extern NSString *const kFirebaseUrl;
