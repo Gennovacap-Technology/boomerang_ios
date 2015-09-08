@@ -11,10 +11,10 @@
 #import <UIView+Rounded.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "Constants.h"
-
 #import "FriendTableViewCell.h"
 #import "GenderTableViewCell.h"
+
+#import "ChatViewController.h"
 
 #import "PINCache.h"
 
@@ -22,6 +22,7 @@
     NSMutableArray *friends;
     NSMutableArray *friendsOfGender;
     NSString *currentGender;
+    NSInteger selectedRow;
 }
 
 - (void)viewDidLoad {
@@ -81,6 +82,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selectedRow = indexPath.row - 1;
+    
+    [self performSegueWithIdentifier:@"chatSegue" sender:self];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -176,6 +181,15 @@
     UIViewController *scene = [storyboard instantiateInitialViewController];
     
     [self presentViewController:scene animated:YES completion:nil];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {    
+    if([[segue identifier] isEqualToString:@"chatSegue"]) {
+        ChatViewController *destinationController = [segue destinationViewController];
+        destinationController.friendUser = [friendsOfGender objectAtIndex:selectedRow];
+    }
 }
 
 @end
