@@ -10,7 +10,7 @@
 
 #import "GenderTableViewCell.h"
 
-@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderTabDelegate>
+@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

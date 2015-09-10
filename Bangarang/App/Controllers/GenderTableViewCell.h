@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol GenderTabDelegate
+@protocol GenderCellDelegate
 
 - (void)dudesButtonPressed;
 - (void)ladiesButtonPressed;
