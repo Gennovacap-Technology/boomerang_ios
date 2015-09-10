@@ -46,8 +46,8 @@
 
 - (NSUInteger)messageHash
 {
-    NSUInteger opa = self.senderId.hash ^ self.date.hash ^ self.text.hash;
-    return opa;
+    NSUInteger hash = self.senderId.hash ^ self.date.hash ^ self.text.hash;
+    return hash;
 }
 
 @end
