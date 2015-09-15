@@ -24,6 +24,7 @@
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
 		12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */; };
 		12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */; };
+		12ED71CC1BA8DD1F0069A6E8 /* WaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71CB1BA8DD1F0069A6E8 /* WaitingViewController.m */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CE61B85376200AEA146 /* BangarangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CE51B85376200AEA146 /* BangarangTests.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
@@ -83,6 +84,8 @@
 		12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
 		12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderTableViewCell.h; sourceTree = "<group>"; };
 		12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderTableViewCell.m; sourceTree = "<group>"; };
+		12ED71CA1BA8DD1F0069A6E8 /* WaitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingViewController.h; sourceTree = "<group>"; };
+		12ED71CB1BA8DD1F0069A6E8 /* WaitingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingViewController.m; sourceTree = "<group>"; };
 		26375CC61B85376200AEA146 /* Bangarang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangarang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CCA1B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CCB1B85376200AEA146 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,6 +160,15 @@
 				120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */,
 			);
 			name = Loading;
+			sourceTree = "<group>";
+		};
+		120FBC201BA7B3FF00AC3D01 /* Waiting */ = {
+			isa = PBXGroup;
+			children = (
+				12ED71CA1BA8DD1F0069A6E8 /* WaitingViewController.h */,
+				12ED71CB1BA8DD1F0069A6E8 /* WaitingViewController.m */,
+			);
+			name = Waiting;
 			sourceTree = "<group>";
 		};
 		129810811B9E231D0028E165 /* Login */ = {
@@ -297,6 +309,7 @@
 		26375CF21B85378D00AEA146 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				120FBC201BA7B3FF00AC3D01 /* Waiting */,
 				12BB5FE71B9E790800333726 /* Chat */,
 				129810821B9E23230028E165 /* Friends List */,
 				120FBC1C1BA7B3AB00AC3D01 /* Loading */,
@@ -606,6 +619,7 @@
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
+				12ED71CC1BA8DD1F0069A6E8 /* WaitingViewController.m in Sources */,
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,

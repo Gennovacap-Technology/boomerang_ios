@@ -18,7 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.79999999999999982" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view alpha="0.79999999999999982" contentMode="scaleToFill" id="iN0-l3-epB" customClass="WaitingViewController">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -81,6 +81,9 @@
                 <constraint firstAttribute="centerY" secondItem="hIx-8Y-Xvx" secondAttribute="centerY" constant="0.5" id="x0Z-dl-kch"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="name" destination="hIx-8Y-Xvx" id="Ixl-Uf-I7I"/>
+            </connections>
             <point key="canvasLocation" x="516" y="497"/>
         </view>
     </objects>
