@@ -27,7 +27,6 @@
     self.messages = [[NSMutableArray alloc] init];
     
     // Chat Users
-    
     self.currentUser = [PFUser currentUser];
     
     self.senderId = _currentUser.objectId;

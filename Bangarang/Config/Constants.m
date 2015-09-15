@@ -22,6 +22,20 @@ NSString *const kUserEmailKey      = @"email";
 NSString *const kUserFacebookIdKey = @"facebookId";
 NSString *const kUserGenderKey     = @"gender";
 NSString *const kUserPhotoURLKey   = @"photoURL";
+NSString *const kUserBangsKey      = @"bangs";
+NSString *const kUserHooksKey      = @"hooks";
+
+#pragma mark - Request Class
+
+NSString *const kRequestClass    = @"Request";
+
+NSString *const kRequestFromUser = @"fromUser";
+NSString *const kRequestToUser   = @"toUser";
+NSString *const kRequestType     = @"type";
+NSString *const kRequestAccepted = @"accepted";
+
+NSString *const kRequestTypeBang = @"bangs";
+NSString *const kRequestTypeHook = @"hooks";
 
 #pragma mark - Facebook Attributes
 
@@ -35,4 +49,12 @@ NSString *const kParseClientKey     = @"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC
 
 #pragma mark - Firebase
 
-NSString *const kFirebaseUrl = @"https://appcraft-chat-test.firebaseio.com/messages/";
+NSString *const kFirebaseUrl = @"https://appcraft-chat-test.firebaseio.com";
+
+#pragma mark - Friends List Relation Button Image
+
+NSString *const kFriendsListRequestButtonImageInitialState = @"Bomb";
+NSString *const kFriendsListRequestButtonImageBangRequestPending = @"BombPinkBackground";
+NSString *const kFriendsListRequestButtonImageBangList = @"Boomerang";
+NSString *const kFriendsListRequestButtonImageHookRequestPending = @"BoomerangPinkBackground";
+NSString *const kFriendsListRequestButtonImageHookList = @"HeartPinkBackground";

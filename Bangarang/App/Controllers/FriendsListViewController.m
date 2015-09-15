@@ -16,13 +16,27 @@
 
 #import "ChatViewController.h"
 
+#import "ParseUtils.h"
+
 #import "PINCache.h"
 
 @implementation FriendsListViewController {
     NSMutableArray *friends;
     NSMutableArray *friendsOfGender;
+    
+    NSMutableArray *bangRequestsSent;
+    NSMutableArray *hookRequestsSent;
+    
+    NSMutableArray *bangRequestsReceived;
+    NSMutableArray *hookRequestsReceived;
+    
+    NSMutableArray *bangs;
+    NSMutableArray *hooks;
+    
     NSString *currentGender;
     NSInteger selectedRow;
+    
+    RequestManager *requestManager;
 }
 
 - (void)viewDidLoad {
@@ -32,11 +46,95 @@
     
     friends = [[NSMutableArray alloc] init];
     friendsOfGender = [[NSMutableArray alloc] init];
+
+    bangRequestsSent = [[NSMutableArray alloc] init];
+    hookRequestsSent = [[NSMutableArray alloc] init];
+
+    bangRequestsReceived = [[NSMutableArray alloc] init];
+    hookRequestsReceived = [[NSMutableArray alloc] init];
+    
+    bangs = [[NSMutableArray alloc] init];
+    hooks = [[NSMutableArray alloc] init];
     
     UIImage* logoImage = [UIImage imageNamed:@"Browse"];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
     
+    requestManager = [[RequestManager alloc] init];
+    requestManager.delegate = self;
+    [requestManager receivedRequestObserver];
+    
+    [self updateRequestsBarButtomItem:0];
+    
+    [self loadRequests];
+    [self loadRelations];
     [self loadFriends];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [requestManager destroy];
+}
+
+- (void)receiveRequest {
+    NSLog(@"Updating Requests");
+    [self loadRequests];
+}
+
+- (UIButton *)requestsButton:(NSInteger)requests {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    if (IS_STANDARD_IPHONE_6_PLUS) {
+        button.frame = CGRectMake(0, 0, 50, 50);
+        button.layer.cornerRadius = 25.0;
+    } else {
+        button.frame = CGRectMake(0, 0, 30, 30);
+        button.layer.cornerRadius = 15.0;
+    }
+    
+    button.titleLabel.font = [UIFont systemFontOfSize:12];
+    
+    [button setBackgroundColor:[UIColor colorWithRed:1.000 green:0.000 blue:0.506 alpha:1.000]];
+    [button setTitle:[NSString stringWithFormat:@"%ld", (long)requests] forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(openRequests) forControlEvents:UIControlEventTouchUpInside];
+    
+    return button;
+}
+
+- (UIButton *)bombButton {
+    UIImage *image = [UIImage imageNamed:@"BombBlack"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    if (IS_STANDARD_IPHONE_6_PLUS) {
+        button.frame = CGRectMake(0, 0, 50, 50);
+    } else {
+        button.frame = CGRectMake(0, 0, 30, 30);
+    }
+    
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(openRequests) forControlEvents:UIControlEventTouchUpInside];
+    
+    return button;
+}
+
+- (void)openRequests {
+    NSLog(@"asd");
+}
+
+- (void)updateRequestsBarButtomItem:(NSInteger)requests {
+    UIButton *bombButton = [self bombButton];
+    UIBarButtonItem *barButtonItemBomb = [[UIBarButtonItem alloc] initWithCustomView:bombButton];
+    
+    if (requests > 0) {
+        UIButton *requestsButton = [self requestsButton:requests];
+        UIBarButtonItem *barButtonItemRequests = [[UIBarButtonItem alloc] initWithCustomView:requestsButton];
+        
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:barButtonItemBomb, barButtonItemRequests, nil];
+    } else {
+        self.navigationItem.rightBarButtonItem = barButtonItemBomb;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -69,8 +167,53 @@
             [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
         }];
         
+        cell.delegate = self;
+        cell.cellIndex = indexPath.row - 1;
+        
+        [self loadButton:cell.bombButton forFriend:friend];
+        
         return cell;
     }
+}
+
+- (void)loadButton:(UIButton *)button forFriend:(PFUser *)friend {    
+    if ([self array:bangRequestsSent containsPFObjectById:friend]) {
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
+                forState:UIControlStateNormal];
+        
+        [button setTag:kFriendBangRequestSent];
+    } else if ([self array:hookRequestsSent containsPFObjectById:friend]) {
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookRequestPending]
+                forState:UIControlStateNormal];
+        
+        [button setTag:kFriendHookRequestSent];
+    } else if ([self array:bangs containsPFObjectById:friend]) {
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangList]
+                forState:UIControlStateNormal];
+        
+        [button setTag:kFriendBangRelation];
+    } else if ([self array:hooks containsPFObjectById:friend]) {
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookList]
+                forState:UIControlStateNormal];
+        
+        [button setTag:kFriendHookRelation];
+    } else {
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
+                forState:UIControlStateNormal];
+        
+        [button setTag:kFriendNoRelation];
+    }
+}
+
+- (BOOL)array:(NSArray *)array containsPFObjectById:(PFObject *)object {
+    //Check if the object's objectId matches the objectId of any member of the array.
+    for (PFObject *arrayObject in array){
+        if ([[arrayObject objectId] isEqual:[object objectId]]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -90,6 +233,20 @@
 }
 
 #pragma mark - Parse Query
+
+- (void)loadRelations {
+    PFUser *currentUser = [PFUser currentUser];
+    
+    PFRelation *relation = [currentUser relationForKey:kUserBangsKey];
+    PFQuery *query = [relation query];
+    
+    [bangs addObjectsFromArray:[query findObjects]];
+    
+    relation = [currentUser relationForKey:kUserHooksKey];
+    query = [relation query];
+    
+    [hooks addObjectsFromArray:[query findObjects]];
+}
 
 - (void)loadFriends {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -122,9 +279,8 @@
            // NSArray *facebookFriendsFromCache = [[PINCache sharedCache] objectForKey:@"facebookFriends"];
             
             PFQuery *query = [PFUser query];
-            //[query whereKey:@"facebookId" containedIn:facebookFriendsFromCache];
             [query whereKey:kUserFacebookIdKey containedIn:facebookFriends];
-            query.cachePolicy = kPFCachePolicyNetworkElseCache;
+            //query.cachePolicy = kPFCachePolicyNetworkElseCache;
             
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
@@ -132,7 +288,7 @@
                         [friends addObject:object];
                     }
                     
-                    friendsOfGender = [friends mutableCopy];
+                    //friendsOfGender = [friends mutableCopy];
                     
                     // Show dudes by default
                     [self dudesButtonPressed];
@@ -144,7 +300,142 @@
     }];
 }
 
-#pragma mark - GenderTabDelegate
+- (void)loadRequests {
+    [[ParseUtils requests] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        [bangRequestsSent removeAllObjects];
+        [hookRequestsSent removeAllObjects];
+        [bangRequestsReceived removeAllObjects];
+        [hookRequestsReceived removeAllObjects];
+        
+        NSString *currentUserId = [[PFUser currentUser] objectId];
+        NSInteger requestsReceived = 0;
+        
+        if (!error) {
+            for (PFObject *request in objects) {
+                NSString *fromUserId = [request[kRequestFromUser] objectId];
+                
+                // Requests sent
+                if ([currentUserId isEqualToString:fromUserId]) {
+                    PFUser *friend = request[kRequestToUser];
+                    
+                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+                        
+                        if ([request[kRequestAccepted] boolValue]) {
+                            [ParseUtils makeRelation:kRequestTypeBang withFriend:friend];
+                            
+                            [bangs addObject:friend];
+                            
+                            [request delete];
+                        } else {
+                            [bangRequestsSent addObject:friend];
+                        }
+                        
+                    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                        
+                        if ([request[kRequestAccepted] boolValue]) {
+                            [ParseUtils makeRelation:kRequestTypeHook withFriend:friend];
+
+                            [self removeFriend:friend FromArray:bangs];
+                            [hooks addObject:friend];
+                            
+                            [request delete];
+                        } else {
+                            [hookRequestsSent addObject:friend];
+                        }
+                        
+                    }
+                    
+                // Request received
+                } else {
+                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+                        PFUser *friend = request[kRequestFromUser];
+                        [bangRequestsReceived addObject:friend];
+                    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                        PFUser *friend = request[kRequestFromUser];
+                        [hookRequestsReceived addObject:friend];
+                    }
+                    
+                    // Count unconfirmed requests
+                    if (![request[kRequestAccepted] boolValue]) {
+                        requestsReceived++;
+                    }
+                }
+            }
+            
+            [[self tableView] reloadData];
+            [self updateRequestsBarButtomItem:requestsReceived];
+        } else {
+            NSLog(@"Failed load requests");
+        }
+    }];
+}
+
+
+
+#pragma mark - FriendCell
+
+- (void)requestButtonPressed:(NSInteger)cellIndex fromSender:(id)sender {
+    PFUser *friend = [friendsOfGender objectAtIndex:cellIndex];
+    
+    UIButton *button = sender;
+    
+    // When your friend has sent a bang request
+    if ([self array:bangRequestsReceived containsPFObjectById:friend]) {
+        [ParseUtils confirmRequest:friend];
+        [self removeFriend:friend FromArray:bangRequestsReceived];
+        
+        [bangs addObject:friend];
+        
+        [requestManager createRequest:[friend objectId]];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangList]
+                forState:UIControlStateNormal];
+    
+    // When your friend has sent a hook up request
+    } else if ([self array:hookRequestsReceived containsPFObjectById:friend]) {
+        [ParseUtils confirmRequest:friend];
+        
+        [self removeFriend:friend FromArray:bangs];
+        [self removeFriend:friend FromArray:hookRequestsReceived];
+        
+        [hooks addObject:friend];
+        
+        [requestManager createRequest:[friend objectId]];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookList]
+                forState:UIControlStateNormal];
+        
+    // When you send a bang to a friend
+    } else if (button.tag == kFriendNoRelation) {
+        [ParseUtils request:kRequestTypeBang ToFriend:friend];
+        [requestManager createRequest:[friend objectId]];
+        [bangRequestsSent addObject:friend];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
+                forState:UIControlStateNormal];
+    
+    // When you send a hook up to a friend
+    } else if (button.tag == kFriendBangRelation) {
+        [ParseUtils request:kRequestTypeHook ToFriend:friend];
+        [requestManager createRequest:[friend objectId]];
+        [hookRequestsSent addObject:friend];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookRequestPending]
+                forState:UIControlStateNormal];
+    }
+    
+    [[self tableView] reloadData];
+}
+
+- (void)removeFriend:(PFUser *)friend FromArray:(NSMutableArray *)array {
+    for (int i = 0; i < [array count]; i++) {
+        if ([[array[i] objectId] isEqual:[friend objectId]]) {
+            [array removeObjectAtIndex:i];
+        }
+    }
+}
+
+#pragma mark - GenderCellDelegate
 
 - (void)dudesButtonPressed {
     [friendsOfGender removeAllObjects];
@@ -173,6 +464,8 @@
     
     [[self tableView] reloadData];
 }
+
+#pragma mark - Actions
 
 - (IBAction)logoutButtonPressed:(id)sender {
     [PFUser logOut];

@@ -335,7 +335,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Browse" id="s5d-ss-Ynl">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="M5y-jW-pY6">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="M5y-jW-pY6">
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="yyx-KU-9Yh" id="ZsO-mj-QSU"/>
                             </connections>
@@ -360,7 +360,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qmM-AX-dBT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4yH-IK-EjW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

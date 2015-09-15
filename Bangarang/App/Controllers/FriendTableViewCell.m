@@ -10,8 +10,12 @@
 
 @implementation FriendTableViewCell
 
+@synthesize delegate;
+
 - (IBAction)bombAction:(id)sender {
-    [_bombButton setImage:[UIImage imageNamed:@"BombPinkBackground"] forState:UIControlStateNormal];    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(requestButtonPressed:fromSender:)]) {
+        [self.delegate requestButtonPressed:_cellIndex fromSender:sender];
+    }
 }
 
 @end

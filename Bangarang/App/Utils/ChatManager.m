@@ -35,7 +35,7 @@
     
     groupId = [self chatRoomIdFor:currentUser and:friend];
     
-    NSString *firebaseURL = [NSString stringWithFormat:@"%@/%@", kFirebaseUrl, groupId];
+    NSString *firebaseURL = [NSString stringWithFormat:@"%@/messages/%@", kFirebaseUrl, groupId];
     
     myRootRef = [[Firebase alloc] initWithUrl:firebaseURL];
     

@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FriendCellDelegate
+
+- (void)requestButtonPressed:(NSInteger)cellIndex fromSender:(id)sender;
+
+@end
+
 @interface FriendTableViewCell : UITableViewCell
+
+@property (nonatomic, assign) id  delegate;
+@property (assign, nonatomic) NSInteger cellIndex;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 @property (weak, nonatomic) IBOutlet UIButton *bombButton;

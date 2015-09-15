@@ -10,8 +10,10 @@
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298108E1B9E45700028E165 /* LoadingViewController.m */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
-		12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */; };
 		12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */; };
+		12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9601BA26CC700AC9DAD /* ParseUtils.m */; };
+		12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9621BA661E300AC9DAD /* FriendsListViewController.m */; };
+		12B0B9661BA702A500AC9DAD /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9651BA702A500AC9DAD /* RequestManager.m */; };
 		12BB5FEA1B9E794200333726 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FE91B9E794200333726 /* ChatViewController.m */; };
 		12BB5FED1B9E7ABB00333726 /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FEC1B9E7ABB00333726 /* ChatManager.m */; };
 		12BB5FF01B9E7AEE00333726 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FEF1B9E7AEE00333726 /* Constants.m */; };
@@ -55,9 +57,13 @@
 		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
-		12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
 		12B0B95C1BA26BDD00AC9DAD /* UIView+LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadingScreen.h"; path = "Categories/UIView+LoadingScreen.h"; sourceTree = "<group>"; };
 		12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadingScreen.m"; path = "Categories/UIView+LoadingScreen.m"; sourceTree = "<group>"; };
+		12B0B95F1BA26CC700AC9DAD /* ParseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseUtils.h; path = Utils/ParseUtils.h; sourceTree = "<group>"; };
+		12B0B9601BA26CC700AC9DAD /* ParseUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseUtils.m; path = Utils/ParseUtils.m; sourceTree = "<group>"; };
+		12B0B9621BA661E300AC9DAD /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
+		12B0B9641BA702A500AC9DAD /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = Utils/RequestManager.h; sourceTree = "<group>"; };
+		12B0B9651BA702A500AC9DAD /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManager.m; path = Utils/RequestManager.m; sourceTree = "<group>"; };
 		12BB5FE81B9E794200333726 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		12BB5FE91B9E794200333726 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		12BB5FEB1B9E7ABB00333726 /* ChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatManager.h; path = Utils/ChatManager.h; sourceTree = "<group>"; };
@@ -142,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */,
-				12A67BED1B8FE53200122FD4 /* FriendsListViewController.m */,
+				12B0B9621BA661E300AC9DAD /* FriendsListViewController.m */,
 				12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */,
 				12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */,
 				12E5FED41B93BD0D0096AABE /* GenderTableViewCell.h */,
@@ -178,6 +184,10 @@
 				12BB5FEC1B9E7ABB00333726 /* ChatManager.m */,
 				1298108D1B9E43CD0028E165 /* LoadingViewController.h */,
 				1298108E1B9E45700028E165 /* LoadingViewController.m */,
+				12B0B95F1BA26CC700AC9DAD /* ParseUtils.h */,
+				12B0B9601BA26CC700AC9DAD /* ParseUtils.m */,
+				12B0B9641BA702A500AC9DAD /* RequestManager.h */,
+				12B0B9651BA702A500AC9DAD /* RequestManager.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -556,17 +566,19 @@
 				12BB5FF01B9E7AEE00333726 /* Constants.m in Sources */,
 				264EF9951B8B2FF90095B861 /* User.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
+				12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */,
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				12BB5FF31B9E7B3C00333726 /* Message.m in Sources */,
 				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
+				12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */,
 				12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */,
+				12B0B9661BA702A500AC9DAD /* RequestManager.m in Sources */,
 				1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
-				12A67BEE1B8FE53200122FD4 /* FriendsListViewController.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
 			);

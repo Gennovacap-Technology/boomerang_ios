@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "GenderTableViewCell.h"
+#import "FriendTableViewCell.h"
 
-@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderCellDelegate>
+#import "RequestManager.h"
+
+@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderCellDelegate, FriendCellDelegate, RequestManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
