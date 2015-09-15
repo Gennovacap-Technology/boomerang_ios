@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */; };
+		120FBC191BA7AC9B00AC3D01 /* Waiting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC181BA7AC9B00AC3D01 /* Waiting.xib */; };
+		120FBC1B1BA7AEE900AC3D01 /* Market Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */; };
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298108E1B9E45700028E165 /* LoadingViewController.m */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		0D6195B1F7616986C510F803 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf in the City.otf"; sourceTree = "<group>"; };
+		120FBC181BA7AC9B00AC3D01 /* Waiting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Waiting.xib; sourceTree = "<group>"; };
+		120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Market Deco.ttf"; sourceTree = "<group>"; };
 		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
 		1298108D1B9E43CD0028E165 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Utils/LoadingViewController.h; sourceTree = "<group>"; };
 		1298108E1B9E45700028E165 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Utils/LoadingViewController.m; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		120FBC141BA7ABD600AC3D01 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */,
 				120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */,
 			);
 			name = Fonts;
@@ -310,6 +315,7 @@
 				12D9576E1B8A4220002D6A7A /* Booms.storyboard */,
 				26375D101B8537AC00AEA146 /* LaunchScreen.xib */,
 				129810851B9E2FB50028E165 /* LoadingScreen.xib */,
+				120FBC181BA7AC9B00AC3D01 /* Waiting.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,10 +521,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */,
+				120FBC1B1BA7AEE900AC3D01 /* Market Deco.ttf in Resources */,
 				26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */,
 				120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */,
 				26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */,
 				26375CF91B85378D00AEA146 /* Images.xcassets in Resources */,
+				120FBC191BA7AC9B00AC3D01 /* Waiting.xib in Resources */,
 				129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

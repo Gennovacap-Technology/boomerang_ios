@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Market Deco.ttf">
+            <string>MarketDeco</string>
+            <string>MarketDeco</string>
+        </mutableArray>
+        <mutableArray key="Wolf in the City.otf">
+            <string>WolfintheCity</string>
+            <string>WolfintheCity</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.79999999999999982" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUy-uN-bxe">
+                    <rect key="frame" x="10" y="217" width="304" height="133"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rUy-uN-bxe" secondAttribute="height" multiplier="16:7" id="rgc-Nr-REQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="150"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-8Y-Xvx">
+                    <rect key="frame" x="6" y="217" width="304" height="133"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="height" multiplier="16:7" id="5M8-8a-2cS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="150"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAITING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-PB-Bta">
+                    <rect key="frame" x="79" y="163" width="158" height="31"/>
+                    <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinePink" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-v5-Jj4">
+                    <rect key="frame" x="122" y="209" width="72" height="3"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinePink" translatesAutoresizingMaskIntoConstraints="NO" id="glY-nk-Y08">
+                    <rect key="frame" x="126" y="370" width="72" height="3"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO CONFIRM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-NM-sp8">
+                    <rect key="frame" x="86" y="388" width="153" height="31"/>
+                    <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="glY-nk-Y08" firstAttribute="top" secondItem="hIx-8Y-Xvx" secondAttribute="bottom" constant="20" id="012-Bb-Kab"/>
+                <constraint firstItem="hIx-8Y-Xvx" firstAttribute="top" secondItem="EGE-v5-Jj4" secondAttribute="bottom" constant="5" id="2Wo-QC-1C1"/>
+                <constraint firstItem="FkO-NM-sp8" firstAttribute="top" secondItem="glY-nk-Y08" secondAttribute="bottom" constant="15" id="5Ty-VM-nnH"/>
+                <constraint firstAttribute="centerX" secondItem="rUy-uN-bxe" secondAttribute="centerX" constant="-2" id="5qC-py-861"/>
+                <constraint firstAttribute="centerY" secondItem="rUy-uN-bxe" secondAttribute="centerY" constant="0.5" id="6QC-wg-bGX"/>
+                <constraint firstAttribute="centerX" secondItem="1Py-PB-Bta" secondAttribute="centerX" constant="2" id="BQX-3K-C9t"/>
+                <constraint firstAttribute="centerX" secondItem="EGE-v5-Jj4" secondAttribute="centerX" constant="2" id="KOg-JB-Nn5"/>
+                <constraint firstAttribute="centerX" secondItem="glY-nk-Y08" secondAttribute="centerX" constant="-2" id="NJk-LR-qAA"/>
+                <constraint firstAttribute="trailing" secondItem="rUy-uN-bxe" secondAttribute="trailing" constant="6" id="Nty-Wn-ttC"/>
+                <constraint firstAttribute="centerX" secondItem="hIx-8Y-Xvx" secondAttribute="centerX" constant="2" id="aGx-oJ-yHe"/>
+                <constraint firstAttribute="trailing" secondItem="hIx-8Y-Xvx" secondAttribute="trailing" constant="10" id="bBY-I0-pD1"/>
+                <constraint firstItem="rUy-uN-bxe" firstAttribute="height" secondItem="hIx-8Y-Xvx" secondAttribute="height" id="cVq-Of-Dw9"/>
+                <constraint firstItem="hIx-8Y-Xvx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="dT5-V3-nn5"/>
+                <constraint firstItem="rUy-uN-bxe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="fTA-BL-mgg"/>
+                <constraint firstItem="rUy-uN-bxe" firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="width" id="g3V-u3-e9X"/>
+                <constraint firstItem="EGE-v5-Jj4" firstAttribute="top" secondItem="1Py-PB-Bta" secondAttribute="bottom" constant="15" id="vZe-Ay-95a"/>
+                <constraint firstAttribute="centerX" secondItem="FkO-NM-sp8" secondAttribute="centerX" constant="-2" id="web-qH-wMH"/>
+                <constraint firstAttribute="centerY" secondItem="hIx-8Y-Xvx" secondAttribute="centerY" constant="0.5" id="x0Z-dl-kch"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="516" y="497"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LinePink" width="72" height="3"/>
+    </resources>
+</document>
