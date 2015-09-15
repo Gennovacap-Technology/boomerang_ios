@@ -10,8 +10,8 @@
 		120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */; };
 		120FBC191BA7AC9B00AC3D01 /* Waiting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC181BA7AC9B00AC3D01 /* Waiting.xib */; };
 		120FBC1B1BA7AEE900AC3D01 /* Market Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */; };
+		120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */; };
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
-		1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298108E1B9E45700028E165 /* LoadingViewController.m */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
 		12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */; };
 		12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9601BA26CC700AC9DAD /* ParseUtils.m */; };
@@ -57,9 +57,9 @@
 		120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf in the City.otf"; sourceTree = "<group>"; };
 		120FBC181BA7AC9B00AC3D01 /* Waiting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Waiting.xib; sourceTree = "<group>"; };
 		120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Market Deco.ttf"; sourceTree = "<group>"; };
+		120FBC1D1BA7B3D100AC3D01 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
-		1298108D1B9E43CD0028E165 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Utils/LoadingViewController.h; sourceTree = "<group>"; };
-		1298108E1B9E45700028E165 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Utils/LoadingViewController.m; sourceTree = "<group>"; };
 		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
@@ -150,6 +150,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		120FBC1C1BA7B3AB00AC3D01 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				120FBC1D1BA7B3D100AC3D01 /* LoadingViewController.h */,
+				120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
 		129810811B9E231D0028E165 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +206,6 @@
 				129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */,
 				12BB5FEB1B9E7ABB00333726 /* ChatManager.h */,
 				12BB5FEC1B9E7ABB00333726 /* ChatManager.m */,
-				1298108D1B9E43CD0028E165 /* LoadingViewController.h */,
-				1298108E1B9E45700028E165 /* LoadingViewController.m */,
 				12B0B95F1BA26CC700AC9DAD /* ParseUtils.h */,
 				12B0B9601BA26CC700AC9DAD /* ParseUtils.m */,
 				12B0B9641BA702A500AC9DAD /* RequestManager.h */,
@@ -292,6 +299,7 @@
 			children = (
 				12BB5FE71B9E790800333726 /* Chat */,
 				129810821B9E23230028E165 /* Friends List */,
+				120FBC1C1BA7B3AB00AC3D01 /* Loading */,
 				129810811B9E231D0028E165 /* Login */,
 			);
 			path = Controllers;
@@ -593,7 +601,7 @@
 				12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */,
 				12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */,
 				12B0B9661BA702A500AC9DAD /* RequestManager.m in Sources */,
-				1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */,
+				120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
