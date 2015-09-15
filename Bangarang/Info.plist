@@ -55,6 +55,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Market Deco.ttf</string>
 		<string>Wolf in the City.otf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
