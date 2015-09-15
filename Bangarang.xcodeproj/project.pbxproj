@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */; };
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		1298108F1B9E45700028E165 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1298108E1B9E45700028E165 /* LoadingViewController.m */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		0D6195B1F7616986C510F803 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf in the City.otf"; sourceTree = "<group>"; };
 		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
 		1298108D1B9E43CD0028E165 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Utils/LoadingViewController.h; sourceTree = "<group>"; };
 		1298108E1B9E45700028E165 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Utils/LoadingViewController.m; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120FBC141BA7ABD600AC3D01 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		129810811B9E231D0028E165 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +276,7 @@
 		26375CF01B85378D00AEA146 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				120FBC141BA7ABD600AC3D01 /* Fonts */,
 				26375CF11B85378D00AEA146 /* Images.xcassets */,
 			);
 			path = Assets;
@@ -505,6 +516,7 @@
 			files = (
 				12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */,
 				26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */,
+				120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */,
 				26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */,
 				26375CF91B85378D00AEA146 /* Images.xcassets in Resources */,
 				129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */,
