@@ -31,11 +31,15 @@
     
     [mainView addGestureRecognizer:singleFingerTap];
     
+    [self performSelector:@selector(hideLoading) withObject:nil afterDelay:3.0f];
+    
     [self addSubview:mainView];
 }
 
 - (void)hideLoading {
     NSArray *subviews = self.subviews;
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
     
     for (UIView *aView in subviews) {
         if ([aView isKindOfClass:[WaitingViewController class]]) {
