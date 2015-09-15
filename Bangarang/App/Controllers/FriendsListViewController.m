@@ -20,6 +20,8 @@
 
 #import "PINCache.h"
 
+#import "UIView+WaitingScreen.h"
+
 @implementation FriendsListViewController {
     NSMutableArray *friends;
     NSMutableArray *friendsOfGender;
@@ -226,10 +228,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     selectedRow = indexPath.row - 1;
-    
+        
     [self performSegueWithIdentifier:@"chatSegue" sender:self];
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - Parse Query

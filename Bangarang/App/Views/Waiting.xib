@@ -31,15 +31,6 @@
                     <color key="textColor" red="1" green="0.0" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-8Y-Xvx">
-                    <rect key="frame" x="6" y="217" width="304" height="133"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="height" multiplier="16:7" id="5M8-8a-2cS"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="150"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAITING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-PB-Bta">
                     <rect key="frame" x="79" y="163" width="158" height="31"/>
                     <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
@@ -56,6 +47,15 @@
                     <rect key="frame" x="86" y="388" width="153" height="31"/>
                     <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
                     <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-8Y-Xvx">
+                    <rect key="frame" x="6" y="217" width="304" height="133"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="height" multiplier="16:7" id="5M8-8a-2cS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="150"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -83,6 +83,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="name" destination="hIx-8Y-Xvx" id="Ixl-Uf-I7I"/>
+                <outlet property="nameBack" destination="rUy-uN-bxe" id="6el-Ke-a6s"/>
             </connections>
             <point key="canvasLocation" x="516" y="497"/>
         </view>

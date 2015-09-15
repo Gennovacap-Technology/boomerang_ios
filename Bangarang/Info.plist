@@ -35,8 +35,6 @@
 	<string>Boomerang</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>Waiting</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Market Deco.ttf</string>
@@ -44,6 +42,8 @@
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Login</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
