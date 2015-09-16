@@ -327,7 +327,7 @@
 }
 
 - (UIButton *)navigationBarRequestsButton {
-    UIImage *image = [UIImage imageNamed:@"BombBlack"];
+    UIImage *image = [UIImage imageNamed:@"ButtonBombBlack"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     if (IS_STANDARD_IPHONE_6_PLUS) {
