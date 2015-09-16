@@ -24,6 +24,9 @@
     if ([PFUser currentUser]) {
         [self loginSuccessfull];
     }
+    
+    // Status Bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
