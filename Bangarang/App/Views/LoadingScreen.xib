@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingBackground-1" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Kd-vUF">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Kd-vUF">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bangarang" translatesAutoresizingMaskIntoConstraints="NO" id="OKh-YY-Rak">
@@ -68,9 +68,9 @@
         </view>
     </objects>
     <resources>
+        <image name="BackgroundLoading" width="750" height="1334"/>
         <image name="Bangarang" width="654" height="233"/>
         <image name="Loading" width="147" height="132"/>
-        <image name="LoadingBackground-1" width="750" height="1334"/>
         <image name="MadeWithLove" width="270" height="80"/>
     </resources>
 </document>

@@ -17,11 +17,6 @@
     
     LoadingViewController *mainView = [subviewArray objectAtIndex:0];
     
-    NSInteger randomNumber = [self randomNumberBetween:1 maxNumber:2];
-    NSString *backgroundImageName = [NSString stringWithFormat:@"LoadingBackground-%ld", (long)randomNumber];
-    
-    mainView.background.image = [UIImage imageNamed:backgroundImageName];
-    
     [self addSubview:mainView];
 }
 
@@ -33,11 +28,6 @@
             [aView removeFromSuperview];
         }
     }
-}
-
-- (NSInteger)randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
-{
-    return min + arc4random_uniform(max - min + 1);
 }
 
 @end
