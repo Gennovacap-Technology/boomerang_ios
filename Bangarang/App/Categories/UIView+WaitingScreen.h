@@ -10,7 +10,8 @@
 
 @interface UIView (UIView_WaitingScreen)
 
-- (void)showWaitingWithName:(NSString *)name;
+- (void)showWaitingFor:(NSString *)name andHideAfterDelay:(NSTimeInterval)delay;
+- (void)showWaitingFor:(NSString *)name;
 - (void)hideLoading;
 
 @end

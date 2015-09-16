@@ -193,7 +193,7 @@
     
     //[self performSegueWithIdentifier:@"chatSegue" sender:self];
     
-    [self.view showWaitingWithName:friend[kUserFirstNameKey]];
+    [self.view showWaitingFor:friend[kUserFirstNameKey] andHideAfterDelay:kWaitingViewDefaultHideInterval];
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }

@@ -12,7 +12,12 @@
 
 @implementation UIView (WaitingScreen)
 
-- (void)showWaitingWithName:(NSString *)name {
+- (void)showWaitingFor:(NSString *)name andHideAfterDelay:(NSTimeInterval)delay {
+    [self showWaitingFor:name];
+    [self performSelector:@selector(hideLoading) withObject:nil afterDelay:delay];
+}
+
+- (void)showWaitingFor:(NSString *)name {
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"Waiting" owner:self options:nil];
     
     WaitingViewController *mainView = [subviewArray objectAtIndex:0];
@@ -30,8 +35,6 @@
                                                                                       action:@selector(hideLoading)];
     
     [mainView addGestureRecognizer:singleFingerTap];
-    
-    [self performSelector:@selector(hideLoading) withObject:nil afterDelay:3.0f];
     
     [self addSubview:mainView];
 }
