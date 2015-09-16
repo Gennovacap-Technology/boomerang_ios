@@ -159,8 +159,8 @@
                         [hookRequestsReceived addObject:friend];
                     }
                     
-                    // Count unconfirmed requests
-                    if (![request[kRequestAccepted] boolValue]) {
+                    // Count confirmed requests
+                    if ([request[kRequestAccepted] boolValue]) {
                         requestsReceived++;
                     }
                 }

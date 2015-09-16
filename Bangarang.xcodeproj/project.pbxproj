@@ -14,6 +14,7 @@
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
 		12A61C741BA9C47B00A6C228 /* MakeLoveAgainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */; };
+		12A61C7B1BAA144E00A6C228 /* RequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C7A1BAA144E00A6C228 /* RequestsViewController.m */; };
 		12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */; };
 		12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9601BA26CC700AC9DAD /* ParseUtils.m */; };
 		12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9621BA661E300AC9DAD /* FriendsListViewController.m */; };
@@ -68,6 +69,8 @@
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A61C721BA9C47B00A6C228 /* MakeLoveAgainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLoveAgainViewController.h; sourceTree = "<group>"; };
 		12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeLoveAgainViewController.m; sourceTree = "<group>"; };
+		12A61C791BAA144E00A6C228 /* RequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestsViewController.h; sourceTree = "<group>"; };
+		12A61C7A1BAA144E00A6C228 /* RequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestsViewController.m; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
 		12B0B95C1BA26BDD00AC9DAD /* UIView+LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadingScreen.h"; path = "Categories/UIView+LoadingScreen.h"; sourceTree = "<group>"; };
 		12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadingScreen.m"; path = "Categories/UIView+LoadingScreen.m"; sourceTree = "<group>"; };
@@ -211,6 +214,15 @@
 			name = "Make Love Again";
 			sourceTree = "<group>";
 		};
+		12A61C781BAA143B00A6C228 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				12A61C791BAA144E00A6C228 /* RequestsViewController.h */,
+				12A61C7A1BAA144E00A6C228 /* RequestsViewController.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
 		12B0B95B1BA266D700AC9DAD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +348,7 @@
 				120FBC1C1BA7B3AB00AC3D01 /* Loading */,
 				129810811B9E231D0028E165 /* Login */,
 				12A61C711BA9C45C00A6C228 /* Make Love Again */,
+				12A61C781BAA143B00A6C228 /* Requests */,
 				120FBC201BA7B3FF00AC3D01 /* Waiting */,
 			);
 			path = Controllers;
@@ -640,6 +653,7 @@
 				12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */,
 				12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */,
 				12B0B9661BA702A500AC9DAD /* RequestManager.m in Sources */,
+				12A61C7B1BAA144E00A6C228 /* RequestsViewController.m in Sources */,
 				120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,

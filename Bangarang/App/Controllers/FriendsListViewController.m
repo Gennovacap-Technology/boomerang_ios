@@ -29,6 +29,8 @@
     
     RequestManager *requestManager;
     FriendsManager *friendsManager;
+    
+    NSUInteger currentNumberOfRequests;
 }
 
 - (void)viewDidLoad {
@@ -217,6 +219,8 @@
         
         [friendsManager addFriendToBangRequestsSent:friend];
         
+        [requestManager createRequest:[friend objectId]];
+        
         [self.view showWaitingFor:friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval];
         
@@ -297,6 +301,8 @@
 }
 
 - (void)updateRequestsBarButtomItem:(NSInteger)requests {
+    currentNumberOfRequests = requests;
+    
     UIButton *bombButton = [self navigationBarRequestsButton];
     UIBarButtonItem *barButtonItemBomb = [[UIBarButtonItem alloc] initWithCustomView:bombButton];
     
@@ -330,7 +336,9 @@
 }
 
 - (void)openRequests {
-    NSLog(@"Opening requests received");
+    if (currentNumberOfRequests > 0) {
+        [self performSegueWithIdentifier:@"requestsSegue" sender:self];
+    }
 }
 
 #pragma mark - Navigation Bar Actions
