@@ -12,6 +12,11 @@
 
 @implementation UIView (WaitingScreen)
 
+- (void)showWaitingFor:(NSString *)name andHideAfterDelay:(NSTimeInterval)delay onFinish:(void (^)(void))onFinish {
+    [self showWaitingFor:name andHideAfterDelay:delay];
+    onFinish();
+}
+
 - (void)showWaitingFor:(NSString *)name andHideAfterDelay:(NSTimeInterval)delay {
     [self showWaitingFor:name];
     [self performSelector:@selector(hideLoading) withObject:nil afterDelay:delay];

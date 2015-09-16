@@ -14,7 +14,6 @@
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
 		12A61C741BA9C47B00A6C228 /* MakeLoveAgainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */; };
-		12A61C771BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C761BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.m */; };
 		12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */; };
 		12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9601BA26CC700AC9DAD /* ParseUtils.m */; };
 		12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9621BA661E300AC9DAD /* FriendsListViewController.m */; };
@@ -69,8 +68,6 @@
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
 		12A61C721BA9C47B00A6C228 /* MakeLoveAgainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLoveAgainViewController.h; sourceTree = "<group>"; };
 		12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeLoveAgainViewController.m; sourceTree = "<group>"; };
-		12A61C751BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+TransparentNavigationController.h"; path = "Categories/UINavigationController+TransparentNavigationController.h"; sourceTree = "<group>"; };
-		12A61C761BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+TransparentNavigationController.m"; path = "Categories/UINavigationController+TransparentNavigationController.m"; sourceTree = "<group>"; };
 		12A67BEC1B8FE53200122FD4 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
 		12B0B95C1BA26BDD00AC9DAD /* UIView+LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadingScreen.h"; path = "Categories/UIView+LoadingScreen.h"; sourceTree = "<group>"; };
 		12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadingScreen.m"; path = "Categories/UIView+LoadingScreen.m"; sourceTree = "<group>"; };
@@ -221,8 +218,6 @@
 				12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */,
 				12ED71CD1BA8DE7E0069A6E8 /* UIView+WaitingScreen.h */,
 				12ED71CE1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m */,
-				12A61C751BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.h */,
-				12A61C761BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -641,7 +636,6 @@
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				12BB5FF31B9E7B3C00333726 /* Message.m in Sources */,
 				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
-				12A61C771BA9C74000A6C228 /* UINavigationController+TransparentNavigationController.m in Sources */,
 				12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */,
 				12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */,
 				12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */,

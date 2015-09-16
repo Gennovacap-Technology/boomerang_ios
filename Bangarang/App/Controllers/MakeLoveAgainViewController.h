@@ -14,10 +14,14 @@
 @interface MakeLoveAgainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *makeLoveAgainView;
+@property (weak, nonatomic) IBOutlet UILabel *friendName;
+@property (weak, nonatomic) IBOutlet UILabel *friendNameBack;
+
 @property (strong, nonatomic) PFUser *friend;
 @property (strong, nonatomic) FriendsManager *friendsManager;
 
 - (IBAction)buttonYes:(id)sender;
 - (IBAction)buttonNo:(id)sender;
+- (IBAction)buttonBack:(id)sender;
 
 @end
