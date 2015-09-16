@@ -19,28 +19,20 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    // Perform segue if user is already logged
-    if ([PFUser currentUser]) {
-        [self loginSuccessfull];
-    }
     
     // Status Bar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
-    //[self.view showProgressHUD];
     [self.view showLoading];
     
     [User facebookLoginWithCompletion:^(id sender, BOOL success, NSError *error, id result) {
         if (success) {
-            //[self.view hideProgressHUD];
             [self.view hideLoading];
             
             [self loginSuccessfull];
         } else {
-            //[self.view hideProgressHUD];
             [self.view hideLoading];
             
             NSLog(@"Error trying to log in with Facebook");

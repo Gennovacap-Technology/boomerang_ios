@@ -694,7 +694,7 @@
     </scenes>
     <resources>
         <image name="ButtonBack" width="96" height="96"/>
-        <image name="ButtonBomb" width="124" height="124"/>
+        <image name="ButtonBomb" width="126" height="126"/>
         <image name="ButtonHeartPinkBackground" width="196" height="196"/>
         <image name="ButtonNo" width="196" height="196"/>
         <image name="DudesOn" width="371" height="217"/>

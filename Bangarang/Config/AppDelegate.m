@@ -34,6 +34,12 @@
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     // [end PARSE CONFIG]
     
+    // Go to Friends list if user is already logged
+    if ([PFUser currentUser]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Booms" bundle:nil];
+        UIViewController *scene = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = scene;
+    }
     
     //Facebook SDK
     return [[FBSDKApplicationDelegate sharedInstance] application:application
