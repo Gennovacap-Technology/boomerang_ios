@@ -18,8 +18,6 @@
 
 #import "ParseUtils.h"
 
-#import "PINCache.h"
-
 #import "UIView+WaitingScreen.h"
 
 @implementation FriendsListViewController {
@@ -139,6 +137,8 @@
     }
 }
 
+#pragma mark - TableView Delegate Methods
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [friendsOfGender count] + 1;
 }
@@ -178,7 +178,29 @@
     }
 }
 
-- (void)loadButton:(UIButton *)button forFriend:(PFUser *)friend {    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 154.0;
+    } else {
+        return 93.0;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selectedRow = indexPath.row - 1;
+    
+    PFUser *friend = [friendsOfGender objectAtIndex:selectedRow];
+    
+    //[self performSegueWithIdentifier:@"chatSegue" sender:self];
+    
+    [self.view showWaitingWithName:friend[kUserFirstNameKey]];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+#pragma mark - View Helpers
+
+- (void)loadButton:(UIButton *)button forFriend:(PFUser *)friend {
     if ([self array:bangRequestsSent containsPFObjectById:friend]) {
         [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
                 forState:UIControlStateNormal];
@@ -208,7 +230,6 @@
 }
 
 - (BOOL)array:(NSArray *)array containsPFObjectById:(PFObject *)object {
-    //Check if the object's objectId matches the objectId of any member of the array.
     for (PFObject *arrayObject in array){
         if ([[arrayObject objectId] isEqual:[object objectId]]) {
             return YES;
@@ -218,20 +239,12 @@
     return NO;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 154.0;
-    } else {
-        return 93.0;
+- (void)removeFriend:(PFUser *)friend FromArray:(NSMutableArray *)array {
+    for (int i = 0; i < [array count]; i++) {
+        if ([[array[i] objectId] isEqual:[friend objectId]]) {
+            [array removeObjectAtIndex:i];
+        }
     }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    selectedRow = indexPath.row - 1;
-        
-    [self performSegueWithIdentifier:@"chatSegue" sender:self];
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - Parse Query
@@ -264,8 +277,7 @@
                                                  NSError *error) {
         
         if (error) {
-            // We must erase the cache
-            //[[PINCache sharedCache] setObject: forKey:@"facebookFriends" block:nil];
+            NSLog(@"Facebook Request Error");
         } else {
             NSArray *data = [result objectForKey:@"data"];
             NSMutableArray *facebookFriends = [[NSMutableArray alloc] initWithCapacity:[data count]];
@@ -275,10 +287,6 @@
                     [facebookFriends addObject:friendData[@"id"]];
                 }
             }
-            
-            //[[PINCache sharedCache] setObject:facebookFriends forKey:@"facebookFriends" block:nil];
-            
-           // NSArray *facebookFriendsFromCache = [[PINCache sharedCache] objectForKey:@"facebookFriends"];
             
             PFQuery *query = [PFUser query];
             [query whereKey:kUserFacebookIdKey containedIn:facebookFriends];
@@ -290,10 +298,11 @@
                         [friends addObject:object];
                     }
                     
-                    //friendsOfGender = [friends mutableCopy];
-                    
-                    // Show dudes by default
-                    [self dudesButtonPressed];
+                    if (currentGender == kFacebookMaleString) {
+                        [self dudesButtonPressed];
+                    } else {
+                        [self ladiesButtonPressed];
+                    }
                 } else {
                     NSLog(@"Error: %@ %@", error, [error userInfo]);
                 }
@@ -372,9 +381,7 @@
     }];
 }
 
-
-
-#pragma mark - FriendCell
+#pragma mark - FriendCell Delegate
 
 - (void)requestButtonPressed:(NSInteger)cellIndex fromSender:(id)sender {
     PFUser *friend = [friendsOfGender objectAtIndex:cellIndex];
@@ -429,15 +436,7 @@
     [[self tableView] reloadData];
 }
 
-- (void)removeFriend:(PFUser *)friend FromArray:(NSMutableArray *)array {
-    for (int i = 0; i < [array count]; i++) {
-        if ([[array[i] objectId] isEqual:[friend objectId]]) {
-            [array removeObjectAtIndex:i];
-        }
-    }
-}
-
-#pragma mark - GenderCellDelegate
+#pragma mark - GenderCell Delegate
 
 - (void)dudesButtonPressed {
     [friendsOfGender removeAllObjects];
@@ -467,7 +466,7 @@
     [[self tableView] reloadData];
 }
 
-#pragma mark - Actions
+#pragma mark - Navigation Bar Actions
 
 - (IBAction)logoutButtonPressed:(id)sender {
     [PFUser logOut];
