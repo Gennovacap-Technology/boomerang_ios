@@ -57,7 +57,7 @@
     PFRelation *userRelationQuery = [user relationForKey:relation];
     [userRelationQuery addObject:friend];
     
-    // Remove from bangs list when add to hook up list
+    // Remove from the bangs list when adding to the hook up list
     if (relation == kRequestTypeHook) {
         PFRelation *userRelationQuery = [user relationForKey:kRequestTypeBang];
         [userRelationQuery removeObject:friend];
