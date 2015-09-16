@@ -26,7 +26,14 @@
     return query;
 }
 
-+ (void)confirmRequest:(PFUser *)friend {
++ (PFQuery *)friends:(NSArray *)facebookFriends {
+    PFQuery *query = [PFUser query];
+    [query whereKey:kUserFacebookIdKey containedIn:facebookFriends];
+    
+    return query;
+}
+
++ (void)confirmRequest:(PFUser *)friend onSuccess:(void (^)(void))onSuccess {
     PFUser *user = [PFUser currentUser];
     
     PFQuery *query = [PFQuery queryWithClassName:kRequestClass];
@@ -45,6 +52,8 @@
             } else if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
                 [self makeRelation:kRequestTypeHook withFriend:friend];
             }
+            
+            onSuccess();
         } else {
             NSLog(@"Error while confirm request");
         }

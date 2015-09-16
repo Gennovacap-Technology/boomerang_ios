@@ -52,8 +52,4 @@
     [self presentViewController:scene animated:YES completion:nil];
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 @end

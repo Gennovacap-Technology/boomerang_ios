@@ -8,7 +8,7 @@
 
 #import "Constants.h"
 
-NSTimeInterval const kWaitingViewDefaultHideInterval = 3.0f;
+NSTimeInterval const kDefaultWaitingViewHideInterval = 3.0f;
 
 #pragma mark - UITableViewCellIdentifier
 

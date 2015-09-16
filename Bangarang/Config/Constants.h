@@ -25,7 +25,7 @@ typedef enum {
     kFriendHookRelation = 4,
 } kFriendRelationIndex;
 
-extern NSTimeInterval const kWaitingViewDefaultHideInterval;
+extern NSTimeInterval const kDefaultWaitingViewHideInterval;
 
 #pragma mark - UITableViewCellIdentifier
 

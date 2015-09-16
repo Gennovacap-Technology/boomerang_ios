@@ -33,13 +33,13 @@
     [friendRef setValue:item];
 }
 
-- (void)receivedRequestObserver {
+- (void)requestReceivedObserver {
     NSString *firebaseURL = [NSString stringWithFormat:@"%@/requests/%@", kFirebaseUrl, [[PFUser currentUser] objectId]];
         
     myRootRef = [[Firebase alloc] initWithUrl:firebaseURL];
     
     [myRootRef observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        if (snapshot.value == [NSNull null]) {
+        if (snapshot.value == [NSNull null] || snapshot.value) {
             NSMutableDictionary *item = [[NSMutableDictionary alloc] init];
             item[@"requests"] = @NO;
             
@@ -49,7 +49,7 @@
     
     [myRootRef observeEventType:FEventTypeChildChanged withBlock:^(FDataSnapshot *snapshot) {
         if ([snapshot.value boolValue]) {
-            [delegate receiveRequest];
+            [delegate requestReceived];
             
             NSMutableDictionary *item = [[NSMutableDictionary alloc] init];
             item[@"requests"] = @NO;

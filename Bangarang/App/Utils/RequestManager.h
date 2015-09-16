@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol RequestManagerDelegate
-- (void)receiveRequest;
+- (void)requestReceived;
 @end
 
 @interface RequestManager : NSObject
@@ -17,7 +17,7 @@
 @property (nonatomic, assign) id  delegate;
 
 - (void)createRequest:(NSString *)friendId;
-- (void)receivedRequestObserver;
+- (void)requestReceivedObserver;
 - (void)destroy;
 
 @end
