@@ -378,7 +378,7 @@
                     <view key="view" contentMode="scaleToFill" id="db8-SM-zTd">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="NM8-hV-Bgf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLogin" translatesAutoresizingMaskIntoConstraints="NO" id="NM8-hV-Bgf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-5I-85u">
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpT-eN-AmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3703" y="1139"/>
+            <point key="canvasLocation" x="3954" y="967.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RTb-J1-0dw">
@@ -693,13 +693,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackgroundLogin" width="750" height="1334"/>
         <image name="ButtonBack" width="96" height="96"/>
         <image name="ButtonBomb" width="126" height="126"/>
         <image name="ButtonHeartPinkBackground" width="196" height="196"/>
         <image name="ButtonNo" width="196" height="196"/>
         <image name="DudesOn" width="371" height="217"/>
         <image name="LadiesOff" width="368" height="217"/>
-        <image name="LaunchScreenBackground" width="750" height="1334"/>
     </resources>
     <color key="tintColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
