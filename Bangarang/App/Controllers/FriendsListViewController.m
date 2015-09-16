@@ -211,17 +211,6 @@
     // When you send a hook up to a friend
     } else if (friendRelation == kFriendBangRelation) {
         [self performSegueWithIdentifier:@"makeLoveAgainSegue" sender:self];
-        /*[ParseUtils request:kRequestTypeHook ToFriend:friend];
-        
-        [friendsManager addFriendToHookRequestsSent:friend];
-        
-        [requestManager createRequest:[friend objectId]];
-        
-        [self.view showWaitingFor:friend[kUserFirstNameKey]
-                andHideAfterDelay:kDefaultWaitingViewHideInterval];
-        
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookRequestPending]
-                forState:UIControlStateNormal];*/
     
     // When you send a bang to a friend
     } else if (friendRelation == kFriendNoRelation) {
