@@ -55,7 +55,6 @@
     [friendsManager loadFriends:^{
         [[self tableView] reloadData];
     }];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -217,8 +216,6 @@
         [ParseUtils request:kRequestTypeBang ToFriend:friend];
         
         [friendsManager addFriendToBangRequestsSent:friend];
-        
-        [requestManager createRequest:[friend objectId]];
         
         [self.view showWaitingFor:friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval];
