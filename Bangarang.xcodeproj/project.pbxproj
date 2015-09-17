@@ -250,12 +250,12 @@
 				129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */,
 				12BB5FEB1B9E7ABB00333726 /* ChatManager.h */,
 				12BB5FEC1B9E7ABB00333726 /* ChatManager.m */,
+				12ED71D31BA920250069A6E8 /* FriendsManager.h */,
+				12ED71D41BA920250069A6E8 /* FriendsManager.m */,
 				12B0B95F1BA26CC700AC9DAD /* ParseUtils.h */,
 				12B0B9601BA26CC700AC9DAD /* ParseUtils.m */,
 				12B0B9641BA702A500AC9DAD /* RequestManager.h */,
 				12B0B9651BA702A500AC9DAD /* RequestManager.m */,
-				12ED71D31BA920250069A6E8 /* FriendsManager.h */,
-				12ED71D41BA920250069A6E8 /* FriendsManager.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -357,10 +357,10 @@
 		26375CF51B85378D00AEA146 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				264EF9931B8B2FF90095B861 /* User.h */,
-				264EF9941B8B2FF90095B861 /* User.m */,
 				12BB5FF11B9E7B3C00333726 /* Message.h */,
 				12BB5FF21B9E7B3C00333726 /* Message.m */,
+				264EF9931B8B2FF90095B861 /* User.h */,
+				264EF9941B8B2FF90095B861 /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,10 +368,10 @@
 		26375CF61B85378D00AEA146 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				26A419341B89EA4600F3A0DA /* Login.storyboard */,
 				12D9576E1B8A4220002D6A7A /* Booms.storyboard */,
 				26375D101B8537AC00AEA146 /* LaunchScreen.xib */,
 				129810851B9E2FB50028E165 /* LoadingScreen.xib */,
+				26A419341B89EA4600F3A0DA /* Login.storyboard */,
 				120FBC181BA7AC9B00AC3D01 /* Waiting.xib */,
 			);
 			path = Views;
