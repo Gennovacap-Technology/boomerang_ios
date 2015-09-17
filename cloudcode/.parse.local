@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Boomerang": {
+      "applicationId": "oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2"
+    },
+    "_default": {
+      "link": "Boomerang"
+    }
+  }
+}
