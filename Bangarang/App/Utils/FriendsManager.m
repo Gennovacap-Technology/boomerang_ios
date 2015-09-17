@@ -162,7 +162,7 @@
                         
                     }
                     
-                    // Request received
+                // Request received
                 } else {
                     if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
                         PFUser *friend = request[kRequestFromUser];
@@ -266,6 +266,10 @@
 
 - (void)removeFriendFromBangs:(PFUser *)friend {
     [self removeFriend:friend fromArray:bangs];
+}
+
+- (void)removeFriendFromBangRequestsSent:(PFUser *)friend {
+    [self removeFriend:friend fromArray:bangRequestsSent];
 }
 
 - (void)removeFriendFromHookRequestsReceived:(PFUser *)friend {

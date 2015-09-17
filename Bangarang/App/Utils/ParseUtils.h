@@ -12,8 +12,9 @@
 
 + (PFQuery *)requests;
 + (PFQuery *)friends:(NSArray *)facebookFriends;
-+ (void)request:(NSString *)requestType ToFriend:(PFUser *)friend;
++ (void)request:(NSString *)requestType ToFriend:(PFUser *)friend onSuccess:(void(^)(void))onSuccess onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived;
 + (void)makeRelation:(NSString *)relation withFriend:(PFUser *)friend;
-+ (void)confirmRequest:(PFUser *)friend onSuccess:(void (^)(void))onSuccess;
++ (void)confirmRequest:(PFUser *)friend onSuccess:(void (^)(void))onSuccess onRequestNotFound:(void (^)(void))onRequestNotFound;
++ (void)removeRequest:(NSString *)requestType ToFriend:(PFUser *)friend;
 
 @end

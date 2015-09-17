@@ -36,6 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     // Status Bar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
@@ -49,13 +52,16 @@
     friendsManager = [FriendsManager sharedManager];
     
     [friendsManager loadRequests:^(NSUInteger requestsReceived){
-        [[self tableView] reloadData];
-        
-        [self updateRequestsBarButtomItem:requestsReceived];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [self updateRequestsBarButtomItem:requestsReceived];
+        });
     }];
     
     [friendsManager loadFriends:^{
-        [[self tableView] reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self tableView] reloadData];
+        });
     }];
 }
 
@@ -168,15 +174,20 @@
     NSLog(@"Request received, updating Requests");
     
     [friendsManager loadRequests:^(NSUInteger requestsReceived) {
-        [[self tableView] reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [self updateRequestsBarButtomItem:requestsReceived];
+        });
         
-        [self updateRequestsBarButtomItem:requestsReceived];
+        NSLog(@"Finished requests update");
     }];
 }
 
 #pragma mark - FriendCell Delegate
 
 - (void)requestButtonPressed:(NSInteger)cellIndex fromSender:(id)sender {
+    selectedRow = cellIndex;
+    
     PFUser *friend = [friendsManager getFriendOfCurrentGenderAtIndex:cellIndex];
     kFriendRelationIndex friendRelation = [friendsManager friendRelation:friend];
     
@@ -184,18 +195,8 @@
     
     // When your friend has sent a hook up request
     if ([friendsManager receivedHookRequestFromFriend:friend]) {
-        [ParseUtils confirmRequest:friend onSuccess:^{
-            [friendsManager removeFriendFromHookRequestsReceived:friend];
-            [friendsManager removeFriendFromBangs:friend];
-            
-            [friendsManager addFriendToHooks:friend];
-            
-            [requestManager createRequest:[friend objectId]];
-        }];
+        [self performSegueWithIdentifier:@"makeLoveAgainSegue" sender:self];
         
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageHookList]
-                forState:UIControlStateNormal];
-    
     // When your friend has sent a bang request
     } else if ([friendsManager receivedBangRequestFromFriend:friend]) {
         [ParseUtils confirmRequest:friend onSuccess:^{
@@ -204,10 +205,12 @@
             [friendsManager addFriendToBangs:friend];
             
             [requestManager createRequest:[friend objectId]];
+            
+            [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangList]
+                    forState:UIControlStateNormal];
+        } onRequestNotFound:^{
+            [friendsManager removeFriendFromBangRequestsReceived:friend];
         }];
-        
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangList]
-                forState:UIControlStateNormal];
         
     // When you send a hook up to a friend
     } else if (friendRelation == kFriendBangRelation) {
@@ -215,16 +218,28 @@
     
     // When you send a bang to a friend
     } else if (friendRelation == kFriendNoRelation) {
-        [ParseUtils request:kRequestTypeBang ToFriend:friend];
-        
-        [friendsManager addFriendToBangRequestsSent:friend];
-        
-        [requestManager createRequest:[friend objectId]];
-        
         [self.view showWaitingFor:friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval];
         
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
+        [ParseUtils request:kRequestTypeBang ToFriend:friend onSuccess:^{
+            [friendsManager addFriendToBangRequestsSent:friend];
+            
+            [requestManager createRequest:[friend objectId]];
+            
+            [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
+                    forState:UIControlStateNormal];
+        } onRequestAlreadyReceived:^{
+            [friendsManager removeFriendFromBangRequestsSent:friend];
+        }];
+    
+    } else if (friendRelation == kFriendBangRequestSent) {
+        [ParseUtils removeRequest:kRequestTypeBang ToFriend:friend];
+        
+        [friendsManager removeFriendFromBangRequestsSent:friend];
+        
+        [requestManager createRequest:[friend objectId]];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
                 forState:UIControlStateNormal];
     }
 }

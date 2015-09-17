@@ -33,6 +33,7 @@
 
 - (void)removeFriendFromHooks:(PFUser *)friend;
 - (void)removeFriendFromBangs:(PFUser *)friend;
+- (void)removeFriendFromBangRequestsSent:(PFUser *)friend;
 - (void)removeFriendFromHookRequestsReceived:(PFUser *)friend;
 - (void)removeFriendFromBangRequestsReceived:(PFUser *)friend;
 
