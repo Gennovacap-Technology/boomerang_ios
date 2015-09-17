@@ -10,9 +10,14 @@
 
 #import "UIView+WaitingScreen.h"
 
+#import "RequestManager.h"
+#import "FriendsManager.h"
+
 #import "ParseUtils.h"
 
-@interface MakeLoveAgainViewController ()
+@interface MakeLoveAgainViewController () {
+    FriendsManager *friendsManager;
+}
 
 @end
 
@@ -20,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    friendsManager = [FriendsManager sharedManager];
     
     [_makeLoveAgainView.layer setCornerRadius:5.0f];
     
@@ -52,7 +59,7 @@
 - (IBAction)buttonYes:(id)sender {
     [ParseUtils request:kRequestTypeHook ToFriend:_friend];
     
-    [_friendsManager addFriendToHookRequestsSent:_friend];
+    [friendsManager addFriendToHookRequestsSent:_friend];
     
     RequestManager *requestManager = [[RequestManager alloc] init];
     [requestManager createRequest:[_friend objectId]];

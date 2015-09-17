@@ -11,9 +11,13 @@
 #import <UIView+Rounded.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#import "FriendsManager.h"
+
 #import "FriendTableViewCell.h"
 
 @interface RequestsViewController () {
+    FriendsManager *friendsManager;
+    
     NSMutableArray *requests;
 }
 
@@ -23,7 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    friendsManager = [FriendsManager sharedManager];
 }
 
 #pragma mark - TableView Delegate Methods
@@ -52,9 +57,7 @@
     
     cell.delegate = self;
     cell.cellIndex = indexPath.row - 1;
-    
-    [self loadButton:cell.bombButton forFriend:friend];
-    
+        
     return cell;
 }
 

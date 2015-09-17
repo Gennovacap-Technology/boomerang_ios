@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RequestManager.h"
-#import "FriendsManager.h"
-
 @interface MakeLoveAgainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *makeLoveAgainView;
@@ -18,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *friendNameBack;
 
 @property (strong, nonatomic) PFUser *friend;
-@property (strong, nonatomic) FriendsManager *friendsManager;
 
 - (IBAction)buttonYes:(id)sender;
 - (IBAction)buttonNo:(id)sender;

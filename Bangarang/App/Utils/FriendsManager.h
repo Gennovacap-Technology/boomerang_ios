@@ -10,6 +10,8 @@
 
 @interface FriendsManager : NSObject
 
++ (id)sharedManager;
+
 - (void)loadFriends:(void (^)(void))onSuccess;
 - (void)loadRequests:(void (^)(NSUInteger))onSuccess;
 - (void)loadRelations;

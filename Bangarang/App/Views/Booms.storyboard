@@ -514,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVn-ei-WuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4086" y="426"/>
+            <point key="canvasLocation" x="4086" y="547"/>
         </scene>
         <!--Make Love Again View Controller-->
         <scene sceneID="b0h-XB-PGZ">
@@ -820,7 +820,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpT-eN-AmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4086" y="962.25"/>
+            <point key="canvasLocation" x="4086" y="1237"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RTb-J1-0dw">

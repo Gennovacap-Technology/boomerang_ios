@@ -46,7 +46,7 @@
     [self updateRequestsBarButtomItem:0];
     
     // Friends Manager
-    friendsManager = [[FriendsManager alloc] init];
+    friendsManager = [FriendsManager sharedManager];
     
     [friendsManager loadRequests:^(NSUInteger requestsReceived){
         [[self tableView] reloadData];
@@ -361,7 +361,6 @@
     } else if ([[segue identifier] isEqualToString:@"makeLoveAgainSegue"]) {
         MakeLoveAgainViewController *destinationController = [segue destinationViewController];
         destinationController.friend = [friendsManager getFriendOfCurrentGenderAtIndex:selectedRow];
-        destinationController.friendsManager = friendsManager;
     }
 }
 
