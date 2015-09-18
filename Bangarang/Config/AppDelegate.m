@@ -24,8 +24,8 @@
     //[Parse enableLocalDatastore];
     
     // Initialize Parse.
-    [Parse setApplicationId:@"oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2"
-                  clientKey:@"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC"];
+    [Parse setApplicationId:kParseApplicationId
+                  clientKey:kParseClientKey];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
@@ -34,6 +34,12 @@
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     // [end PARSE CONFIG]
     
+    // Go to Friends list if user is already logged
+    if ([PFUser currentUser]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Booms" bundle:nil];
+        UIViewController *scene = [storyboard instantiateInitialViewController];
+        self.window.rootViewController = scene;
+    }
     
     //Facebook SDK
     return [[FBSDKApplicationDelegate sharedInstance] application:application

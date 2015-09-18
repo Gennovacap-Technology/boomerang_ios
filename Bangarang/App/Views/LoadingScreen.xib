@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingViewController">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Kd-vUF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bangarang" translatesAutoresizingMaskIntoConstraints="NO" id="OKh-YY-Rak">
+                    <rect key="frame" x="20" y="139" width="280" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OKh-YY-Rak" secondAttribute="height" multiplier="14:5" id="DCs-oX-dSC"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="L1d-Om-E9C">
+                    <rect key="frame" x="119" y="479" width="82" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="R52-wi-JHe"/>
+                        <constraint firstAttribute="width" secondItem="L1d-Om-E9C" secondAttribute="height" multiplier="82:73" id="ona-QV-Buv"/>
+                        <constraint firstAttribute="width" constant="82" id="zHv-wA-kDa"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MadeWithLove" translatesAutoresizingMaskIntoConstraints="NO" id="XHK-QJ-nVV">
+                    <rect key="frame" x="95" y="264" width="130" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="42a-ql-l2j"/>
+                        <constraint firstAttribute="width" secondItem="XHK-QJ-nVV" secondAttribute="height" multiplier="10:3" id="bO1-NX-Ft3"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="42a-ql-l2j"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rFC-Kd-vUF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0kp-3T-dow"/>
+                <constraint firstItem="L1d-Om-E9C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="119" id="7cT-N9-J3b"/>
+                <constraint firstAttribute="centerY" secondItem="XHK-QJ-nVV" secondAttribute="centerY" constant="0.5" id="FbU-2a-kCF"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHK-QJ-nVV" secondAttribute="trailing" constant="95" id="GEu-ZC-e6n"/>
+                <constraint firstAttribute="trailing" secondItem="OKh-YY-Rak" secondAttribute="trailing" constant="20" id="H9m-of-hHL"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L1d-Om-E9C" secondAttribute="trailing" constant="119" id="Mih-3y-m6w"/>
+                <constraint firstAttribute="centerX" secondItem="OKh-YY-Rak" secondAttribute="centerX" id="Nxx-8v-Xee"/>
+                <constraint firstItem="OKh-YY-Rak" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="RhK-GL-2Fd"/>
+                <constraint firstItem="rFC-Kd-vUF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ToL-fT-OGi"/>
+                <constraint firstAttribute="centerX" secondItem="L1d-Om-E9C" secondAttribute="centerX" id="WDr-Ku-Tvx"/>
+                <constraint firstAttribute="trailing" secondItem="rFC-Kd-vUF" secondAttribute="trailing" id="bEC-ZW-HQt"/>
+                <constraint firstItem="XHK-QJ-nVV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="95" id="crg-7e-NVm"/>
+                <constraint firstItem="OKh-YY-Rak" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="139" id="j12-4o-D6j"/>
+                <constraint firstAttribute="bottom" secondItem="L1d-Om-E9C" secondAttribute="bottom" constant="16" id="miL-2l-Uic"/>
+                <constraint firstAttribute="centerX" secondItem="XHK-QJ-nVV" secondAttribute="centerX" id="tZe-hC-vot"/>
+                <constraint firstAttribute="bottom" secondItem="rFC-Kd-vUF" secondAttribute="bottom" id="uba-Di-nIn"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="background" destination="rFC-Kd-vUF" id="tau-K1-amO"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackgroundLoading" width="750" height="1334"/>
+        <image name="Bangarang" width="654" height="233"/>
+        <image name="Loading" width="147" height="132"/>
+        <image name="MadeWithLove" width="270" height="80"/>
+    </resources>
+</document>

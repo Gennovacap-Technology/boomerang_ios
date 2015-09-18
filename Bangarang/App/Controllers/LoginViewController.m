@@ -9,44 +9,42 @@
 #import "LoginViewController.h"
 #import "User.h"
 
+#import "UIView+LoadingScreen.h"
+
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // Status Bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
-    [self.view showProgressHUD];
+    [self.view showLoading];
+    
     [User facebookLoginWithCompletion:^(id sender, BOOL success, NSError *error, id result) {
-        //
         if (success) {
-            [self.view hideProgressHUD];
-            [self performSegueWithIdentifier:@"loginSuccessful" sender:self];
+            [self.view hideLoading];
+            
+            [self loginSuccessfull];
         } else {
-            [self.view hideProgressHUD];
+            [self.view hideLoading];
+            
             NSLog(@"Error trying to log in with Facebook");
         }
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loginSuccessfull {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Booms" bundle:nil];
+    UIViewController *scene = [storyboard instantiateInitialViewController];
+    
+    [self presentViewController:scene animated:YES completion:nil];
 }
-*/
 
 @end

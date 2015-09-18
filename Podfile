@@ -7,7 +7,7 @@
 # ============================================
 
 # iOS Platform
-platform :ios, '7.1'
+platform :ios, '8.0'
 
 pod 'AFNetworking'
 pod 'APLKeyboardControls'
@@ -21,6 +21,11 @@ pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Underscore.m'
 
-pod 'NYSegmentedControl'
+pod 'PINCache', '~> 2.0'
+pod 'UIView+Rounded', '~> 0.1'
+pod 'SDWebImage', '~> 3.7'
 
 #pod 'MagicalRecord'
+
+pod 'JSQMessagesViewController'
+pod 'Firebase', '>= 2.3.3'

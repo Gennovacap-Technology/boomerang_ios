@@ -41,9 +41,12 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.5.1):
     - FBSDKCoreKit
+  - Firebase (2.3.3)
+  - JSQMessagesViewController (7.1.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - MBProgressHUD (0.9.1)
   - NSData+Base64 (1.0.0)
-  - NYSegmentedControl (1.0.6)
   - Parse (1.8.1):
     - Bolts/Tasks (>= 1.2.0)
   - ParseFacebookUtilsV4 (1.8.1):
@@ -53,7 +56,12 @@ PODS:
     - Parse (~> 1.8.0)
   - ParseModel (1.2.0):
     - Parse
+  - PINCache (2.0)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - TPKeyboardAvoiding (1.2.9)
+  - UIView+Rounded (0.1.4)
   - Underscore.m (0.2.1)
 
 DEPENDENCIES:
@@ -62,12 +70,16 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Firebase (>= 2.3.3)
+  - JSQMessagesViewController
   - MBProgressHUD
-  - NYSegmentedControl
   - Parse
   - ParseFacebookUtilsV4
   - ParseModel
+  - PINCache (~> 2.0)
+  - SDWebImage (~> 3.7)
   - TPKeyboardAvoiding
+  - UIView+Rounded (~> 0.1)
   - Underscore.m
 
 SPEC CHECKSUMS:
@@ -77,13 +89,18 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: f335eaf6865e1e1597dee1debfb533045500da47
   FBSDKLoginKit: 225cc9a388a92916ee3f3bb14422017b6e44b65b
   FBSDKShareKit: 642034ac9f30793dfd897851b724bb4281750266
+  Firebase: 2db60272f68ce40c7d47e5ae6eddc16977c65d4c
+  JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
-  NYSegmentedControl: b5a1a4e22d1daae8e118a83a5d6410d7c9f84d4b
   Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
   ParseFacebookUtilsV4: 2c54f1c9756f4827417984f42b64bc38571d626b
   ParseModel: e9fb801cfca78f389241e367d025476c24fafe8d
+  PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
+  UIView+Rounded: 3cce1316497852acbb4e2650eac518f216229316
   Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 
 COCOAPODS: 0.38.2
