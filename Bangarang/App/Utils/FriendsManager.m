@@ -210,6 +210,10 @@
     // Requests sent
     if ([currentUserId isEqualToString:fromUserId]) {
         
+        if ([request[kRequestFromUserRead] boolValue]) {
+            return NO;
+        }
+        
         // Confirmed Bang
         if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
             
@@ -225,6 +229,10 @@
     // Request received
     } else {
         
+        if ([request[kRequestToUserRead] boolValue]) {
+            return NO;
+        }
+        
         // Hook Received
         if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
             return YES;
@@ -232,6 +240,19 @@
     }
     
     return NO;
+}
+
+- (void)setRequestAsRead:(PFObject *)request {
+    NSString *fromUserId = [request[kRequestFromUser] objectId];
+    NSString *currentUserId = [[PFUser currentUser] objectId];
+    
+    if ([currentUserId isEqualToString:fromUserId]) {
+        request[kRequestFromUserRead] = @YES;
+    } else {
+        request[kRequestToUserRead] = @YES;
+    }
+    
+    [request saveInBackground];
 }
 
 - (BOOL)receivedBangRequestFromFriend:(PFUser *)friend {

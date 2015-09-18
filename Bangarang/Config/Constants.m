@@ -31,13 +31,15 @@ NSString *const kUserHooksKey      = @"hooks";
 
 NSString *const kRequestClass    = @"Request";
 
-NSString *const kRequestFromUser = @"fromUser";
-NSString *const kRequestToUser   = @"toUser";
-NSString *const kRequestType     = @"type";
-NSString *const kRequestAccepted = @"accepted";
+NSString *const kRequestFromUser     = @"fromUser";
+NSString *const kRequestToUser       = @"toUser";
+NSString *const kRequestType         = @"type";
+NSString *const kRequestAccepted     = @"accepted";
+NSString *const kRequestFromUserRead = @"fromUserRead";
+NSString *const kRequestToUserRead   = @"toUserRead";
 
-NSString *const kRequestTypeBang = @"bangs";
-NSString *const kRequestTypeHook = @"hooks";
+NSString *const kRequestTypeBang = @"bang";
+NSString *const kRequestTypeHook = @"hook";
 
 #pragma mark - Facebook Attributes
 

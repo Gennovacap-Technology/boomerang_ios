@@ -41,6 +41,7 @@
             for (PFObject *request in objects) {
                 if ([friendsManager shouldNotificateUser:request]) {
                     [requestsArray addObject:request];
+                    [friendsManager setRequestAsRead:request];
                 }
             }
             

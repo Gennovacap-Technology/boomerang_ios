@@ -51,6 +51,8 @@ extern NSString *const kRequestFromUser;
 extern NSString *const kRequestToUser;
 extern NSString *const kRequestType;
 extern NSString *const kRequestAccepted;
+extern NSString *const kRequestFromUserRead;
+extern NSString *const kRequestToUserRead;
 
 extern NSString *const kRequestTypeBang;
 extern NSString *const kRequestTypeHook;

@@ -24,6 +24,7 @@
 - (kFriendRelationIndex)friendRelation:(PFUser *)friend;
 
 - (BOOL)shouldNotificateUser:(PFObject *)request;
+- (void)setRequestAsRead:(PFObject *)request;
 
 - (BOOL)receivedBangRequestFromFriend:(PFUser *)friend;
 - (BOOL)receivedHookRequestFromFriend:(PFUser *)friend;

@@ -356,6 +356,7 @@
 - (void)openRequests {
     if (currentNumberOfRequests > 0) {
         [self performSegueWithIdentifier:@"requestsSegue" sender:self];
+        [self updateRequestsBarButtomItem:0];
     }
 }
 
