@@ -21,6 +21,7 @@
     
     PFQuery *query = [PFQuery orQueryWithSubqueries:@[queryToUser, queryFromUser]];
     
+    [query orderByDescending:@"updatedAt"];
     //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     
     return query;
