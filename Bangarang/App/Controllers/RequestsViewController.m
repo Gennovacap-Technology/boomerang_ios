@@ -39,31 +39,8 @@
     [[ParseUtils requests] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *request in objects) {
-                NSString *fromUserId = [request[kRequestFromUser] objectId];
-                NSString *currentUserId = [[PFUser currentUser] objectId];
-                
-                // Requests sent
-                if ([currentUserId isEqualToString:fromUserId]) {
-                    
-                    // Confirmed Bang
-                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
-                        
-                        if ([request[kRequestAccepted] boolValue]) {
-                            [requestsArray addObject:request];
-                        }
-                        
-                    // Confirmed Hook
-                    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-                        [requestsArray addObject:request];
-                    }
-                    
-                // Request received
-                } else {
-                    
-                    // Hook Received
-                     if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-                        [requestsArray addObject:request];
-                    }
+                if ([friendsManager shouldNotificateUser:request]) {
+                    [requestsArray addObject:request];
                 }
             }
             

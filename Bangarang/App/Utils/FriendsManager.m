@@ -131,6 +131,10 @@
             for (PFObject *request in objects) {
                 NSString *fromUserId = [request[kRequestFromUser] objectId];
                 
+                if ([self shouldNotificateUser:request]) {
+                    requestsReceived++;
+                }
+                
                 // Requests sent
                 if ([currentUserId isEqualToString:fromUserId]) {
                     PFUser *friend = request[kRequestToUser];
@@ -142,8 +146,6 @@
                             [ParseUtils makeRelation:kRequestTypeBang withFriend:friend];
                             
                             [bangs addObject:friend];
-                            
-                            requestsReceived++;
                         } else {
                             [bangRequestsSent addObject:friend];
                         }
@@ -156,11 +158,8 @@
                             
                             [self removeFriend:friend fromArray:bangs];
                             [hooks addObject:friend];
-                            
-                            requestsReceived++;
                         } else {
                             [hookRequestsSent addObject:friend];
-                            requestsReceived++;
                         }
                         
                     }
@@ -179,10 +178,6 @@
                               ![request[kRequestAccepted] boolValue]) {
                         PFUser *friend = request[kRequestFromUser];
                         [hookRequestsReceived addObject:friend];
-                        
-                        requestsReceived++;
-                    } else if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-                        requestsReceived++;
                     }
                 }
             }
@@ -206,6 +201,37 @@
     }
     
     return kFriendNoRelation;
+}
+
+- (BOOL)shouldNotificateUser:(PFObject *)request {
+    NSString *fromUserId = [request[kRequestFromUser] objectId];
+    NSString *currentUserId = [[PFUser currentUser] objectId];
+    
+    // Requests sent
+    if ([currentUserId isEqualToString:fromUserId]) {
+        
+        // Confirmed Bang
+        if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+            
+            if ([request[kRequestAccepted] boolValue]) {
+                return YES;
+            }
+            
+            // Confirmed Hook
+        } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+            return YES;
+        }
+        
+    // Request received
+    } else {
+        
+        // Hook Received
+        if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 - (BOOL)receivedBangRequestFromFriend:(PFUser *)friend {
