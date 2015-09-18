@@ -55,7 +55,7 @@ Parse.Cloud.afterSave("Request", function(request, response) {
   mainQuery.first ({
     success: function(object) {
       if (object) {
-        if (object.get("type") == "bang" && object.get("fromUserRead") == true) {
+        if (object.get("type") == "bangs" && object.get("fromUserRead") == true) {
           object.destroy({
             success: function(myObject) {
              response.success();
@@ -64,7 +64,7 @@ Parse.Cloud.afterSave("Request", function(request, response) {
               response.error(error);
             }
           });
-        } else if (object.get("type") == "hook" && object.get("fromUserRead") == true && object.get("toUserRead") == true) {
+        } else if (object.get("type") == "hooks" && object.get("fromUserRead") == true && object.get("toUserRead") == true) {
           object.destroy({
             success: function(myObject) {
              response.success();
