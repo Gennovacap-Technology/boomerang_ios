@@ -12,13 +12,14 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #import "FriendsManager.h"
+#import "ParseUtils.h"
 
-#import "FriendTableViewCell.h"
+#import "RequestFriendTableViewCell.h"
 
 @interface RequestsViewController () {
     FriendsManager *friendsManager;
     
-    NSMutableArray *requests;
+    NSMutableArray *requestsArray;
 }
 
 @end
@@ -28,23 +29,87 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     friendsManager = [FriendsManager sharedManager];
+    
+    requestsArray = [[NSMutableArray alloc] init];
+    
+    [[ParseUtils requests] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *request in objects) {
+                NSString *fromUserId = [request[kRequestFromUser] objectId];
+                NSString *currentUserId = [[PFUser currentUser] objectId];
+                
+                // Requests sent
+                if ([currentUserId isEqualToString:fromUserId]) {
+                    
+                    // Confirmed Bang
+                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+                        
+                        if ([request[kRequestAccepted] boolValue]) {
+                            [requestsArray addObject:request];
+                        }
+                        
+                    // Confirmed Hook
+                    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                        [requestsArray addObject:request];
+                    }
+                    
+                // Request received
+                } else {
+                    
+                    // Hook Received
+                     if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                        [requestsArray addObject:request];
+                    }
+                }
+            }
+            
+            [self.tableView reloadData];
+        }
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        [self setEdgesForExtendedLayout:UIRectEdgeBottom];
 }
 
 #pragma mark - TableView Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [requests count];
+    return [requestsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FriendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFriendsListFriendCell];
+    RequestFriendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFriendsListFriendCell];
     
     if (cell == nil) {
-        cell = [[FriendTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kFriendsListFriendCell];
+        cell = [[RequestFriendTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kFriendsListFriendCell];
     }
     
-    PFUser *friend = [friendsManager getFriendOfCurrentGenderAtIndex:indexPath.row - 1];
+    PFObject *request = [requestsArray objectAtIndex:indexPath.row];
+    PFUser *friend;
+    
+    if ([[request[kRequestFromUser] objectId] isEqualToString:[[PFUser currentUser] objectId]]) {
+        friend = (PFUser *)[request[kRequestToUser] fetchIfNeeded];
+    } else {
+        friend = (PFUser *)[request[kRequestFromUser] fetchIfNeeded];
+    }
+    
+    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+        cell.status.text = @"Accepted the bang request";
+    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+        if ([[request[kRequestFromUser] objectId] isEqualToString:[[PFUser currentUser] objectId]]) {
+            cell.status.text = @"Accepted make love again";
+        } else {
+            cell.status.text = @"Wants to make love again";
+        }
+    }
     
     cell.name.text = [NSString stringWithFormat:@"%@ %@", friend[kUserFirstNameKey], friend[kUserLastNameKey]];
     
@@ -55,14 +120,7 @@
                                    [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
                                }];
     
-    cell.delegate = self;
-    cell.cellIndex = indexPath.row - 1;
-        
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
 }
 
 @end

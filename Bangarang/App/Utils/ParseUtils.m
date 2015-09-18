@@ -33,13 +33,18 @@
     return query;
 }
 
-+ (void)confirmRequest:(PFUser *)friend onSuccess:(void (^)(void))onSuccess onRequestNotFound:(void (^)(void))onRequestNotFound {
++ (void)confirmRequest:(NSString *)type
+              ofFriend:(PFUser *)friend
+             onSuccess:(void (^)(void))onSuccess
+     onRequestNotFound:(void (^)(void))onRequestNotFound {
+    
     PFUser *user = [PFUser currentUser];
     
     PFQuery *query = [PFQuery queryWithClassName:kRequestClass];
     
     [query whereKey:kRequestFromUser equalTo:friend];
     [query whereKey:kRequestToUser equalTo:user];
+    [query whereKey:kRequestType equalTo:type];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -79,7 +84,11 @@
     [user saveInBackground];
 }
 
-+ (void)request:(NSString *)requestType ToFriend:(PFUser *)friend onSuccess:(void(^)(void))onSuccess onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
++ (void)request:(NSString *)requestType
+       toFriend:(PFUser *)friend
+      onSuccess:(void(^)(void))onSuccess
+onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
+    
     PFObject *request = [PFObject objectWithClassName:kRequestClass];
     
     request[kRequestFromUser] = [PFUser currentUser];

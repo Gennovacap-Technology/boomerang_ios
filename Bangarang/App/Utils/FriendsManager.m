@@ -135,6 +135,7 @@
                 if ([currentUserId isEqualToString:fromUserId]) {
                     PFUser *friend = request[kRequestToUser];
                     
+                    // Bang Requests
                     if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
                         
                         if ([request[kRequestAccepted] boolValue]) {
@@ -142,11 +143,12 @@
                             
                             [bangs addObject:friend];
                             
-                            [request delete];
+                            requestsReceived++;
                         } else {
                             [bangRequestsSent addObject:friend];
                         }
-                        
+                    
+                    // Hook Requests
                     } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
                         
                         if ([request[kRequestAccepted] boolValue]) {
@@ -155,25 +157,31 @@
                             [self removeFriend:friend fromArray:bangs];
                             [hooks addObject:friend];
                             
-                            [request delete];
+                            requestsReceived++;
                         } else {
                             [hookRequestsSent addObject:friend];
+                            requestsReceived++;
                         }
                         
                     }
                     
                 // Request received
                 } else {
-                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+                    
+                    // Bang Requests
+                    if ([request[kRequestType] isEqualToString:kRequestTypeBang] &&
+                        ![request[kRequestAccepted] boolValue]) {
                         PFUser *friend = request[kRequestFromUser];
                         [bangRequestsReceived addObject:friend];
-                    } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                    
+                    // Hook Requests
+                    } else if ([request[kRequestType] isEqualToString:kRequestTypeHook] &&
+                              ![request[kRequestAccepted] boolValue]) {
                         PFUser *friend = request[kRequestFromUser];
                         [hookRequestsReceived addObject:friend];
-                    }
-                    
-                    // Count confirmed requests
-                    if ([request[kRequestAccepted] boolValue]) {
+                        
+                        requestsReceived++;
+                    } else if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
                         requestsReceived++;
                     }
                 }

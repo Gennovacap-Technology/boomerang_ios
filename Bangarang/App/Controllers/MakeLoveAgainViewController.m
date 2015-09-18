@@ -59,7 +59,7 @@
 - (IBAction)buttonYes:(id)sender {
     RequestManager *requestManager = [[RequestManager alloc] init];
     
-    [ParseUtils request:kRequestTypeHook ToFriend:_friend onSuccess:^{
+    [ParseUtils request:kRequestTypeHook toFriend:_friend onSuccess:^{
         [friendsManager addFriendToHookRequestsSent:_friend];
         
         [requestManager createRequest:[_friend objectId]];
@@ -69,7 +69,7 @@
                     [self dismissViewControllerAnimated:NO completion:nil];
                 }];
     } onRequestAlreadyReceived:^{
-        [ParseUtils confirmRequest:_friend onSuccess:^{
+        [ParseUtils confirmRequest:kRequestTypeHook ofFriend:_friend onSuccess:^{
             [friendsManager removeFriendFromHookRequestsReceived:_friend];
             [friendsManager removeFriendFromBangs:_friend];
             

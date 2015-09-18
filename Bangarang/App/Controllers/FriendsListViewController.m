@@ -199,7 +199,7 @@
         
     // When your friend has sent a bang request
     } else if ([friendsManager receivedBangRequestFromFriend:friend]) {
-        [ParseUtils confirmRequest:friend onSuccess:^{
+        [ParseUtils confirmRequest:kRequestTypeBang ofFriend:friend onSuccess:^{
             [friendsManager removeFriendFromBangRequestsReceived:friend];
             
             [friendsManager addFriendToBangs:friend];
@@ -221,7 +221,7 @@
         [self.view showWaitingFor:friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval];
         
-        [ParseUtils request:kRequestTypeBang ToFriend:friend onSuccess:^{
+        [ParseUtils request:kRequestTypeBang toFriend:friend onSuccess:^{
             [friendsManager addFriendToBangRequestsSent:friend];
             
             [requestManager createRequest:[friend objectId]];
@@ -241,6 +241,9 @@
         
         [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
                 forState:UIControlStateNormal];
+    } else if (friendRelation == kFriendHookRequestSent) {
+        [self.view showWaitingFor:friend[kUserFirstNameKey]
+                andHideAfterDelay:kDefaultWaitingViewHideInterval];
     }
 }
 
