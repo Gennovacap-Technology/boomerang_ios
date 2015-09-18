@@ -29,7 +29,7 @@ NSString *const kUserHooksKey      = @"hooks";
 
 #pragma mark - Request Class
 
-NSString *const kRequestClass    = @"Request";
+NSString *const kRequestClass = @"Request";
 
 NSString *const kRequestFromUser     = @"fromUser";
 NSString *const kRequestToUser       = @"toUser";
@@ -38,8 +38,8 @@ NSString *const kRequestAccepted     = @"accepted";
 NSString *const kRequestFromUserRead = @"fromUserRead";
 NSString *const kRequestToUserRead   = @"toUserRead";
 
-NSString *const kRequestTypeBang = @"bang";
-NSString *const kRequestTypeHook = @"hook";
+NSString *const kRequestTypeBang = @"bangs";
+NSString *const kRequestTypeHook = @"hooks";
 
 #pragma mark - Facebook Attributes
 
