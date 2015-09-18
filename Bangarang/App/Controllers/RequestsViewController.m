@@ -39,7 +39,7 @@
     [[ParseUtils requests] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *request in objects) {
-                if ([friendsManager shouldNotificateUser:request]) {
+                if ([friendsManager shouldNotifyFriend:request]) {
                     [requestsArray addObject:request];
                     [friendsManager setRequestAsRead:request];
                 }

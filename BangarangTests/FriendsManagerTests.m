@@ -1,19 +1,19 @@
 //
-//  BangarangTests.m
-//  BangarangTests
+//  FriendsManagerTests.m
+//  Bangarang
 //
-//  Created by Nielson Rolim on 8/19/15.
+//  Created by Thales Pereira on 9/18/15.
 //  Copyright (c) 2015 Gennovacap. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface BangarangTests : XCTestCase
+@interface FriendsManagerTests : XCTestCase
 
 @end
 
-@implementation BangarangTests
+@implementation FriendsManagerTests
 
 - (void)setUp {
     [super setUp];

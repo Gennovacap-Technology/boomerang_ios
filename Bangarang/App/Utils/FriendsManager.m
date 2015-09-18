@@ -131,7 +131,7 @@
             for (PFObject *request in objects) {
                 NSString *fromUserId = [request[kRequestFromUser] objectId];
                 
-                if ([self shouldNotificateUser:request]) {
+                if ([self shouldNotifyFriend:request]) {
                     requestsReceived++;
                 }
                 
@@ -203,7 +203,7 @@
     return kFriendNoRelation;
 }
 
-- (BOOL)shouldNotificateUser:(PFObject *)request {
+- (BOOL)shouldNotifyFriend:(PFObject *)request {
     NSString *fromUserId = [request[kRequestFromUser] objectId];
     NSString *currentUserId = [[PFUser currentUser] objectId];
     
