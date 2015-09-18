@@ -8,11 +8,13 @@ Parse.Cloud.beforeSave("Request", function(request, response) {
 
 	fromQuery.equalTo("fromUser", request.object.get("fromUser"));
 	fromQuery.equalTo("toUser", request.object.get("toUser"));
+	fromQuery.equalTo("type", request.object.get("type"));
 
 	var toQuery = new Parse.Query("Request");
 
 	toQuery.equalTo("fromUser", request.object.get("toUser"));
 	toQuery.equalTo("toUser", request.object.get("fromUser"));
+	toQuery.equalTo("type", request.object.get("type"));
 
 	var mainQuery = Parse.Query.or(fromQuery, toQuery);
 
