@@ -23,6 +23,7 @@
 		12BB5FED1B9E7ABB00333726 /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FEC1B9E7ABB00333726 /* ChatManager.m */; };
 		12BB5FF01B9E7AEE00333726 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FEF1B9E7AEE00333726 /* Constants.m */; };
 		12BB5FF31B9E7B3C00333726 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BB5FF21B9E7B3C00333726 /* Message.m */; };
+		12C043931BABBB5B00D842B0 /* RequestFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C043921BABBB5B00D842B0 /* RequestFriendTableViewCell.m */; };
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
 		12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */; };
 		12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */; };
@@ -87,6 +88,8 @@
 		12BB5FEF1B9E7AEE00333726 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		12BB5FF11B9E7B3C00333726 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		12BB5FF21B9E7B3C00333726 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		12C043911BABBB5B00D842B0 /* RequestFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestFriendTableViewCell.h; sourceTree = "<group>"; };
+		12C043921BABBB5B00D842B0 /* RequestFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestFriendTableViewCell.m; sourceTree = "<group>"; };
 		12D9576E1B8A4220002D6A7A /* Booms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booms.storyboard; sourceTree = "<group>"; };
 		12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
 		12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 			children = (
 				12A61C791BAA144E00A6C228 /* RequestsViewController.h */,
 				12A61C7A1BAA144E00A6C228 /* RequestsViewController.m */,
+				12C043911BABBB5B00D842B0 /* RequestFriendTableViewCell.h */,
+				12C043921BABBB5B00D842B0 /* RequestFriendTableViewCell.m */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */,
 				12B0B9661BA702A500AC9DAD /* RequestManager.m in Sources */,
 				12A61C7B1BAA144E00A6C228 /* RequestsViewController.m in Sources */,
+				12C043931BABBB5B00D842B0 /* RequestFriendTableViewCell.m in Sources */,
 				120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */,
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
@@ -773,7 +779,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
 				INFOPLIST_FILE = Bangarang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
@@ -789,7 +795,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
 				INFOPLIST_FILE = Bangarang/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
