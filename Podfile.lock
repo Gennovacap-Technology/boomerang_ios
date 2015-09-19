@@ -56,7 +56,6 @@ PODS:
     - Parse (~> 1.8.0)
   - ParseModel (1.2.0):
     - Parse
-  - PINCache (2.0)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -76,7 +75,6 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtilsV4
   - ParseModel
-  - PINCache (~> 2.0)
   - SDWebImage (~> 3.7)
   - TPKeyboardAvoiding
   - UIView+Rounded (~> 0.1)
@@ -97,7 +95,6 @@ SPEC CHECKSUMS:
   Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
   ParseFacebookUtilsV4: 2c54f1c9756f4827417984f42b64bc38571d626b
   ParseModel: e9fb801cfca78f389241e367d025476c24fafe8d
-  PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
   UIView+Rounded: 3cce1316497852acbb4e2650eac518f216229316

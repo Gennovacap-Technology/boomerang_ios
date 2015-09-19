@@ -9,6 +9,8 @@
 # iOS Platform
 platform :ios, '8.0'
 
+link_with 'Bangarang', 'BangarangTests'
+
 pod 'AFNetworking'
 pod 'APLKeyboardControls'
 pod 'MBProgressHUD'
@@ -21,7 +23,6 @@ pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Underscore.m'
 
-pod 'PINCache', '~> 2.0'
 pod 'UIView+Rounded', '~> 0.1'
 pod 'SDWebImage', '~> 3.7'
 
