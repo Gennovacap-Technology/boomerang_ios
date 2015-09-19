@@ -30,8 +30,8 @@
 		12ED71CC1BA8DD1F0069A6E8 /* WaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71CB1BA8DD1F0069A6E8 /* WaitingViewController.m */; };
 		12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71CE1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m */; };
 		12ED71D51BA920250069A6E8 /* FriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71D41BA920250069A6E8 /* FriendsManager.m */; };
+		12F2232E1BACA44300CF3A87 /* FriendsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
-		26375CE61B85376200AEA146 /* BangarangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CE51B85376200AEA146 /* BangarangTests.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
 		26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D051B85379C00AEA146 /* NRDateField.m */; };
 		26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D071B85379C00AEA146 /* NRPickerField.m */; };
@@ -101,12 +101,12 @@
 		12ED71CE1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WaitingScreen.m"; path = "Categories/UIView+WaitingScreen.m"; sourceTree = "<group>"; };
 		12ED71D31BA920250069A6E8 /* FriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsManager.h; path = Utils/FriendsManager.h; sourceTree = "<group>"; };
 		12ED71D41BA920250069A6E8 /* FriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsManager.m; path = Utils/FriendsManager.m; sourceTree = "<group>"; };
+		12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsManagerTests.m; sourceTree = "<group>"; };
 		26375CC61B85376200AEA146 /* Bangarang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangarang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CCA1B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CCB1B85376200AEA146 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26375CDF1B85376200AEA146 /* BangarangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BangarangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CE41B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26375CE51B85376200AEA146 /* BangarangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BangarangTests.m; sourceTree = "<group>"; };
 		26375CF11B85378D00AEA146 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26375D011B85379600AEA146 /* Bangarang-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bangarang-PrefixHeader.pch"; sourceTree = "<group>"; };
 		26375D041B85379C00AEA146 /* NRDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDateField.h; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 		26375CE21B85376200AEA146 /* BangarangTests */ = {
 			isa = PBXGroup;
 			children = (
-				26375CE51B85376200AEA146 /* BangarangTests.m */,
+				12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */,
 				26375CE31B85376200AEA146 /* Supporting Files */,
 			);
 			path = BangarangTests;
@@ -546,7 +546,7 @@
 		26375CBE1B85376200AEA146 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Gennovacap;
 				TargetAttributes = {
 					26375CC51B85376200AEA146 = {
@@ -676,7 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26375CE61B85376200AEA146 /* BangarangTests.m in Sources */,
+				12F2232E1BACA44300CF3A87 /* FriendsManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +712,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -727,7 +728,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -764,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -777,10 +778,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
 				INFOPLIST_FILE = Bangarang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -793,10 +796,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
 				INFOPLIST_FILE = Bangarang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
 			};
@@ -816,6 +821,7 @@
 				);
 				INFOPLIST_FILE = BangarangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bangarang.app/Bangarang";
 			};
@@ -831,6 +837,7 @@
 				);
 				INFOPLIST_FILE = BangarangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bangarang.app/Bangarang";
 			};
