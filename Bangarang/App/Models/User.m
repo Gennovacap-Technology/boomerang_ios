@@ -7,7 +7,6 @@
 //
 
 #import "User.h"
-#import "PINCache.h"
 
 static User* _currentUser = nil;
 
