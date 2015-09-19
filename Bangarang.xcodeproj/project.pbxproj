@@ -45,6 +45,7 @@
 		264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */; };
 		264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */; };
 		26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A419341B89EA4600F3A0DA /* Login.storyboard */; };
+		AD2623392DBB36494B70AA72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
 		C741FE2F9FEF25AF1F9489BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2623392DBB36494B70AA72 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,9 +528,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26375CEC1B85376200AEA146 /* Build configuration list for PBXNativeTarget "BangarangTests" */;
 			buildPhases = (
+				F3A1A7910820F927ADE6DA44 /* Check Pods Manifest.lock */,
 				26375CDB1B85376200AEA146 /* Sources */,
 				26375CDC1B85376200AEA146 /* Frameworks */,
 				26375CDD1B85376200AEA146 /* Resources */,
+				AE155BD90CABD0E2CF8444F0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,6 +623,36 @@
 			showEnvVarsInLog = 0;
 		};
 		74FCFAB7FBE556431297941A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE155BD90CABD0E2CF8444F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3A1A7910820F927ADE6DA44 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -809,6 +843,7 @@
 		};
 		26375CED1B85376200AEA146 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FBB097B59F6A1F138A5736 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -829,6 +864,7 @@
 		};
 		26375CEE1B85376200AEA146 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 631848CD498E94CA4F5D1274 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

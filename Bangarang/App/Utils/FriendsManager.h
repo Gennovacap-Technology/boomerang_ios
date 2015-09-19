@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Constants.h"
+#import "Parse.h"
+
 @interface FriendsManager : NSObject
 
 + (id)sharedManager;
