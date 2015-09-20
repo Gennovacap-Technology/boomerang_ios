@@ -229,6 +229,8 @@
     request[kRequestFromUserRead] = @NO;
     request[kRequestToUserRead]   = @YES;
     request[kRequestAccepted]     = @YES;
+    
+    XCTAssert(notify);
 }
 
 - (void)testShouldNotifyCurrentUserOnHookRequestsReceived {
@@ -257,6 +259,8 @@
     request[kRequestFromUserRead] = @NO;
     request[kRequestToUserRead]   = @YES;
     request[kRequestAccepted]     = @YES;
+    
+    XCTAssertFalse(notify);
 }
 
 - (void)testIfRequestIsDeletedOnParseDataOnBangRequests {
