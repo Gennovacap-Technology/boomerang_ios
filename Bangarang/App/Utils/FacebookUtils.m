@@ -46,14 +46,12 @@
             NSString *gender = userData[@"gender"];
             NSString *firstName = userData[@"first_name"];
             NSString *lastName = userData[@"last_name"];
-            NSString* photoURL = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookId];
             
             user[kUserFacebookIdKey] = facebookId;
             user[kUserEmailKey] = email;
             user[kUserGenderKey] = gender;
             user[kUserFirstNameKey] = firstName;
             user[kUserLastNameKey] = lastName;
-            user[kUserPhotoURLKey] = photoURL;
             
             [user saveInBackground];
         }

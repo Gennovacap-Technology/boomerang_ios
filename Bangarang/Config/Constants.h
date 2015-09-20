@@ -61,6 +61,7 @@ extern NSString *const kRequestTypeHook;
 
 extern NSString *const kFacebookMaleString;
 extern NSString *const kFacebookFemaleString;
+extern NSString *const kFacebookProfilePictureUrl;
 
 #pragma mark - Parse
 

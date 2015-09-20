@@ -9,7 +9,7 @@
 #import "RequestsViewController.h"
 
 #import <UIView+Rounded.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageDownloader.h>
 
 #import "FriendsManager.h"
 #import "ParseUtils.h"
@@ -91,12 +91,23 @@
     
     cell.name.text = [NSString stringWithFormat:@"%@ %@", friend[kUserFirstNameKey], friend[kUserLastNameKey]];
     
-    [cell.avatarImage sd_setImageWithURL:[NSURL URLWithString:friend[kUserPhotoURLKey]]
-                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                   
-                                   // Rounded UIImageView
-                                   [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
-                               }];
+    NSString *profileUrl = [NSString stringWithFormat:kFacebookProfilePictureUrl, friend[kUserFacebookIdKey]];
+    
+    [SDWebImageDownloader.sharedDownloader downloadImageWithURL:[NSURL URLWithString:profileUrl]
+                                                        options:0
+                                                       progress:^(NSInteger receivedSize, NSInteger expectedSize)
+     {
+     }
+                                                      completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished)
+     {
+         if (image && finished)
+         {
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 cell.avatarImage.image = [UIImage imageWithData:data];
+                 [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
+             });
+         }
+    }];
     
     return cell;
 }
