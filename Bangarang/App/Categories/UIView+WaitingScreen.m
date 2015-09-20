@@ -36,10 +36,10 @@
     mainView.name.text = name;
     mainView.nameBack.text = name;
     
-    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                      action:@selector(hideLoading)];
+    //UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    //                                                                                  action:@selector(hideLoading)];
     
-    [mainView addGestureRecognizer:singleFingerTap];
+    //[mainView addGestureRecognizer:singleFingerTap];
     
     [self addSubview:mainView];
 }
