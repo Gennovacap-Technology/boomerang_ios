@@ -22,9 +22,11 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived;
 
 + (void)confirmRequest:(NSString *)type
               ofFriend:(PFUser *)friend
-onSuccess:(void (^)(void))onSuccess
-onRequestNotFound:(void (^)(void))onRequestNotFound;
+             onSuccess:(void (^)(void))onSuccess
+     onRequestNotFound:(void (^)(void))onRequestNotFound;
 
-+ (void)removeRequest:(NSString *)requestType ToFriend:(PFUser *)friend;
++ (void)removeRequest:(NSString *)requestType
+             toFriend:(PFUser *)friend
+            onSuccess:(void(^)(void))onSuccess;
 
 @end

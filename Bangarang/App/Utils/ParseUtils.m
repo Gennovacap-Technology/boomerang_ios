@@ -97,7 +97,7 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     request[kRequestType]     = requestType;
     request[kRequestAccepted] = @NO;
     
-    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {        
         if (succeeded) {
             onSuccess();
         } else {
@@ -106,7 +106,10 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     }];
 }
 
-+ (void)removeRequest:(NSString *)requestType ToFriend:(PFUser *)friend {
++ (void)removeRequest:(NSString *)requestType
+             toFriend:(PFUser *)friend
+            onSuccess:(void(^)(void))onSuccess {
+    
     PFUser *user = [PFUser currentUser];
     
     PFQuery *query = [PFQuery queryWithClassName:kRequestClass];
@@ -115,13 +118,12 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     [query whereKey:kRequestToUser equalTo:friend];
     [query whereKey:kRequestType equalTo:requestType];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            PFObject *request = [objects firstObject];
-            
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
-                [request delete];
-            });
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (object) {
+            [object delete];
+            onSuccess();
+        } else {
+            NSLog(@"The getFirstObject request failed.");
         }
     }];
 }

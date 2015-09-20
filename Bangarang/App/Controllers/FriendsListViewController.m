@@ -216,34 +216,36 @@
     } else if (friendRelation == kFriendBangRelation) {
         [self performSegueWithIdentifier:@"makeLoveAgainSegue" sender:self];
     
+    // When you remove a bang request sent to a friend
+    } else if (friendRelation == kFriendBangRequestSent) {
+        [friendsManager removeFriendFromBangRequestsSent:friend];
+        
+        [ParseUtils removeRequest:kRequestTypeBang toFriend:friend onSuccess:^{
+            [requestManager createRequest:[friend objectId]];
+        }];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
+                forState:UIControlStateNormal];
+        
+    } else if (friendRelation == kFriendHookRequestSent) {
+        [self.view showWaitingFor:friend[kUserFirstNameKey]
+                andHideAfterDelay:kDefaultWaitingViewHideInterval];
+    
     // When you send a bang to a friend
     } else if (friendRelation == kFriendNoRelation) {
         [self.view showWaitingFor:friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval];
         
+        [friendsManager addFriendToBangRequestsSent:friend];
+        
         [ParseUtils request:kRequestTypeBang toFriend:friend onSuccess:^{
-            [friendsManager addFriendToBangRequestsSent:friend];
-            
             [requestManager createRequest:[friend objectId]];
-            
-            [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
-                    forState:UIControlStateNormal];
         } onRequestAlreadyReceived:^{
-            [friendsManager removeFriendFromBangRequestsSent:friend];
+            //[friendsManager removeFriendFromBangRequestsSent:friend];
         }];
-    
-    } else if (friendRelation == kFriendBangRequestSent) {
-        [ParseUtils removeRequest:kRequestTypeBang ToFriend:friend];
         
-        [friendsManager removeFriendFromBangRequestsSent:friend];
-        
-        [requestManager createRequest:[friend objectId]];
-        
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
                 forState:UIControlStateNormal];
-    } else if (friendRelation == kFriendHookRequestSent) {
-        [self.view showWaitingFor:friend[kUserFirstNameKey]
-                andHideAfterDelay:kDefaultWaitingViewHideInterval];
     }
 }
 

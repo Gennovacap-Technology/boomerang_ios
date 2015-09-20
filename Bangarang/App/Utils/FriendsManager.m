@@ -131,7 +131,7 @@
             for (PFObject *request in objects) {
                 NSString *fromUserId = [request[kRequestFromUser] objectId];
                 
-                if ([self shouldNotifyFriend:request]) {
+                if ([self shouldNotifyCurrentUser:request]) {
                     requestsReceived++;
                 }
                 
@@ -203,7 +203,7 @@
     return kFriendNoRelation;
 }
 
-- (BOOL)shouldNotifyFriend:(PFObject *)request {
+- (BOOL)shouldNotifyCurrentUser:(PFObject *)request {
     NSString *fromUserId = [request[kRequestFromUser] objectId];
     NSString *currentUserId = [[PFUser currentUser] objectId];
     
@@ -323,6 +323,10 @@
 
 - (void)removeFriendFromBangs:(PFUser *)friend {
     [self removeFriend:friend fromArray:bangs];
+}
+
+- (void)removeFriendFromHookRequestsSent:(PFUser *)friend {
+    [self removeFriend:friend fromArray:hookRequestsSent];
 }
 
 - (void)removeFriendFromBangRequestsSent:(PFUser *)friend {
