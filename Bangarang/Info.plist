@@ -2,10 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth2</string>
-	</array>
+	<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>facebook.com</key>
+    <dict>
+      <key>NSIncludesSubdomains</key> <true/>        
+      <key>NSExceptionRequiresForwardSecrecy</key> <false/>
+    </dict>
+    <key>fbcdn.net</key>
+    <dict>
+      <key>NSIncludesSubdomains</key> <true/>
+      <key>NSExceptionRequiresForwardSecrecy</key>  <false/>
+    </dict>
+    <key>akamaihd.net</key>
+    <dict>
+      <key>NSIncludesSubdomains</key> <true/>
+      <key>NSExceptionRequiresForwardSecrecy</key> <false/>
+    </dict>
+  </dict>
+</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -37,6 +54,10 @@
 	<string>955697157825773</string>
 	<key>FacebookDisplayName</key>
 	<string>Boomerang</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>

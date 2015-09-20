@@ -18,21 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // [PARSE CONFIG]
-    // [Optional] Power your app with Local Datastore. For more info, go to
-    // https://parse.com/docs/ios_guide#localdatastore/iOS
-    //[Parse enableLocalDatastore];
-    
     // Initialize Parse.
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
     
-    // [Optional] Track statistics around application opens.
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
     // Parse Facebook Utils
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
-    // [end PARSE CONFIG]
     
     // Go to Friends list if user is already logged
     if ([PFUser currentUser]) {
@@ -41,10 +32,7 @@
         self.window.rootViewController = scene;
     }
     
-    //Facebook SDK
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                    didFinishLaunchingWithOptions:launchOptions];
-    //return YES;
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -76,8 +64,6 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    
-    //Facebook SDK
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                                           openURL:url
                                                 sourceApplication:sourceApplication

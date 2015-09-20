@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120B089F1BAF44D500AC7D27 /* FacebookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B089E1BAF44D500AC7D27 /* FacebookUtils.m */; settings = {ASSET_TAGS = (); }; };
 		120FBC171BA7AC6C00AC3D01 /* Wolf in the City.otf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */; };
 		120FBC191BA7AC9B00AC3D01 /* Waiting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC181BA7AC9B00AC3D01 /* Waiting.xib */; };
 		120FBC1B1BA7AEE900AC3D01 /* Market Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */; };
@@ -38,7 +39,6 @@
 		26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D0B1B85379C00AEA146 /* UIColor+Helper.m */; };
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
-		264EF9951B8B2FF90095B861 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9941B8B2FF90095B861 /* User.m */; };
 		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
 		264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */; };
 		264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */; };
@@ -61,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		0D6195B1F7616986C510F803 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		120B089D1BAF44D500AC7D27 /* FacebookUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookUtils.h; path = Utils/FacebookUtils.h; sourceTree = "<group>"; };
+		120B089E1BAF44D500AC7D27 /* FacebookUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookUtils.m; path = Utils/FacebookUtils.m; sourceTree = "<group>"; };
 		120FBC161BA7AC6C00AC3D01 /* Wolf in the City.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf in the City.otf"; sourceTree = "<group>"; };
 		120FBC181BA7AC9B00AC3D01 /* Waiting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Waiting.xib; sourceTree = "<group>"; };
 		120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Market Deco.ttf"; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 		26375D141B8537CD00AEA146 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26375D151B8537CD00AEA146 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangarang-Bridging-Header.h"; sourceTree = "<group>"; };
-		264EF9931B8B2FF90095B861 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		264EF9941B8B2FF90095B861 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		264EF9961B8B417B0095B861 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		264EF9971B8B417B0095B861 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		264EF99E1B8B4E4A0095B861 /* MyiOSLogicBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyiOSLogicBlocks.h; sourceTree = "<group>"; };
@@ -263,6 +263,8 @@
 				12B0B9601BA26CC700AC9DAD /* ParseUtils.m */,
 				12B0B9641BA702A500AC9DAD /* RequestManager.h */,
 				12B0B9651BA702A500AC9DAD /* RequestManager.m */,
+				120B089D1BAF44D500AC7D27 /* FacebookUtils.h */,
+				120B089E1BAF44D500AC7D27 /* FacebookUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -366,8 +368,6 @@
 			children = (
 				12BB5FF11B9E7B3C00333726 /* Message.h */,
 				12BB5FF21B9E7B3C00333726 /* Message.m */,
-				264EF9931B8B2FF90095B861 /* User.h */,
-				264EF9941B8B2FF90095B861 /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -682,7 +682,6 @@
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
 				12A61C741BA9C47B00A6C228 /* MakeLoveAgainViewController.m in Sources */,
 				12BB5FF01B9E7AEE00333726 /* Constants.m in Sources */,
-				264EF9951B8B2FF90095B861 /* User.m in Sources */,
 				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
 				12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */,
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
@@ -703,6 +702,7 @@
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
+				120B089F1BAF44D500AC7D27 /* FacebookUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
