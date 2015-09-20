@@ -139,6 +139,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    if (indexPath.row == 0) {
+        return;
+    }
+    
     selectedRow = indexPath.row - 1;
     
     PFUser *friend = [friendsManager getFriendOfCurrentGenderAtIndex:selectedRow];
@@ -171,8 +177,6 @@
         default:
             break;
     }
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 # pragma mark - Request Manager Delegate
