@@ -223,7 +223,7 @@
             
             // Confirmed Hook
         } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-            if ([request[kRequestAccepted] boolValue] && request[kRequestToUserRead]) {
+            if ([request[kRequestAccepted] boolValue]) {
                 return YES;
             }
         }
