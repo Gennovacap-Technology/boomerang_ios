@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     self.messages = [[NSMutableArray alloc] init];
     
     // Chat Users
@@ -39,12 +39,21 @@
     // Bubble Images
     JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
     
-    self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
-    self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
+    UIColor *bubbleColorOut = [UIColor colorWithWhite:0.800 alpha:0.100];
+    UIColor *bubbleColorIn = [UIColor colorWithRed:1.000 green:0.000 blue:0.506 alpha:0.100];
+    
+    self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:bubbleColorOut];
+    self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:bubbleColorIn];
     
     // Remove Avatar
     self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSizeZero;
     self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
+    
+    self.collectionView.backgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundLogin"]];
+    [backgroundImage setContentMode:UIViewContentModeScaleAspectFit];
+    
+    [self.collectionView.backgroundView addSubview:backgroundImage];
     
     [self setAutomaticallyScrollsToMostRecentMessage:YES];
 }
@@ -160,7 +169,7 @@
     JSQMessage *message = [self.messages objectAtIndex:indexPath.item];
     
     if ([message.senderId isEqualToString:self.senderId]) {
-        cell.textView.textColor = [UIColor blackColor];
+        cell.textView.textColor = [UIColor whiteColor];
     } else {
         cell.textView.textColor = [UIColor whiteColor];
     }
