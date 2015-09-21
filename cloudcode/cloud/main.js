@@ -16,19 +16,25 @@ Parse.Cloud.beforeSave("Request", function(request, response) {
   toQuery.equalTo("toUser", request.object.get("fromUser"));
   toQuery.equalTo("type", request.object.get("type"));
 
-  var mainQuery = Parse.Query.or(fromQuery, toQuery);
+  fromQuery.first().then(function(object) {
+    if (object) {
+      response.error("Request already sent");
+      return;
+    }
 
-  mainQuery.first ({
-    success: function(object) {
+    return toQuery.first().then(function(object) {
       if (object) {
-        response.error("Request already created.");
+        response.error("Request already received");
+        return;
       } else {
         response.success();
       }
-    },
-    error: function(error) {
-      response.success();
-    }
+    }, function(error) {
+      response.error(error);
+    });
+
+  }, function(error) {
+    response.error(error);
   });
 });
 
