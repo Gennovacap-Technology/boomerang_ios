@@ -59,15 +59,21 @@
 - (IBAction)buttonYes:(id)sender {
     RequestManager *requestManager = [[RequestManager alloc] init];
     
-    [ParseUtils request:kRequestTypeHook toFriend:_friend onSuccess:^{
+    [ParseUtils request:kRequestTypeHook toFriend:_friend onSuccess:^{        
         [friendsManager addFriendToHookRequestsSent:_friend];
         
         [requestManager createRequest:[_friend objectId]];
         
         [self.view showWaitingFor:_friend[kUserFirstNameKey]
                 andHideAfterDelay:kDefaultWaitingViewHideInterval onFinish:^{
-                    [self dismissViewControllerAnimated:NO completion:nil];
+                    
+                    [self dismissViewControllerAnimated:NO completion:^{
+                        [self.delegate updateRequests];
+                    }];
+                
                 }];
+    } onRequestAlreadySent:^{
+        
     } onRequestAlreadyReceived:^{
         [ParseUtils confirmRequest:kRequestTypeHook ofFriend:_friend onSuccess:^{
             [friendsManager removeFriendFromHookRequestsReceived:_friend];
@@ -77,9 +83,13 @@
             
             [requestManager createRequest:[_friend objectId]];
             
-            [self dismissViewControllerAnimated:NO completion:nil];
+            [self dismissViewControllerAnimated:NO completion:^{
+                [self.delegate updateRequests];
+            }];
         } onRequestNotFound:^{
-            [self dismissViewControllerAnimated:NO completion:nil];
+            [self dismissViewControllerAnimated:NO completion:^{
+                [self.delegate updateRequests];
+            }];
         }];
     }];
 }

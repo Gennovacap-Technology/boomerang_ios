@@ -88,6 +88,7 @@
 + (void)request:(NSString *)requestType
        toFriend:(PFUser *)friend
       onSuccess:(void(^)(void))onSuccess
+onRequestAlreadySent:(void (^)(void))onRequestAlreadySent
 onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     
     PFObject *request = [PFObject objectWithClassName:kRequestClass];
@@ -97,11 +98,13 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     request[kRequestType]     = requestType;
     request[kRequestAccepted] = @NO;
     
-    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {        
-        if (succeeded) {
-            onSuccess();
-        } else {
+    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if ([[error localizedDescription] isEqualToString:@"Request already received"]) {
             onRequestAlreadyReceived();
+        } else if ([[error localizedDescription] isEqualToString:@"Request already sent"]) {
+            onRequestAlreadySent();
+        } else {
+            onSuccess();
         }
     }];
 }

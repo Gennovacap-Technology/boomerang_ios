@@ -13,7 +13,11 @@
 
 #import "RequestManager.h"
 
-@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderCellDelegate, FriendCellDelegate, RequestManagerDelegate>
+@protocol FriendsListDelegate <NSObject>
+- (void)updateRequests;
+@end
+
+@interface FriendsListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, GenderCellDelegate, FriendCellDelegate, RequestManagerDelegate, FriendsListDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

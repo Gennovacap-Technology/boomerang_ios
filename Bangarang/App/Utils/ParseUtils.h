@@ -16,6 +16,7 @@
 + (void)request:(NSString *)requestType
        toFriend:(PFUser *)friend
       onSuccess:(void(^)(void))onSuccess
+onRequestAlreadySent:(void (^)(void))onRequestAlreadySent
 onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived;
 
 + (void)makeRelation:(NSString *)relation withFriend:(PFUser *)friend;

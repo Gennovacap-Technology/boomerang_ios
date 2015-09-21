@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FriendsListViewController.h"
+
 @interface MakeLoveAgainViewController : UIViewController
+
+@property (nonatomic, weak) id<FriendsListDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIView *makeLoveAgainView;
 @property (weak, nonatomic) IBOutlet UILabel *friendName;
