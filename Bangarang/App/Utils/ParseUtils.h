@@ -28,6 +28,7 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived;
 
 + (void)removeRequest:(NSString *)requestType
              toFriend:(PFUser *)friend
-            onSuccess:(void(^)(void))onSuccess;
+            onSuccess:(void(^)(void))onSuccess
+    onRequestAccepted:(void(^)(void))onRequestAccepted;
 
 @end

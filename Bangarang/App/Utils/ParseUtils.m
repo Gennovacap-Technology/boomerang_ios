@@ -47,25 +47,26 @@
     [query whereKey:kRequestToUser equalTo:user];
     [query whereKey:kRequestType equalTo:type];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            if ([objects count] > 0) {
-                PFObject *request = objects[0];
-                request[kRequestAccepted] = @YES;
-                [request saveInBackground];
-                
-                if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
-                    [self makeRelation:kRequestTypeBang withFriend:friend];
-                } else if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-                    [self makeRelation:kRequestTypeHook withFriend:friend];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (object) {
+            PFObject *request = object;
+            request[kRequestAccepted] = @YES;
+            
+            [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if (succeeded) {
+                    if ([request[kRequestType] isEqualToString:kRequestTypeBang]) {
+                        [self makeRelation:kRequestTypeBang withFriend:friend];
+                    } else if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
+                        [self makeRelation:kRequestTypeHook withFriend:friend];
+                    }
+                    
+                    onSuccess();
+                } else {
+                    onRequestNotFound();
                 }
-                
-                onSuccess();
-            } else {
-                onRequestNotFound();
-            }
+            }];
         } else {
-            NSLog(@"Error while confirm request");
+            onRequestNotFound();
         }
     }];
 }
@@ -111,7 +112,8 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
 
 + (void)removeRequest:(NSString *)requestType
              toFriend:(PFUser *)friend
-            onSuccess:(void(^)(void))onSuccess {
+            onSuccess:(void(^)(void))onSuccess
+    onRequestAccepted:(void(^)(void))onRequestAccepted {
     
     PFUser *user = [PFUser currentUser];
     
@@ -123,8 +125,12 @@ onRequestAlreadyReceived:(void (^)(void))onRequestAlreadyReceived {
     
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (object) {
-            [object delete];
-            onSuccess();
+            if ([object[kRequestAccepted] boolValue]) {
+                onRequestAccepted();
+            } else {
+                [object delete];
+                onSuccess();
+            }
         } else {
             NSLog(@"The getFirstObject request failed.");
         }

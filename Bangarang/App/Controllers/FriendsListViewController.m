@@ -280,6 +280,12 @@
     
     [ParseUtils removeRequest:kRequestTypeBang toFriend:friend onSuccess:^{
         [requestManager createRequest:[friend objectId]];
+    } onRequestAccepted:^{
+        [friendsManager removeFriendFromBangRequestsSent:friend];
+        [friendsManager addFriendToBangs:friend];
+        
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangList]
+                forState:UIControlStateNormal];
     }];
 }
 
@@ -289,15 +295,16 @@
     
     [ParseUtils confirmRequest:kRequestTypeBang ofFriend:friend onSuccess:^{
         [friendsManager removeFriendFromBangRequestsReceived:friend];
-        
         [friendsManager addFriendToBangs:friend];
         
         [requestManager createRequest:[friend objectId]];
     } onRequestNotFound:^{
         [friendsManager removeFriendFromBangRequestsReceived:friend];
         
-        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageInitialState]
+        [button setImage:[UIImage imageNamed:kFriendsListRequestButtonImageBangRequestPending]
                 forState:UIControlStateNormal];
+        
+        [self sendBangRequestToAFriend:friend withButton:button];
     }];
 }
 
