@@ -34,9 +34,6 @@
 		12F2232E1BACA44300CF3A87 /* FriendsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
-		26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D051B85379C00AEA146 /* NRDateField.m */; };
-		26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D071B85379C00AEA146 /* NRPickerField.m */; };
-		26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D0B1B85379C00AEA146 /* UIColor+Helper.m */; };
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
 		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
@@ -112,12 +109,6 @@
 		26375CE41B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CF11B85378D00AEA146 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26375D011B85379600AEA146 /* Boomerang-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Boomerang-PrefixHeader.pch"; sourceTree = "<group>"; };
-		26375D041B85379C00AEA146 /* NRDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDateField.h; sourceTree = "<group>"; };
-		26375D051B85379C00AEA146 /* NRDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDateField.m; sourceTree = "<group>"; };
-		26375D061B85379C00AEA146 /* NRPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRPickerField.h; sourceTree = "<group>"; };
-		26375D071B85379C00AEA146 /* NRPickerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRPickerField.m; sourceTree = "<group>"; };
-		26375D0A1B85379C00AEA146 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
-		26375D0B1B85379C00AEA146 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		26375D101B8537AC00AEA146 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		26375D141B8537CD00AEA146 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26375D151B8537CD00AEA146 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -294,11 +285,9 @@
 			children = (
 				26375CEF1B85378D00AEA146 /* App */,
 				26375CFD1B85379600AEA146 /* Config */,
-				26375D031B85379C00AEA146 /* Libs */,
 				264EF99B1B8B4E4A0095B861 /* Vendor */,
 				26375CC91B85376200AEA146 /* Supporting Files */,
 			);
-			name = Boomerang;
 			path = Boomerang;
 			sourceTree = "<group>";
 		};
@@ -317,7 +306,6 @@
 				12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */,
 				26375CE31B85376200AEA146 /* Supporting Files */,
 			);
-			name = BoomerangTests;
 			path = BoomerangTests;
 			sourceTree = "<group>";
 		};
@@ -397,19 +385,6 @@
 				12BB5FEF1B9E7AEE00333726 /* Constants.m */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		26375D031B85379C00AEA146 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				26375D041B85379C00AEA146 /* NRDateField.h */,
-				26375D051B85379C00AEA146 /* NRDateField.m */,
-				26375D061B85379C00AEA146 /* NRPickerField.h */,
-				26375D071B85379C00AEA146 /* NRPickerField.m */,
-				26375D0A1B85379C00AEA146 /* UIColor+Helper.h */,
-				26375D0B1B85379C00AEA146 /* UIColor+Helper.m */,
-			);
-			path = Libs;
 			sourceTree = "<group>";
 		};
 		264EF99B1B8B4E4A0095B861 /* Vendor */ = {
@@ -678,13 +653,11 @@
 			files = (
 				129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */,
 				12ED71D51BA920250069A6E8 /* FriendsManager.m in Sources */,
-				26375D0C1B85379C00AEA146 /* NRDateField.m in Sources */,
 				12BB5FED1B9E7ABB00333726 /* ChatManager.m in Sources */,
 				12BB5FEA1B9E794200333726 /* ChatViewController.m in Sources */,
 				26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */,
 				12A61C741BA9C47B00A6C228 /* MakeLoveAgainViewController.m in Sources */,
 				12BB5FF01B9E7AEE00333726 /* Constants.m in Sources */,
-				26375D0F1B85379C00AEA146 /* UIColor+Helper.m in Sources */,
 				12B0B9631BA661E300AC9DAD /* FriendsListViewController.m in Sources */,
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				12BB5FF31B9E7B3C00333726 /* Message.m in Sources */,
@@ -699,7 +672,6 @@
 				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
 				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
-				26375D0D1B85379C00AEA146 /* NRPickerField.m in Sources */,
 				12ED71CC1BA8DD1F0069A6E8 /* WaitingViewController.m in Sources */,
 				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
