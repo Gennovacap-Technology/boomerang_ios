@@ -32,6 +32,11 @@
     [FacebookUtils loginWithFacebookWithBlock:^{
         [self.view hideLoading];
         
+        // Associate current user to current installation
+        PFInstallation *installation = [PFInstallation currentInstallation];
+        installation[@"user"] = [PFUser currentUser];
+        [installation saveInBackground];
+        
         [self loginSuccessfull];
     } onError:^{
         [self.view hideLoading];

@@ -25,6 +25,13 @@
     // Parse Facebook Utils
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
+    // Notifications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
+
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+
     // Go to Friends list if user is already logged
     if ([PFUser currentUser]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Booms" bundle:nil];
@@ -69,5 +76,14 @@
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation];
 }
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current Installation and save it to Parse
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
 
 @end

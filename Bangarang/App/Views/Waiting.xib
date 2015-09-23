@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUy-uN-bxe">
-                    <rect key="frame" x="10" y="217" width="304" height="133"/>
+                    <rect key="frame" x="10" y="180" width="304" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="rUy-uN-bxe" secondAttribute="height" multiplier="16:7" id="rgc-Nr-REQ"/>
                     </constraints>
@@ -32,25 +32,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAITING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-PB-Bta">
-                    <rect key="frame" x="79" y="163" width="158" height="31"/>
+                    <rect key="frame" x="79" y="126" width="158" height="31"/>
                     <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
                     <color key="textColor" red="1" green="0.0" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinePink" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-v5-Jj4">
-                    <rect key="frame" x="122" y="209" width="72" height="3"/>
+                    <rect key="frame" x="122" y="172" width="72" height="3"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinePink" translatesAutoresizingMaskIntoConstraints="NO" id="glY-nk-Y08">
-                    <rect key="frame" x="126" y="370" width="72" height="3"/>
+                    <rect key="frame" x="126" y="333" width="72" height="3"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO CONFIRM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-NM-sp8">
-                    <rect key="frame" x="86" y="388" width="153" height="31"/>
+                    <rect key="frame" x="86" y="351" width="153" height="31"/>
                     <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="28"/>
                     <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-8Y-Xvx">
-                    <rect key="frame" x="6" y="217" width="304" height="133"/>
+                    <rect key="frame" x="6" y="180" width="304" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="height" multiplier="16:7" id="5M8-8a-2cS"/>
                     </constraints>
@@ -70,6 +70,7 @@
                 <constraint firstAttribute="centerX" secondItem="EGE-v5-Jj4" secondAttribute="centerX" constant="2" id="KOg-JB-Nn5"/>
                 <constraint firstAttribute="centerX" secondItem="glY-nk-Y08" secondAttribute="centerX" constant="-2" id="NJk-LR-qAA"/>
                 <constraint firstAttribute="trailing" secondItem="rUy-uN-bxe" secondAttribute="trailing" constant="6" id="Nty-Wn-ttC"/>
+                <constraint firstItem="hIx-8Y-Xvx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="180" id="a4F-la-LTc"/>
                 <constraint firstAttribute="centerX" secondItem="hIx-8Y-Xvx" secondAttribute="centerX" constant="2" id="aGx-oJ-yHe"/>
                 <constraint firstAttribute="trailing" secondItem="hIx-8Y-Xvx" secondAttribute="trailing" constant="10" id="bBY-I0-pD1"/>
                 <constraint firstItem="rUy-uN-bxe" firstAttribute="height" secondItem="hIx-8Y-Xvx" secondAttribute="height" id="cVq-Of-Dw9"/>
@@ -78,9 +79,14 @@
                 <constraint firstItem="rUy-uN-bxe" firstAttribute="width" secondItem="hIx-8Y-Xvx" secondAttribute="width" id="g3V-u3-e9X"/>
                 <constraint firstItem="EGE-v5-Jj4" firstAttribute="top" secondItem="1Py-PB-Bta" secondAttribute="bottom" constant="15" id="vZe-Ay-95a"/>
                 <constraint firstAttribute="centerX" secondItem="FkO-NM-sp8" secondAttribute="centerX" constant="-2" id="web-qH-wMH"/>
-                <constraint firstAttribute="centerY" secondItem="hIx-8Y-Xvx" secondAttribute="centerY" constant="0.5" id="x0Z-dl-kch"/>
+                <constraint firstItem="rUy-uN-bxe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="180" id="yT2-Xu-pLX"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="6QC-wg-bGX"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="name" destination="hIx-8Y-Xvx" id="Ixl-Uf-I7I"/>
                 <outlet property="nameBack" destination="rUy-uN-bxe" id="6el-Ke-a6s"/>
