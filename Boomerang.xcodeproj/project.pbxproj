@@ -105,13 +105,13 @@
 		12ED71D31BA920250069A6E8 /* FriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsManager.h; path = Utils/FriendsManager.h; sourceTree = "<group>"; };
 		12ED71D41BA920250069A6E8 /* FriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsManager.m; path = Utils/FriendsManager.m; sourceTree = "<group>"; };
 		12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsManagerTests.m; sourceTree = "<group>"; };
-		26375CC61B85376200AEA146 /* Bangarang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangarang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26375CC61B85376200AEA146 /* Boomerang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boomerang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CCA1B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CCB1B85376200AEA146 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		26375CDF1B85376200AEA146 /* BangarangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BangarangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26375CDF1B85376200AEA146 /* Boomerang.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Boomerang.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26375CE41B85376200AEA146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26375CF11B85378D00AEA146 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		26375D011B85379600AEA146 /* Bangarang-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bangarang-PrefixHeader.pch"; sourceTree = "<group>"; };
+		26375D011B85379600AEA146 /* Boomerang-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Boomerang-PrefixHeader.pch"; sourceTree = "<group>"; };
 		26375D041B85379C00AEA146 /* NRDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDateField.h; sourceTree = "<group>"; };
 		26375D051B85379C00AEA146 /* NRDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDateField.m; sourceTree = "<group>"; };
 		26375D061B85379C00AEA146 /* NRPickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRPickerField.h; sourceTree = "<group>"; };
@@ -272,8 +272,8 @@
 		26375CBD1B85376200AEA146 = {
 			isa = PBXGroup;
 			children = (
-				26375CC81B85376200AEA146 /* Bangarang */,
-				26375CE21B85376200AEA146 /* BangarangTests */,
+				26375CC81B85376200AEA146 /* Boomerang */,
+				26375CE21B85376200AEA146 /* BoomerangTests */,
 				26375CC71B85376200AEA146 /* Products */,
 				391A7C438953F53438B820E7 /* Pods */,
 				5A80AFE2204A2D56E019E50E /* Frameworks */,
@@ -283,13 +283,13 @@
 		26375CC71B85376200AEA146 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26375CC61B85376200AEA146 /* Bangarang.app */,
-				26375CDF1B85376200AEA146 /* BangarangTests.xctest */,
+				26375CC61B85376200AEA146 /* Boomerang.app */,
+				26375CDF1B85376200AEA146 /* Boomerang.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		26375CC81B85376200AEA146 /* Bangarang */ = {
+		26375CC81B85376200AEA146 /* Boomerang */ = {
 			isa = PBXGroup;
 			children = (
 				26375CEF1B85378D00AEA146 /* App */,
@@ -298,7 +298,8 @@
 				264EF99B1B8B4E4A0095B861 /* Vendor */,
 				26375CC91B85376200AEA146 /* Supporting Files */,
 			);
-			path = Bangarang;
+			name = Boomerang;
+			path = Boomerang;
 			sourceTree = "<group>";
 		};
 		26375CC91B85376200AEA146 /* Supporting Files */ = {
@@ -310,13 +311,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		26375CE21B85376200AEA146 /* BangarangTests */ = {
+		26375CE21B85376200AEA146 /* BoomerangTests */ = {
 			isa = PBXGroup;
 			children = (
 				12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */,
 				26375CE31B85376200AEA146 /* Supporting Files */,
 			);
-			path = BangarangTests;
+			name = BoomerangTests;
+			path = BoomerangTests;
 			sourceTree = "<group>";
 		};
 		26375CE31B85376200AEA146 /* Supporting Files */ = {
@@ -390,7 +392,7 @@
 				26375D141B8537CD00AEA146 /* AppDelegate.h */,
 				26375D151B8537CD00AEA146 /* AppDelegate.m */,
 				26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */,
-				26375D011B85379600AEA146 /* Bangarang-PrefixHeader.pch */,
+				26375D011B85379600AEA146 /* Boomerang-PrefixHeader.pch */,
 				12BB5FEE1B9E7AEE00333726 /* Constants.h */,
 				12BB5FEF1B9E7AEE00333726 /* Constants.m */,
 			);
@@ -505,9 +507,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		26375CC51B85376200AEA146 /* Bangarang */ = {
+		26375CC51B85376200AEA146 /* Boomerang */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26375CE91B85376200AEA146 /* Build configuration list for PBXNativeTarget "Bangarang" */;
+			buildConfigurationList = 26375CE91B85376200AEA146 /* Build configuration list for PBXNativeTarget "Boomerang" */;
 			buildPhases = (
 				74FCFAB7FBE556431297941A /* Check Pods Manifest.lock */,
 				26375CC21B85376200AEA146 /* Sources */,
@@ -519,14 +521,14 @@
 			);
 			dependencies = (
 			);
-			name = Bangarang;
+			name = Boomerang;
 			productName = Bangarang;
-			productReference = 26375CC61B85376200AEA146 /* Bangarang.app */;
+			productReference = 26375CC61B85376200AEA146 /* Boomerang.app */;
 			productType = "com.apple.product-type.application";
 		};
-		26375CDE1B85376200AEA146 /* BangarangTests */ = {
+		26375CDE1B85376200AEA146 /* BoomerangTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26375CEC1B85376200AEA146 /* Build configuration list for PBXNativeTarget "BangarangTests" */;
+			buildConfigurationList = 26375CEC1B85376200AEA146 /* Build configuration list for PBXNativeTarget "BoomerangTests" */;
 			buildPhases = (
 				F3A1A7910820F927ADE6DA44 /* Check Pods Manifest.lock */,
 				26375CDB1B85376200AEA146 /* Sources */,
@@ -539,9 +541,9 @@
 			dependencies = (
 				26375CE11B85376200AEA146 /* PBXTargetDependency */,
 			);
-			name = BangarangTests;
-			productName = BangarangTests;
-			productReference = 26375CDF1B85376200AEA146 /* BangarangTests.xctest */;
+			name = BoomerangTests;
+			productName = BoomerangTests;
+			productReference = 26375CDF1B85376200AEA146 /* Boomerang.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -562,7 +564,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 26375CC11B85376200AEA146 /* Build configuration list for PBXProject "Bangarang" */;
+			buildConfigurationList = 26375CC11B85376200AEA146 /* Build configuration list for PBXProject "Boomerang" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -575,8 +577,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26375CC51B85376200AEA146 /* Bangarang */,
-				26375CDE1B85376200AEA146 /* BangarangTests */,
+				26375CC51B85376200AEA146 /* Boomerang */,
+				26375CDE1B85376200AEA146 /* BoomerangTests */,
 			);
 		};
 /* End PBXProject section */
@@ -719,7 +721,7 @@
 /* Begin PBXTargetDependency section */
 		26375CE11B85376200AEA146 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 26375CC51B85376200AEA146 /* Bangarang */;
+			target = 26375CC51B85376200AEA146 /* Boomerang */;
 			targetProxy = 26375CE01B85376200AEA146 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -813,13 +815,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
-				INFOPLIST_FILE = Bangarang/Info.plist;
+				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
+				INFOPLIST_FILE = Boomerang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
+				PRODUCT_NAME = Boomerang;
+				SWIFT_OBJC_BRIDGING_HEADER = "Boomerang/Config/Bangarang-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -831,13 +833,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Bangarang/Config/Bangarang-PrefixHeader.pch";
-				INFOPLIST_FILE = Bangarang/Info.plist;
+				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
+				INFOPLIST_FILE = Boomerang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bangarang/Config/Bangarang-Bridging-Header.h";
+				PRODUCT_NAME = Boomerang;
+				SWIFT_OBJC_BRIDGING_HEADER = "Boomerang/Config/Bangarang-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -854,11 +856,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BangarangTests/Info.plist;
+				INFOPLIST_FILE = BoomerangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bangarang.app/Bangarang";
+				PRODUCT_NAME = Boomerang;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boomerang.app/Boomerang";
 			};
 			name = Debug;
 		};
@@ -871,18 +873,18 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BangarangTests/Info.plist;
+				INFOPLIST_FILE = BoomerangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bangarang.app/Bangarang";
+				PRODUCT_NAME = Boomerang;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boomerang.app/Boomerang";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26375CC11B85376200AEA146 /* Build configuration list for PBXProject "Bangarang" */ = {
+		26375CC11B85376200AEA146 /* Build configuration list for PBXProject "Boomerang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26375CE71B85376200AEA146 /* Debug */,
@@ -891,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26375CE91B85376200AEA146 /* Build configuration list for PBXNativeTarget "Bangarang" */ = {
+		26375CE91B85376200AEA146 /* Build configuration list for PBXNativeTarget "Boomerang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26375CEA1B85376200AEA146 /* Debug */,
@@ -900,7 +902,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26375CEC1B85376200AEA146 /* Build configuration list for PBXNativeTarget "BangarangTests" */ = {
+		26375CEC1B85376200AEA146 /* Build configuration list for PBXNativeTarget "BoomerangTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26375CED1B85376200AEA146 /* Debug */,

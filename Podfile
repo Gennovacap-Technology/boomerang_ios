@@ -9,7 +9,7 @@
 # iOS Platform
 platform :ios, '8.0'
 
-link_with 'Bangarang', 'BangarangTests'
+link_with 'Boomerang', 'BoomerangTests'
 
 pod 'AFNetworking'
 pod 'APLKeyboardControls'
@@ -25,8 +25,6 @@ pod 'Underscore.m'
 
 pod 'UIView+Rounded', '~> 0.1'
 pod 'SDWebImage', '~> 3.7'
-
-#pod 'MagicalRecord'
 
 pod 'JSQMessagesViewController'
 pod 'Firebase', '>= 2.3.3'

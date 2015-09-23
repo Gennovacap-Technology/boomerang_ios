@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -12,8 +12,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-Ep-X7B">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="gml-3K-x3f">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boomerang" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-CU-pW5">
+                    <rect key="frame" x="20" y="143" width="280" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dn4-CU-pW5" secondAttribute="height" multiplier="14:5" id="PF7-7L-RaI"/>
+                    </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="om8-03-H5c">
                     <rect key="frame" x="119" y="479" width="82" height="73"/>
@@ -35,30 +41,21 @@
                         </mask>
                     </variation>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bangarang" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-Ls-xfi">
-                    <rect key="frame" x="20" y="139" width="280" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="iRH-Ls-xfi" secondAttribute="height" multiplier="654:233" id="tWp-wk-jtA"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="eLH-Ep-X7B" secondAttribute="bottom" id="3yQ-QX-Jof"/>
                 <constraint firstAttribute="bottom" secondItem="om8-03-H5c" secondAttribute="bottom" constant="16" id="Lw2-d7-0ga"/>
-                <constraint firstAttribute="trailing" secondItem="iRH-Ls-xfi" secondAttribute="trailing" constant="20" id="P27-uN-EUa"/>
-                <constraint firstItem="eLH-Ep-X7B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S3e-kw-z8U"/>
                 <constraint firstItem="om8-03-H5c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="119" id="Vjo-fr-6RD"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TMD-0W-rI0" secondAttribute="trailing" constant="95" id="WuF-DJ-rnd"/>
-                <constraint firstItem="eLH-Ep-X7B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZsG-qx-pfC"/>
+                <constraint firstAttribute="trailing" secondItem="dn4-CU-pW5" secondAttribute="trailing" constant="20" id="afv-8I-IcB"/>
                 <constraint firstAttribute="centerX" secondItem="om8-03-H5c" secondAttribute="centerX" id="cKK-l9-0DT"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="om8-03-H5c" secondAttribute="trailing" constant="119" id="cPw-Ad-pTx"/>
-                <constraint firstAttribute="trailing" secondItem="eLH-Ep-X7B" secondAttribute="trailing" id="dAe-2p-jmy"/>
-                <constraint firstItem="iRH-Ls-xfi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="139" id="gAj-Po-KeF"/>
                 <constraint firstAttribute="centerX" secondItem="TMD-0W-rI0" secondAttribute="centerX" id="hak-GV-EPU"/>
+                <constraint firstItem="dn4-CU-pW5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ngb-df-7HO"/>
                 <constraint firstItem="TMD-0W-rI0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="95" id="pVC-oI-721"/>
                 <constraint firstAttribute="centerY" secondItem="TMD-0W-rI0" secondAttribute="centerY" constant="0.5" id="q0s-6d-HsQ"/>
-                <constraint firstItem="iRH-Ls-xfi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="wiK-zI-kBy"/>
+                <constraint firstItem="dn4-CU-pW5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xUf-Ml-upr"/>
+                <constraint firstItem="TMD-0W-rI0" firstAttribute="top" secondItem="dn4-CU-pW5" secondAttribute="bottom" constant="21" id="zuO-nm-Rek"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -67,7 +64,7 @@
     </objects>
     <resources>
         <image name="BackgroundLoading" width="750" height="1334"/>
-        <image name="Bangarang" width="654" height="233"/>
+        <image name="Boomerang" width="654" height="233"/>
         <image name="Loading" width="147" height="132"/>
         <image name="MadeWithLove" width="270" height="80"/>
     </resources>
