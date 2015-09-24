@@ -9,8 +9,6 @@
 # iOS Platform
 platform :ios, '8.0'
 
-link_with 'Boomerang', 'BoomerangTests'
-
 pod 'AFNetworking'
 pod 'APLKeyboardControls'
 pod 'MBProgressHUD'
@@ -28,3 +26,5 @@ pod 'SDWebImage', '~> 3.7'
 
 pod 'JSQMessagesViewController'
 pod 'Firebase', '>= 2.3.3'
+
+link_with 'BoomerangTests', 'BoomerangUITests'

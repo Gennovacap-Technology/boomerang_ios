@@ -35,9 +35,6 @@
 
     kDefaultWaitForExpectationsTimeout = 10.0;
     
-    [Parse setApplicationId:kParseApplicationId
-                  clientKey:kParseClientKey];
-    
     friendsManager = [[FriendsManager alloc] init];
     
     XCTestExpectation *expectationLogin = [self expectationWithDescription:@"Parse login"];
