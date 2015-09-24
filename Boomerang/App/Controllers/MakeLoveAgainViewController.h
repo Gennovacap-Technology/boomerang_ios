@@ -15,10 +15,13 @@
 @property (nonatomic, weak) id<FriendsListDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIView *makeLoveAgainView;
+@property (weak, nonatomic) IBOutlet UIView *makeLoveAgainText;
 @property (weak, nonatomic) IBOutlet UILabel *friendName;
 @property (weak, nonatomic) IBOutlet UILabel *friendNameBack;
+@property (weak, nonatomic) IBOutlet UIImageView *boomImageView;
 
 @property (strong, nonatomic) PFUser *friend;
+@property (strong, nonatomic) PFObject *request;
 
 - (IBAction)buttonYes:(id)sender;
 - (IBAction)buttonNo:(id)sender;

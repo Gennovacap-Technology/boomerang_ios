@@ -30,6 +30,9 @@
     RequestManager *requestManager;
     FriendsManager *friendsManager;
     
+    NSMutableArray *hooksConfirmed;
+    PFObject *requestOfBoom;
+    
     NSUInteger currentNumberOfRequests;
 }
 
@@ -85,12 +88,34 @@
 }
 
 - (void)updateRequests {
+    if ([hooksConfirmed count] > 0) {
+        [self showBooms];
+        return;
+    }
+    
     [friendsManager loadRequests:^(NSUInteger requestsReceived){
+        hooksConfirmed = [NSMutableArray arrayWithArray:[friendsManager hooksConfirmed]];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
             [self updateRequestsBarButtomItem:requestsReceived];
+            
+            [self showBooms];
         });
     }];
+}
+
+- (void)showBooms {
+    if ([hooksConfirmed count] > 0) {
+        PFObject *request = [hooksConfirmed objectAtIndex:0];
+        [hooksConfirmed removeObjectAtIndex:0];
+        
+        [request fetchIfNeeded];
+        
+        requestOfBoom = request;
+        
+        [self performSegueWithIdentifier:@"makeLoveAgainSegue" sender:self];
+    }
 }
 
 #pragma mark - TableView Delegate Methods
@@ -438,10 +463,17 @@
     if([[segue identifier] isEqualToString:@"chatSegue"]) {
         ChatViewController *destinationController = [segue destinationViewController];
         destinationController.friendUser = [friendsManager getFriendOfCurrentGenderAtIndex:selectedRow];
-    } else if ([[segue identifier] isEqualToString:@"makeLoveAgainSegue"]) {
+    } else if ([[segue identifier] isEqualToString:@"makeLoveAgainSegue"]) {        
         MakeLoveAgainViewController *destinationController = [segue destinationViewController];
         destinationController.delegate = self;
-        destinationController.friend = [friendsManager getFriendOfCurrentGenderAtIndex:selectedRow];
+        if (requestOfBoom) {
+            destinationController.request = requestOfBoom;
+            [destinationController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+            
+            requestOfBoom = NULL;
+        } else {
+            destinationController.friend = [friendsManager getFriendOfCurrentGenderAtIndex:selectedRow];
+        }
     }
 }
 

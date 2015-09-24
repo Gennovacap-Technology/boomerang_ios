@@ -44,4 +44,6 @@
 - (void)removeFriendFromHookRequestsReceived:(PFUser *)friend;
 - (void)removeFriendFromBangRequestsReceived:(PFUser *)friend;
 
+- (NSArray *)hooksConfirmed;
+
 @end

@@ -26,6 +26,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (_request) {
+        [self setBoomTime];
+        PFUser *friend = [_request objectForKey:kRequestToUser];
+        
+        [friend fetchIfNeeded];
+        _friend = friend;
+                
+        [_request delete];
+        
+        [self setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    } else {
+        [self hideBoomTime];
+    }
+    
     friendsManager = [FriendsManager sharedManager];
     
     [_makeLoveAgainView.layer setCornerRadius:5.0f];
@@ -52,8 +66,22 @@
 {
     [super viewWillDisappear:animated];
     
+    [self.delegate updateRequests];
+    
     [[UIApplication sharedApplication] setStatusBarHidden:NO
                                             withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)hideBoomTime {
+    [_makeLoveAgainView setHidden:NO];
+    [_makeLoveAgainText setHidden:NO];
+    [_boomImageView setHidden:YES];
+}
+
+- (void)setBoomTime {
+    [_makeLoveAgainView setHidden:YES];
+    [_makeLoveAgainText setHidden:YES];
+    [_boomImageView setHidden:NO];
 }
 
 - (IBAction)buttonYes:(id)sender {
@@ -75,6 +103,8 @@
     } onRequestAlreadySent:^{
         
     } onRequestAlreadyReceived:^{
+        [self setBoomTime];
+        
         [ParseUtils confirmRequest:kRequestTypeHook ofFriend:_friend onSuccess:^{
             [friendsManager removeFriendFromHookRequestsReceived:_friend];
             [friendsManager removeFriendFromBangs:_friend];
@@ -83,11 +113,11 @@
             
             [requestManager createRequest:[_friend objectId]];
             
-            [self dismissViewControllerAnimated:NO completion:^{
-                [self.delegate updateRequests];
-            }];
+            //[self dismissViewControllerAnimated:NO completion:^{
+            //    [self.delegate updateRequests];
+            //}];
         } onRequestNotFound:^{
-            [self dismissViewControllerAnimated:NO completion:^{
+            [self dismissViewControllerAnimated:YES completion:^{
                 [self.delegate updateRequests];
             }];
         }];
@@ -95,11 +125,11 @@
 }
 
 - (IBAction)buttonNo:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)buttonBack:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -23,6 +23,8 @@
     NSMutableArray *bangs;
     NSMutableArray *hooks;
     
+    NSMutableArray *hooksConfirmed;
+    
     NSString *currentGender;
 }
 
@@ -53,6 +55,8 @@
     
     bangs = [[NSMutableArray alloc] init];
     hooks = [[NSMutableArray alloc] init];
+    
+    hooksConfirmed = [[NSMutableArray alloc] init];
     
     currentGender = kFacebookMaleString;
     
@@ -124,6 +128,8 @@
         [bangRequestsReceived removeAllObjects];
         [hookRequestsReceived removeAllObjects];
         
+        [hooksConfirmed removeAllObjects];
+        
         NSString *currentUserId = [[PFUser currentUser] objectId];
         NSUInteger requestsReceived = 0;
         
@@ -155,6 +161,8 @@
                         
                         if ([request[kRequestAccepted] boolValue]) {
                             [ParseUtils makeRelation:kRequestTypeHook withFriend:friend];
+                            
+                            [hooksConfirmed addObject:request];
                             
                             [self removeFriend:friend fromArray:bangs];
                             [hooks addObject:friend];
@@ -221,11 +229,6 @@
                 return YES;
             }
             
-            // Confirmed Hook
-        } else if([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-            if ([request[kRequestAccepted] boolValue]) {
-                return YES;
-            }
         }
         
     // Request received
@@ -237,7 +240,9 @@
         
         // Hook Received
         if ([request[kRequestType] isEqualToString:kRequestTypeHook]) {
-            return YES;
+            if (![request[kRequestAccepted] boolValue]) {
+                return YES;
+            }
         }
     }
     
@@ -339,6 +344,10 @@
 
 - (void)removeFriendFromBangRequestsReceived:(PFUser *)friend {
     [self removeFriend:friend fromArray:bangRequestsReceived];
+}
+
+- (NSArray *)hooksConfirmed {
+    return hooksConfirmed;
 }
 
 @end
