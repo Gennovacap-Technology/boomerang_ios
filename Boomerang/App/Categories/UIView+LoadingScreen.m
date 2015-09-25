@@ -17,6 +17,8 @@
     
     LoadingViewController *mainView = [subviewArray objectAtIndex:0];
     
+    mainView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    
     [self addSubview:mainView];
 }
 

@@ -36,6 +36,8 @@
     mainView.name.text = name;
     mainView.nameBack.text = name;
     
+    mainView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    
     UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                       action:@selector(hideLoading)];
     
