@@ -76,6 +76,9 @@
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"ChatHeader" owner:self options:nil];
     ChatHeaderView *mainView = [subviewArray objectAtIndex:0];
 
+    mainView.labelFriendName.numberOfLines = 1;
+    mainView.labelFriendName.adjustsFontSizeToFitWidth = YES;
+    
     mainView.labelFriendName.text = _friendUser[kUserFirstNameKey];
     
     [mainView.buttonBack addTarget:self
