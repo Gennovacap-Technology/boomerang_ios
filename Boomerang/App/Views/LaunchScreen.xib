@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="gml-3K-x3f">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLoading" translatesAutoresizingMaskIntoConstraints="NO" id="gml-3K-x3f">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boomerang" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-CU-pW5">
@@ -44,7 +44,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="gml-3K-x3f" secondAttribute="bottom" id="ITW-G9-ojS"/>
                 <constraint firstAttribute="bottom" secondItem="om8-03-H5c" secondAttribute="bottom" constant="16" id="Lw2-d7-0ga"/>
+                <constraint firstItem="gml-3K-x3f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M15-eo-bQX"/>
+                <constraint firstAttribute="trailing" secondItem="gml-3K-x3f" secondAttribute="trailing" id="NLC-fo-9eK"/>
+                <constraint firstItem="gml-3K-x3f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ngl-JH-vug"/>
                 <constraint firstItem="om8-03-H5c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="119" id="Vjo-fr-6RD"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TMD-0W-rI0" secondAttribute="trailing" constant="95" id="WuF-DJ-rnd"/>
                 <constraint firstAttribute="trailing" secondItem="dn4-CU-pW5" secondAttribute="trailing" constant="20" id="afv-8I-IcB"/>

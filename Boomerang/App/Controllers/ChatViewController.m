@@ -11,6 +11,8 @@
 #import "Message.h"
 #import "ChatManager.h"
 
+#import "ChatHeaderView.h"
+
 @interface ChatViewController () {
     ChatManager *chatManager;
 }
@@ -23,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    
     self.messages = [[NSMutableArray alloc] init];
     
     // Chat Users
@@ -49,9 +51,8 @@
     self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSizeZero;
     self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
     
-    self.collectionView.backgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
-    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundLogin"]];
-    [backgroundImage setContentMode:UIViewContentModeScaleAspectFit];
+    // Collection View Background
+    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundLogin"]];
     
     // Send Button
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -68,14 +69,31 @@
     [self.inputToolbar.contentView.textView setPlaceHolder:@"Type something..."];
     [self.inputToolbar.contentView.textView setPlaceHolderTextColor:[UIColor colorWithRed:1.000 green:0.000 blue:0.506 alpha:0.500]];
     
-    [self.collectionView.backgroundView addSubview:backgroundImage];
-    
     [self setAutomaticallyScrollsToMostRecentMessage:YES];
+    
+    self.topContentAdditionalInset = 100;
+
+    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"ChatHeader" owner:self options:nil];
+    ChatHeaderView *mainView = [subviewArray objectAtIndex:0];
+
+    mainView.labelFriendName.text = _friendUser[kUserFirstNameKey];
+    
+    [mainView.buttonBack addTarget:self
+                            action:@selector(backButton)
+                  forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:mainView];
+}
+
+- (void)backButton {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     self.inputToolbar.contentView.leftBarButtonItem = nil;
 }
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Wolf in the City.otf">
+            <string>WolfintheCity</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-aW-ZwB">
+                    <rect key="frame" x="90" y="10" width="140" height="80"/>
+                    <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="80"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7A-20-eK7">
+                    <rect key="frame" x="254" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="X6K-3j-Mpq"/>
+                        <constraint firstAttribute="height" constant="50" id="mAz-we-dp3"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="ButtonHeartPinkBackground">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Viu-Xz-Ih1">
+                    <rect key="frame" x="16" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8Gd-NT-NGl"/>
+                        <constraint firstAttribute="width" constant="50" id="ERw-uM-ZSg"/>
+                    </constraints>
+                    <state key="normal" image="ButtonBack">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Viu-Xz-Ih1" firstAttribute="centerY" secondItem="o5R-aW-ZwB" secondAttribute="centerY" id="214-tH-QeY"/>
+                <constraint firstItem="M7A-20-eK7" firstAttribute="centerY" secondItem="o5R-aW-ZwB" secondAttribute="centerY" id="7tH-wT-VaE"/>
+                <constraint firstItem="Viu-Xz-Ih1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Jm0-6J-7mt"/>
+                <constraint firstItem="o5R-aW-ZwB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="RUT-ps-TSb"/>
+                <constraint firstItem="o5R-aW-ZwB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Viu-Xz-Ih1" secondAttribute="trailing" constant="24" id="bzP-Gg-ZB1"/>
+                <constraint firstItem="o5R-aW-ZwB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cg1-HC-gW0"/>
+                <constraint firstItem="M7A-20-eK7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o5R-aW-ZwB" secondAttribute="trailing" constant="22" id="vwk-Vw-7lg"/>
+                <constraint firstAttribute="trailing" secondItem="M7A-20-eK7" secondAttribute="trailing" constant="16" id="y3u-5Z-vt4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonBack" destination="Viu-Xz-Ih1" id="DJY-KL-bXu"/>
+                <outlet property="labelFriendName" destination="o5R-aW-ZwB" id="j0Y-T3-uxv"/>
+            </connections>
+            <point key="canvasLocation" x="383" y="119"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ButtonBack" width="96" height="96"/>
+        <image name="ButtonHeartPinkBackground" width="196" height="196"/>
+    </resources>
+</document>

@@ -168,6 +168,9 @@
                                                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                         <rect key="frame" x="84" y="18" width="153" height="29"/>
                                                     </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="83" y="18" width="153" height="29"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-os-gV3">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -321,7 +324,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="cBS-ub-ncL" id="X8l-Xf-xnf"/>
-                        <segue destination="bcS-a9-iZt" kind="show" identifier="chatSegue" id="Qdf-UR-pl2"/>
+                        <segue destination="bcS-a9-iZt" kind="presentation" identifier="chatSegue" id="Qdf-UR-pl2"/>
                         <segue destination="tAD-x5-zjo" kind="presentation" identifier="makeLoveAgainSegue" id="9gX-qY-VHU"/>
                         <segue destination="o2W-98-YCy" kind="show" identifier="requestsSegue" id="xku-oy-0qP"/>
                     </connections>
@@ -522,12 +525,11 @@
                     <view key="view" contentMode="scaleToFill" id="4yH-IK-EjW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVn-ei-WuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4086" y="547"/>
+            <point key="canvasLocation" x="4086" y="546.75"/>
         </scene>
         <!--Make Love Again View Controller-->
         <scene sceneID="b0h-XB-PGZ">
@@ -689,28 +691,6 @@
                                     <action selector="buttonBack:" destination="tAD-x5-zjo" eventType="touchUpInside" id="9pq-PR-HuM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juV-fr-moO">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mDO-b4-pFk"/>
-                                    <constraint firstAttribute="width" constant="50" id="s1d-MJ-nU0"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="ButtonHeartPinkBackground">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="mDO-b4-pFk"/>
-                                        <exclude reference="s1d-MJ-nU0"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="mDO-b4-pFk"/>
-                                        <include reference="s1d-MJ-nU0"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvS-0E-MfS">
                                 <rect key="frame" x="6" y="217" width="304" height="133"/>
                                 <constraints>
@@ -741,6 +721,29 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juV-fr-moO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mDO-b4-pFk"/>
+                                    <constraint firstAttribute="width" constant="50" id="s1d-MJ-nU0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ButtonHeartPinkBackground">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mDO-b4-pFk"/>
+                                        <exclude reference="s1d-MJ-nU0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="249" y="35" width="50" height="50"/>
+                                    <mask key="constraints">
+                                        <include reference="mDO-b4-pFk"/>
+                                        <include reference="s1d-MJ-nU0"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -789,9 +792,9 @@
                                 <exclude reference="FzZ-5I-85u"/>
                                 <exclude reference="e85-aV-kyC"/>
                                 <exclude reference="h5C-go-YmB"/>
-                                <exclude reference="juV-fr-moO"/>
                                 <exclude reference="mvS-0E-MfS"/>
                                 <exclude reference="ewB-2X-M0D"/>
+                                <exclude reference="juV-fr-moO"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7PD-kk-4PR"/>
@@ -828,9 +831,9 @@
                                 <include reference="FzZ-5I-85u"/>
                                 <include reference="e85-aV-kyC"/>
                                 <include reference="h5C-go-YmB"/>
-                                <include reference="juV-fr-moO"/>
                                 <include reference="mvS-0E-MfS"/>
                                 <include reference="ewB-2X-M0D"/>
+                                <include reference="juV-fr-moO"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7PD-kk-4PR"/>

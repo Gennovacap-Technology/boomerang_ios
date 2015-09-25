@@ -42,9 +42,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    // Status Bar
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    
     // Navigation Bar
     UIImage* logoImage = [UIImage imageNamed:@"Browse"];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
@@ -65,6 +62,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    // Status Bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     if([self respondsToSelector:@selector(edgesForExtendedLayout)])
         [self setEdgesForExtendedLayout:UIRectEdgeBottom];
