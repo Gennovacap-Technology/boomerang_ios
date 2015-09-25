@@ -53,6 +53,20 @@
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundLogin"]];
     [backgroundImage setContentMode:UIViewContentModeScaleAspectFit];
     
+    UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *btnImage = [UIImage imageNamed:@"ButtonSend"];
+    [sendButton setImage:btnImage forState:UIControlStateNormal];
+    
+    self.inputToolbar.contentView.rightBarButtonItem = sendButton;
+    
+    [self.inputToolbar.contentView setBackgroundColor:[UIColor colorWithWhite:0.157 alpha:1.000]];
+    [self.inputToolbar.contentView.textView setBackgroundColor:[UIColor colorWithWhite:0.157 alpha:1.000]];
+    [self.inputToolbar.contentView.textView.layer setBorderColor:(__bridge CGColorRef _Nullable)([UIColor colorWithWhite:0.157 alpha:1.000])];
+    [self.inputToolbar.contentView.textView setTextColor:[UIColor colorWithRed:1.000 green:0.000 blue:0.506 alpha:1.000]];
+    [self.inputToolbar.contentView.textView setPlaceHolder:@"Type something..."];
+    [self.inputToolbar.contentView.textView setPlaceHolderTextColor:[UIColor colorWithRed:1.000 green:0.000 blue:0.506 alpha:0.500]];
+    
+    
     [self.collectionView.backgroundView addSubview:backgroundImage];
     
     [self setAutomaticallyScrollsToMostRecentMessage:YES];
