@@ -386,13 +386,8 @@
 - (UIButton *)requestsButton:(NSInteger)requests {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    if (IS_STANDARD_IPHONE_6_PLUS) {
-        button.frame = CGRectMake(0, 0, 50, 50);
-        button.layer.cornerRadius = 25.0;
-    } else {
-        button.frame = CGRectMake(0, 0, 30, 30);
-        button.layer.cornerRadius = 15.0;
-    }
+    button.frame = CGRectMake(0, 0, 30, 30);
+    button.layer.cornerRadius = 15.0;
     
     button.titleLabel.font = [UIFont systemFontOfSize:12];
     
@@ -426,11 +421,7 @@
     UIImage *image = [UIImage imageNamed:@"ButtonBombBlack"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    if (IS_STANDARD_IPHONE_6_PLUS) {
-        button.frame = CGRectMake(0, 0, 50, 50);
-    } else {
-        button.frame = CGRectMake(0, 0, 30, 30);
-    }
+    button.frame = CGRectMake(0, 0, 30, 30);
     
     [button setBackgroundImage:image forState:UIControlStateNormal];
     
