@@ -46,11 +46,6 @@ NSString *const kFacebookMaleString        = @"male";
 NSString *const kFacebookFemaleString      = @"female";
 NSString *const kFacebookProfilePictureUrl = @"https://graph.facebook.com/%@/picture?type=square&width=120&height=120&return_ssl_resources=1";
 
-#pragma mark - Parse
-
-NSString *const kParseApplicationId = @"oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2";
-NSString *const kParseClientKey     = @"2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC";
-
 #pragma mark - Firebase
 
 NSString *const kFirebaseUrl = @"https://appcraft-chat-test.firebaseio.com";
