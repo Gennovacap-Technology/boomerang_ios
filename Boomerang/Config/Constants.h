@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Gennovacap. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #pragma mark - iPhone model detection macros
 
 typedef enum {

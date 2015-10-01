@@ -8,21 +8,11 @@
 
 #import <Availability.h>
 
-#ifndef __IPHONE_7_1
-    #warning "This project uses features only available in iOS SDK 7.1 and later."
-#endif
-
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <FBSDKCoreKit/FBSDKCoreKit.h>
     #import <Parse/Parse.h>
     #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
-    #import "Underscore.h"
-    #define _ Underscore
-    #import "MyiOSLogicBlocks.h"
-    #import "MyiOSThirdPartyViewHelpers.h"
-    #import <AFNetworking/AFNetworking.h>
-    #import <AFNetworking/UIImageView+AFNetworking.h>
     #import "Constants.h"
 #endif
