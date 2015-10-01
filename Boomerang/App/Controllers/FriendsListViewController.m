@@ -166,6 +166,22 @@
         
         [self loadButton:cell.bombButton forFriend:friend];
         
+        if ([friendsManager friendRelation:friend] == kFriendHookRelation) {            
+            NSMutableAttributedString *notifyingStr = [[NSMutableAttributedString alloc] initWithString:@"Boomerang | Chat now !"];
+            [notifyingStr beginEditing];
+            [notifyingStr addAttribute:NSFontAttributeName
+                                 value:[UIFont fontWithName:@"Wolf in the City" size:26.0]
+                                 range:NSMakeRange(0,9)];
+            [notifyingStr endEditing];
+            
+            cell.status.attributedText = notifyingStr;
+            
+            cell.status.hidden = NO;
+        } else {
+            cell.status.hidden = YES;
+        }
+        
+        
         return cell;
     }
 }
