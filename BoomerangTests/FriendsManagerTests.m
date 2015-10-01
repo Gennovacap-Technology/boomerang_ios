@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import "FriendsManager.h"
+#import "Parse.h"
+
 #import "ParseUtils.h"
+#import "FriendsManager.h"
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface FriendsManagerTests : XCTestCase {
     FriendsManager *friendsManager;
+    ParseUtils *parseUtils;
     
     PFUser *currentUser;
     PFUser *friend1;
@@ -33,13 +36,17 @@
 - (void)setUp {
     [super setUp];
 
-    kDefaultWaitForExpectationsTimeout = 10.0;
+    kDefaultWaitForExpectationsTimeout = 20.0;
+    //self.continueAfterFailure = NO;
     
+    [Parse setApplicationId:@"kb5KPJAtHIlxwXcSXBSsENdU8ysMZ6oTAGYQUZpv"
+                  clientKey:@"xV1Xcwz6KMcUIZMAhey5U1raWRbWH16WIrrYVUQy"];
+
     friendsManager = [[FriendsManager alloc] init];
     
     XCTestExpectation *expectationLogin = [self expectationWithDescription:@"Parse login"];
     
-    [PFUser logInWithUsernameInBackground:@"rt07x263FGsLxK1BpV3pgsj5I" password:@"helen"
+    [PFUser logInWithUsernameInBackground:@"ItcCxuUzPBFehvQl0NPfHYh0P" password:@"helen"
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             [expectationLogin fulfill];
@@ -55,7 +62,8 @@
     }];
     
     PFQuery *query = [PFUser query];
-    [query whereKey:@"objectId" containedIn:@[@"tlfJPo1hUg", @"MnoZreXejV", @"oaCMxqZx5m"]];
+    
+    [query whereKey:@"objectId" containedIn:@[@"hAN4aHu9N1", @"ssCgbcjI89", @"gx8c9DvEBV"]];
     
     XCTestExpectation *expectationFriends = [self expectationWithDescription:@"Parse query"];
     
@@ -77,6 +85,8 @@
 
 - (void)tearDown {
     [super tearDown];
+    
+    //[PFUser logOut];
     
     friendsManager = NULL;
     
@@ -213,7 +223,7 @@
     
     notify = [friendsManager shouldNotifyCurrentUser:request];
     
-    XCTAssert(notify);
+    XCTAssertFalse(notify);
     
     request[kRequestFromUserRead] = @NO;
     request[kRequestToUserRead]   = @YES;
@@ -221,13 +231,13 @@
     
     notify = [friendsManager shouldNotifyCurrentUser:request];
     
-    XCTAssert(notify);
+    XCTAssertFalse(notify);
     
-    request[kRequestFromUserRead] = @NO;
+    request[kRequestFromUserRead] = @YES;
     request[kRequestToUserRead]   = @YES;
     request[kRequestAccepted]     = @YES;
     
-    XCTAssert(notify);
+    XCTAssertFalse(notify);
 }
 
 - (void)testShouldNotifyCurrentUserOnHookRequestsReceived {
@@ -376,7 +386,7 @@
     [self deleteAllRequests];
 }
 
-/*- (void)testUserCanRemoveABangRequest {
+- (void)testUserCanRemoveABangRequest {
     PFObject *request = [PFObject objectWithClassName:kRequestClass];
     
     request[kRequestFromUser]     = [PFUser currentUser];
@@ -389,12 +399,50 @@
     
     XCTAssert([self saveRequest:request]);
     
-    [ParseUtils removeRequest:kRequestTypeBang toFriend:friend1 onSuccess:^{
-        
+    XCTestExpectation *expectationRemove = [self expectationWithDescription:@"Remove Request"];
+    
+    [self removeRequest:kRequestTypeBang toFriend:friend1 onSuccess:^{
+        [expectationRemove fulfill];
+    } onRequestAccepted:^{
+        [expectationRemove fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:kDefaultWaitForExpectationsTimeout handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
     }];
     
     XCTAssertFalse([self verifyIfRequestExists:request]);
-}*/
+    
+    request = [PFObject objectWithClassName:kRequestClass];
+    
+    request[kRequestFromUser]     = [PFUser currentUser];
+    request[kRequestToUser]       = friend1;
+    request[kRequestType]         = kRequestTypeBang;
+    
+    request[kRequestFromUserRead] = @NO;
+    request[kRequestToUserRead]   = @YES;
+    request[kRequestAccepted]     = @NO;
+    
+    XCTAssert([self saveRequest:request]);
+    
+    expectationRemove = [self expectationWithDescription:@"Remove Request"];
+    
+    [self removeRequest:kRequestTypeBang toFriend:friend1 onSuccess:^{
+        [expectationRemove fulfill];
+    } onRequestAccepted:^{
+        [expectationRemove fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:kDefaultWaitForExpectationsTimeout handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+    
+    XCTAssertFalse([self verifyIfRequestExists:request]);
+}
 
 - (BOOL)saveRequest:(PFObject *)request {
     PFObject *myRequest = request;
@@ -448,7 +496,37 @@
 
 - (BOOL)saveAndVerifyIfRequestExists:(PFObject *)request {
     [self saveRequest:request];
+    
+    //[NSThread sleepForTimeInterval:2];
+    
     return [self verifyIfRequestExists:request];
+}
+
+- (void)removeRequest:(NSString *)requestType
+             toFriend:(PFUser *)friend
+            onSuccess:(void(^)(void))onSuccess
+    onRequestAccepted:(void(^)(void))onRequestAccepted {
+    
+    PFUser *user = [PFUser currentUser];
+    
+    PFQuery *query = [PFQuery queryWithClassName:kRequestClass];
+    
+    [query whereKey:kRequestFromUser equalTo:user];
+    [query whereKey:kRequestToUser equalTo:friend];
+    [query whereKey:kRequestType equalTo:requestType];
+    
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (object) {
+            if ([object[kRequestAccepted] boolValue]) {
+                onRequestAccepted();
+            } else {
+                [object delete];
+                onSuccess();
+            }
+        } else {
+            NSLog(@"The getFirstObject request failed.");
+        }
+    }];
 }
 
 - (BOOL)deleteAllRequests {

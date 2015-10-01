@@ -18,9 +18,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //#if DEVELOPMENT
+    [Parse setApplicationId:@"kb5KPJAtHIlxwXcSXBSsENdU8ysMZ6oTAGYQUZpv"
+                  clientKey:@"xV1Xcwz6KMcUIZMAhey5U1raWRbWH16WIrrYVUQy"];
+    //#endif
+    
+    /*NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"]];
+
+    #if DEVELOPMENT
+    NSDictionary *parse = [[info objectForKey:@"Parse"] objectForKey:@"Development"];
+    #else
+    NSDictionary *parse = [[info objectForKey:@"Parse"] objectForKey:@"Production"];
+    #endif
+    
     // Initialize Parse.
-    [Parse setApplicationId:kParseApplicationId
-                  clientKey:kParseClientKey];
+    [Parse setApplicationId:[parse objectForKey:@"Application ID"]
+                  clientKey:[parse objectForKey:@"Client Key"]];*/
+    
+    
     
     // Parse Facebook Utils
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
@@ -82,7 +97,12 @@
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"requests" ];
     [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 

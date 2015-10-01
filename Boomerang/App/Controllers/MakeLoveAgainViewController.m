@@ -113,9 +113,9 @@
             
             [requestManager createRequest:[_friend objectId]];
             
-            //[self dismissViewControllerAnimated:NO completion:^{
-            //    [self.delegate updateRequests];
-            //}];
+            [self dismissViewControllerAnimated:NO completion:^{
+                [self.delegate updateRequests];
+            }];
         } onRequestNotFound:^{
             [self dismissViewControllerAnimated:YES completion:^{
                 [self.delegate updateRequests];

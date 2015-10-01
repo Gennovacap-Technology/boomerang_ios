@@ -2,50 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Parse</key>
-	<dict>
-		<key>Production</key>
-		<dict>
-			<key>Application ID</key>
-			<string>oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2</string>
-			<key>Client Key</key>
-			<string>2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC</string>
-		</dict>
-		<key>Development</key>
-		<dict>
-			<key>Application ID</key>
-			<string>kb5KPJAtHIlxwXcSXBSsENdU8ysMZ6oTAGYQUZpv</string>
-			<key>Client Key</key>
-			<string>xV1Xcwz6KMcUIZMAhey5U1raWRbWH16WIrrYVUQy</string>
-		</dict>
-	</dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>facebook.com</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>fbcdn.net</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>akamaihd.net</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-		</dict>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -83,6 +39,59 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>192.168.0.102:3000</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>akamaihd.net</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>facebook.com</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>fbcdn.net</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>Parse</key>
+	<dict>
+		<key>Development</key>
+		<dict>
+			<key>Application ID</key>
+			<string>kb5KPJAtHIlxwXcSXBSsENdU8ysMZ6oTAGYQUZpv</string>
+			<key>Client Key</key>
+			<string>xV1Xcwz6KMcUIZMAhey5U1raWRbWH16WIrrYVUQy</string>
+		</dict>
+		<key>Production</key>
+		<dict>
+			<key>Application ID</key>
+			<string>oUWt7oahon42aIrWTi6LebwTO6AXuRZ6tfVZjzV2</string>
+			<key>Client Key</key>
+			<string>2BotsOMQoBU1xU8Qk1RSIGbLSJ7vGUf8rCkVvJvC</string>
+		</dict>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Market Deco.ttf</string>

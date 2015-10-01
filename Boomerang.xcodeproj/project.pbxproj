@@ -12,9 +12,9 @@
 		120FBC191BA7AC9B00AC3D01 /* Waiting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC181BA7AC9B00AC3D01 /* Waiting.xib */; };
 		120FBC1B1BA7AEE900AC3D01 /* Market Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */; };
 		120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */; };
+		128E080A1BBA2A9100CBB4DD /* RequestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E08091BBA2A9100CBB4DD /* RequestsUITests.swift */; settings = {ASSET_TAGS = (); }; };
 		129810861B9E2FB50028E165 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129810851B9E2FB50028E165 /* LoadingScreen.xib */; };
 		129CDEB61B947B1100D94230 /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */; };
-		12A466271BB45320000BA2DC /* BoomerangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A466261BB45320000BA2DC /* BoomerangUITests.m */; };
 		12A61C741BA9C47B00A6C228 /* MakeLoveAgainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */; };
 		12A61C7B1BAA144E00A6C228 /* RequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A61C7A1BAA144E00A6C228 /* RequestsViewController.m */; };
 		12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B95D1BA26BDD00AC9DAD /* UIView+LoadingScreen.m */; };
@@ -28,6 +28,7 @@
 		12C705711BB49A85006C64A7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C705701BB49A85006C64A7 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		12C705731BB4F188006C64A7 /* ChatHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C705721BB4F188006C64A7 /* ChatHeader.xib */; settings = {ASSET_TAGS = (); }; };
 		12C705791BB4F604006C64A7 /* ChatHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C705781BB4F604006C64A7 /* ChatHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		12D13D5D1BB77CBD009ED1BF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C705701BB49A85006C64A7 /* Constants.m */; };
 		12D9576F1B8A4220002D6A7A /* Booms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9576E1B8A4220002D6A7A /* Booms.storyboard */; };
 		12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */; };
 		12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E5FED51B93BD0D0096AABE /* GenderTableViewCell.m */; };
@@ -35,25 +36,19 @@
 		12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71CE1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m */; };
 		12ED71D51BA920250069A6E8 /* FriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71D41BA920250069A6E8 /* FriendsManager.m */; };
 		12F2232E1BACA44300CF3A87 /* FriendsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F2232D1BACA44300CF3A87 /* FriendsManagerTests.m */; };
-		12FD771E1BB4659D002087FA /* FriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED71D41BA920250069A6E8 /* FriendsManager.m */; };
-		12FD771F1BB465BE002087FA /* ParseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B9601BA26CC700AC9DAD /* ParseUtils.m */; };
 		26375CCC1B85376200AEA146 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375CCB1B85376200AEA146 /* main.m */; };
 		26375CF91B85378D00AEA146 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26375CF11B85378D00AEA146 /* Images.xcassets */; };
 		26375D121B8537AC00AEA146 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26375D101B8537AC00AEA146 /* LaunchScreen.xib */; };
 		26375D161B8537CD00AEA146 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375D151B8537CD00AEA146 /* AppDelegate.m */; };
 		264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9971B8B417B0095B861 /* LoginViewController.m */; };
-		264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */; };
-		264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */; };
-		264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */; };
-		264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */; };
 		26A419351B89EA4600F3A0DA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A419341B89EA4600F3A0DA /* Login.storyboard */; };
-		9A6F2DA1BCFCAB7E89336D35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
+		82D9C96A7C7A849816046D74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
 		AD2623392DBB36494B70AA72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
 		C741FE2F9FEF25AF1F9489BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6195B1F7616986C510F803 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		12A466291BB45320000BA2DC /* PBXContainerItemProxy */ = {
+		12D13D581BB77BF8009ED1BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26375CBE1B85376200AEA146 /* Project object */;
 			proxyType = 1;
@@ -78,12 +73,11 @@
 		120FBC1A1BA7AEE900AC3D01 /* Market Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Market Deco.ttf"; sourceTree = "<group>"; };
 		120FBC1D1BA7B3D100AC3D01 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		120FBC1E1BA7B3D100AC3D01 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		128E08081BBA2A9000CBB4DD /* BoomerangUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoomerangUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		128E08091BBA2A9100CBB4DD /* RequestsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsUITests.swift; sourceTree = "<group>"; };
 		129810851B9E2FB50028E165 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
 		129CDEB41B947B1100D94230 /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOLinkedStoryboardSegue.h; path = Utils/AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
 		129CDEB51B947B1100D94230 /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOLinkedStoryboardSegue.m; path = Utils/AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
-		12A466241BB45320000BA2DC /* BoomerangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomerangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		12A466261BB45320000BA2DC /* BoomerangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoomerangUITests.m; sourceTree = "<group>"; };
-		12A466281BB45320000BA2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12A61C721BA9C47B00A6C228 /* MakeLoveAgainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLoveAgainViewController.h; sourceTree = "<group>"; };
 		12A61C731BA9C47B00A6C228 /* MakeLoveAgainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeLoveAgainViewController.m; sourceTree = "<group>"; };
 		12A61C791BAA144E00A6C228 /* RequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestsViewController.h; sourceTree = "<group>"; };
@@ -109,6 +103,8 @@
 		12C705721BB4F188006C64A7 /* ChatHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatHeader.xib; sourceTree = "<group>"; };
 		12C705771BB4F604006C64A7 /* ChatHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatHeaderView.h; sourceTree = "<group>"; };
 		12C705781BB4F604006C64A7 /* ChatHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatHeaderView.m; sourceTree = "<group>"; };
+		12D13D531BB77BF8009ED1BF /* BoomerangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomerangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D13D571BB77BF8009ED1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12D9576E1B8A4220002D6A7A /* Booms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booms.storyboard; sourceTree = "<group>"; };
 		12E5FED11B921EEA0096AABE /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
 		12E5FED21B921EEA0096AABE /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
@@ -134,29 +130,17 @@
 		26375D171B85380700AEA146 /* Bangarang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangarang-Bridging-Header.h"; sourceTree = "<group>"; };
 		264EF9961B8B417B0095B861 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		264EF9971B8B417B0095B861 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		264EF99E1B8B4E4A0095B861 /* MyiOSLogicBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyiOSLogicBlocks.h; sourceTree = "<group>"; };
-		264EF9E31B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MyAdditions.h"; sourceTree = "<group>"; };
-		264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MyAdditions.m"; sourceTree = "<group>"; };
-		264EF9E51B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyMBProgressHUD_Additions.h"; sourceTree = "<group>"; };
-		264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyMBProgressHUD_Additions.m"; sourceTree = "<group>"; };
-		264EF9E71B8B4E4A0095B861 /* MyiOSThirdPartyViewHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyiOSThirdPartyViewHelpers.h; sourceTree = "<group>"; };
-		264EFA351B8B512F0095B861 /* RWTUIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTUIImageExtras.h; sourceTree = "<group>"; };
-		264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTUIImageExtras.m; sourceTree = "<group>"; };
-		264EFA3B1B8B518A0095B861 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
-		264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
-		264EFA431B8B52050095B861 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		26A419341B89EA4600F3A0DA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		631848CD498E94CA4F5D1274 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		89FBB097B59F6A1F138A5736 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12A466211BB45320000BA2DC /* Frameworks */ = {
+		12D13D501BB77BF8009ED1BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6F2DA1BCFCAB7E89336D35 /* libPods.a in Frameworks */,
+				82D9C96A7C7A849816046D74 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,15 +212,6 @@
 			name = "Friends List";
 			sourceTree = "<group>";
 		};
-		12A466251BB45320000BA2DC /* BoomerangUITests */ = {
-			isa = PBXGroup;
-			children = (
-				12A466261BB45320000BA2DC /* BoomerangUITests.m */,
-				12A466281BB45320000BA2DC /* Info.plist */,
-			);
-			path = BoomerangUITests;
-			sourceTree = "<group>";
-		};
 		12A61C711BA9C45C00A6C228 /* Make Love Again */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +254,16 @@
 			name = Chat;
 			sourceTree = "<group>";
 		};
+		12D13D541BB77BF8009ED1BF /* BoomerangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				12D13D571BB77BF8009ED1BF /* Info.plist */,
+				128E08091BBA2A9100CBB4DD /* RequestsUITests.swift */,
+				128E08081BBA2A9000CBB4DD /* BoomerangUITests-Bridging-Header.h */,
+			);
+			path = BoomerangUITests;
+			sourceTree = "<group>";
+		};
 		12D957701B8A45A3002D6A7A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,7 +288,7 @@
 			children = (
 				26375CC81B85376200AEA146 /* Boomerang */,
 				26375CE21B85376200AEA146 /* BoomerangTests */,
-				12A466251BB45320000BA2DC /* BoomerangUITests */,
+				12D13D541BB77BF8009ED1BF /* BoomerangUITests */,
 				26375CC71B85376200AEA146 /* Products */,
 				391A7C438953F53438B820E7 /* Pods */,
 				5A80AFE2204A2D56E019E50E /* Frameworks */,
@@ -315,7 +300,7 @@
 			children = (
 				26375CC61B85376200AEA146 /* Boomerang.app */,
 				26375CDF1B85376200AEA146 /* Boomerang.xctest */,
-				12A466241BB45320000BA2DC /* BoomerangUITests.xctest */,
+				12D13D531BB77BF8009ED1BF /* BoomerangUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,7 +310,6 @@
 			children = (
 				26375CEF1B85378D00AEA146 /* App */,
 				26375CFD1B85379600AEA146 /* Config */,
-				264EF99B1B8B4E4A0095B861 /* Vendor */,
 				26375CC91B85376200AEA146 /* Supporting Files */,
 			);
 			path = Boomerang;
@@ -428,81 +412,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		264EF99B1B8B4E4A0095B861 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				264EF99C1B8B4E4A0095B861 /* MyiOSHelpers */,
-				264EF99F1B8B4E4A0095B861 /* MyiOSViewHelpers */,
-				264EFA351B8B512F0095B861 /* RWTUIImageExtras.h */,
-				264EFA361B8B512F0095B861 /* RWTUIImageExtras.m */,
-				264EFA3A1B8B518A0095B861 /* UIActionSheet+Blocks */,
-				264EFA421B8B52050095B861 /* UIAlertView+Blocks */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		264EF99C1B8B4E4A0095B861 /* MyiOSHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				264EF99D1B8B4E4A0095B861 /* Blocks */,
-			);
-			path = MyiOSHelpers;
-			sourceTree = "<group>";
-		};
-		264EF99D1B8B4E4A0095B861 /* Blocks */ = {
-			isa = PBXGroup;
-			children = (
-				264EF99E1B8B4E4A0095B861 /* MyiOSLogicBlocks.h */,
-			);
-			path = Blocks;
-			sourceTree = "<group>";
-		};
-		264EF99F1B8B4E4A0095B861 /* MyiOSViewHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				264EF9E11B8B4E4A0095B861 /* ThirdPartyHelpers */,
-			);
-			path = MyiOSViewHelpers;
-			sourceTree = "<group>";
-		};
-		264EF9E11B8B4E4A0095B861 /* ThirdPartyHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				264EF9E21B8B4E4A0095B861 /* MBProgressHUD */,
-				264EF9E71B8B4E4A0095B861 /* MyiOSThirdPartyViewHelpers.h */,
-			);
-			path = ThirdPartyHelpers;
-			sourceTree = "<group>";
-		};
-		264EF9E21B8B4E4A0095B861 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				264EF9E31B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.h */,
-				264EF9E41B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m */,
-				264EF9E51B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.h */,
-				264EF9E61B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		264EFA3A1B8B518A0095B861 /* UIActionSheet+Blocks */ = {
-			isa = PBXGroup;
-			children = (
-				264EFA3B1B8B518A0095B861 /* UIActionSheet+Blocks.h */,
-				264EFA3C1B8B518A0095B861 /* UIActionSheet+Blocks.m */,
-			);
-			path = "UIActionSheet+Blocks";
-			sourceTree = "<group>";
-		};
-		264EFA421B8B52050095B861 /* UIAlertView+Blocks */ = {
-			isa = PBXGroup;
-			children = (
-				264EFA431B8B52050095B861 /* UIAlertView+Blocks.h */,
-				264EFA441B8B52050095B861 /* UIAlertView+Blocks.m */,
-			);
-			path = "UIAlertView+Blocks";
-			sourceTree = "<group>";
-		};
 		391A7C438953F53438B820E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,24 +432,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12A466231BB45320000BA2DC /* BoomerangUITests */ = {
+		12D13D521BB77BF8009ED1BF /* BoomerangUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12A4662B1BB45320000BA2DC /* Build configuration list for PBXNativeTarget "BoomerangUITests" */;
+			buildConfigurationList = 12D13D5C1BB77BF8009ED1BF /* Build configuration list for PBXNativeTarget "BoomerangUITests" */;
 			buildPhases = (
-				68738F4E17F54EE95C1E5DAB /* Check Pods Manifest.lock */,
-				12A466201BB45320000BA2DC /* Sources */,
-				12A466211BB45320000BA2DC /* Frameworks */,
-				12A466221BB45320000BA2DC /* Resources */,
-				5570825195795A400DB0CE50 /* Copy Pods Resources */,
+				8F5C66CE3A6D5070A1A21AC0 /* Check Pods Manifest.lock */,
+				12D13D4F1BB77BF8009ED1BF /* Sources */,
+				12D13D501BB77BF8009ED1BF /* Frameworks */,
+				12D13D511BB77BF8009ED1BF /* Resources */,
+				59E88BFD3DA5F889E7D748C8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				12A4662A1BB45320000BA2DC /* PBXTargetDependency */,
+				12D13D591BB77BF8009ED1BF /* PBXTargetDependency */,
 			);
 			name = BoomerangUITests;
 			productName = BoomerangUITests;
-			productReference = 12A466241BB45320000BA2DC /* BoomerangUITests.xctest */;
+			productReference = 12D13D531BB77BF8009ED1BF /* BoomerangUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		26375CC51B85376200AEA146 /* Boomerang */ = {
@@ -588,15 +497,17 @@
 		26375CBE1B85376200AEA146 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Gennovacap;
 				TargetAttributes = {
-					12A466231BB45320000BA2DC = {
+					12D13D521BB77BF8009ED1BF = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 26375CC51B85376200AEA146;
 					};
 					26375CC51B85376200AEA146 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 45U8B66FTJ;
 					};
 					26375CDE1B85376200AEA146 = {
 						CreatedOnToolsVersion = 6.4;
@@ -619,13 +530,13 @@
 			targets = (
 				26375CC51B85376200AEA146 /* Boomerang */,
 				26375CDE1B85376200AEA146 /* BoomerangTests */,
-				12A466231BB45320000BA2DC /* BoomerangUITests */,
+				12D13D521BB77BF8009ED1BF /* BoomerangUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12A466221BB45320000BA2DC /* Resources */ = {
+		12D13D511BB77BF8009ED1BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -673,7 +584,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5570825195795A400DB0CE50 /* Copy Pods Resources */ = {
+		59E88BFD3DA5F889E7D748C8 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -688,7 +599,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68738F4E17F54EE95C1E5DAB /* Check Pods Manifest.lock */ = {
+		74FCFAB7FBE556431297941A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -703,7 +614,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		74FCFAB7FBE556431297941A /* Check Pods Manifest.lock */ = {
+		8F5C66CE3A6D5070A1A21AC0 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -751,13 +662,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12A466201BB45320000BA2DC /* Sources */ = {
+		12D13D4F1BB77BF8009ED1BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FD771F1BB465BE002087FA /* ParseUtils.m in Sources */,
-				12FD771E1BB4659D002087FA /* FriendsManager.m in Sources */,
-				12A466271BB45320000BA2DC /* BoomerangUITests.m in Sources */,
+				128E080A1BBA2A9100CBB4DD /* RequestsUITests.swift in Sources */,
+				12D13D5D1BB77CBD009ED1BF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +685,6 @@
 				12C705711BB49A85006C64A7 /* Constants.m in Sources */,
 				12E5FED61B93BD0D0096AABE /* GenderTableViewCell.m in Sources */,
 				12BB5FF31B9E7B3C00333726 /* Message.m in Sources */,
-				264EFA451B8B52050095B861 /* UIAlertView+Blocks.m in Sources */,
 				12B0B9611BA26CC700AC9DAD /* ParseUtils.m in Sources */,
 				12B0B95E1BA26BDD00AC9DAD /* UIView+LoadingScreen.m in Sources */,
 				12ED71CF1BA8DE7E0069A6E8 /* UIView+WaitingScreen.m in Sources */,
@@ -784,11 +693,8 @@
 				12C705791BB4F604006C64A7 /* ChatHeaderView.m in Sources */,
 				12C043931BABBB5B00D842B0 /* RequestFriendTableViewCell.m in Sources */,
 				120FBC1F1BA7B3D100AC3D01 /* LoadingViewController.m in Sources */,
-				264EFA011B8B4E4A0095B861 /* MBProgressHUD+MyAdditions.m in Sources */,
 				264EF9981B8B417B0095B861 /* LoginViewController.m in Sources */,
-				264EFA401B8B518A0095B861 /* UIActionSheet+Blocks.m in Sources */,
 				12ED71CC1BA8DD1F0069A6E8 /* WaitingViewController.m in Sources */,
-				264EFA021B8B4E4A0095B861 /* UIView+MyMBProgressHUD_Additions.m in Sources */,
 				12E5FED31B921EEA0096AABE /* FriendTableViewCell.m in Sources */,
 				26375CCC1B85376200AEA146 /* main.m in Sources */,
 				120B089F1BAF44D500AC7D27 /* FacebookUtils.m in Sources */,
@@ -806,10 +712,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		12A4662A1BB45320000BA2DC /* PBXTargetDependency */ = {
+		12D13D591BB77BF8009ED1BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26375CC51B85376200AEA146 /* Boomerang */;
-			targetProxy = 12A466291BB45320000BA2DC /* PBXContainerItemProxy */;
+			targetProxy = 12D13D581BB77BF8009ED1BF /* PBXContainerItemProxy */;
 		};
 		26375CE11B85376200AEA146 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -819,36 +725,41 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12A4662C1BB45320000BA2DC /* Debug */ = {
+		12D13D5A1BB77BF8009ED1BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89FBB097B59F6A1F138A5736 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_ON_DEMAND_RESOURCES = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = BoomerangUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gennovacap.BoomerangUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BoomerangUITests/BoomerangUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = Boomerang;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		12A4662D1BB45320000BA2DC /* Release */ = {
+		12D13D5B1BB77BF8009ED1BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 631848CD498E94CA4F5D1274 /* Pods.release.xcconfig */;
 			buildSettings = {
-				ENABLE_ON_DEMAND_RESOURCES = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BoomerangUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gennovacap.BoomerangUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BoomerangUITests/BoomerangUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = Boomerang;
 				USES_XCTRUNNER = YES;
 			};
@@ -882,6 +793,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
+					"DEVELOPMENT=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -941,12 +853,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
 				INFOPLIST_FILE = Boomerang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gennovacap.BoomerangDating;
 				PRODUCT_NAME = Boomerang;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boomerang/Config/Bangarang-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -959,12 +872,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Boomerang/Config/Boomerang-PrefixHeader.pch";
 				INFOPLIST_FILE = Boomerang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gennovacap.BoomerangDating;
 				PRODUCT_NAME = Boomerang;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boomerang/Config/Bangarang-Bridging-Header.h";
 			};
@@ -1000,6 +914,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = BoomerangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennovacap.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1011,11 +929,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12A4662B1BB45320000BA2DC /* Build configuration list for PBXNativeTarget "BoomerangUITests" */ = {
+		12D13D5C1BB77BF8009ED1BF /* Build configuration list for PBXNativeTarget "BoomerangUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12A4662C1BB45320000BA2DC /* Debug */,
-				12A4662D1BB45320000BA2DC /* Release */,
+				12D13D5A1BB77BF8009ED1BF /* Debug */,
+				12D13D5B1BB77BF8009ED1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

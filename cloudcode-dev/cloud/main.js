@@ -1,3 +1,5 @@
+require('cloud/app.js');
+
 Parse.Cloud.beforeSave("Request", function(request, response) {
   if (!request.object.isNew()) {
       // Let existing object updates go through

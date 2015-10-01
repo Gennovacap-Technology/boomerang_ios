@@ -222,16 +222,7 @@
 # pragma mark - Request Manager Delegate
 
 - (void)requestReceived {
-    NSLog(@"Request received, updating Requests");
-    
-    [friendsManager loadRequests:^(NSUInteger requestsReceived) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-            [self updateRequestsBarButtomItem:requestsReceived];
-        });
-        
-        NSLog(@"Finished requests update");
-    }];
+    [self updateRequests];
 }
 
 #pragma mark - FriendCell Delegate
