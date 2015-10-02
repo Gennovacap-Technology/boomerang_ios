@@ -276,19 +276,19 @@
                                                     <exclude reference="6EZ-IE-khL"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="4Aw-Jx-U3Y"/>
-                                                    <exclude reference="5ff-iI-u1x"/>
-                                                    <exclude reference="8ur-Hc-ASf"/>
-                                                    <exclude reference="PF0-wy-Isd"/>
                                                     <exclude reference="7Ba-qZ-ZyY"/>
                                                     <exclude reference="JWV-7a-lLI"/>
-                                                    <exclude reference="8yl-IU-A6z"/>
-                                                    <exclude reference="A4c-Mw-ske"/>
                                                     <exclude reference="0eu-Om-78g"/>
                                                     <exclude reference="6fa-99-ZFH"/>
                                                     <exclude reference="7iF-yF-D80"/>
                                                     <exclude reference="9TM-H0-0yb"/>
                                                     <exclude reference="wcW-j5-y82"/>
+                                                    <exclude reference="8yl-IU-A6z"/>
+                                                    <exclude reference="A4c-Mw-ske"/>
+                                                    <exclude reference="4Aw-Jx-U3Y"/>
+                                                    <exclude reference="5ff-iI-u1x"/>
+                                                    <exclude reference="8ur-Hc-ASf"/>
+                                                    <exclude reference="PF0-wy-Isd"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -303,19 +303,19 @@
                                                     <include reference="lwY-Ay-ltB"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="4Aw-Jx-U3Y"/>
-                                                    <include reference="5ff-iI-u1x"/>
-                                                    <include reference="8ur-Hc-ASf"/>
-                                                    <include reference="PF0-wy-Isd"/>
                                                     <include reference="7Ba-qZ-ZyY"/>
                                                     <include reference="JWV-7a-lLI"/>
-                                                    <include reference="8yl-IU-A6z"/>
-                                                    <include reference="A4c-Mw-ske"/>
                                                     <include reference="0eu-Om-78g"/>
                                                     <include reference="6fa-99-ZFH"/>
                                                     <include reference="7iF-yF-D80"/>
                                                     <include reference="9TM-H0-0yb"/>
                                                     <include reference="wcW-j5-y82"/>
+                                                    <include reference="8yl-IU-A6z"/>
+                                                    <include reference="A4c-Mw-ske"/>
+                                                    <include reference="4Aw-Jx-U3Y"/>
+                                                    <include reference="5ff-iI-u1x"/>
+                                                    <include reference="8ur-Hc-ASf"/>
+                                                    <include reference="PF0-wy-Isd"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -454,9 +454,6 @@
                                                     <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="14"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="81" y="63" width="41" height="17"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -626,8 +623,7 @@
                                                 <exclude reference="iDh-XB-CVL"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="35" y="94" width="80" height="80"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="dhr-G8-cJO"/>
                                                 <include reference="iDh-XB-CVL"/>
@@ -644,7 +640,7 @@
                                             <constraint firstAttribute="width" constant="80" id="LXd-E0-9lZ"/>
                                             <constraint firstAttribute="height" constant="80" id="fet-1V-zLj"/>
                                         </constraints>
-                                        <state key="normal" image="ButtonHeartPinkBackground">
+                                        <state key="normal" image="ButtonHeartSelected">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -653,8 +649,7 @@
                                                 <exclude reference="fet-1V-zLj"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="151" y="94" width="80" height="80"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="LXd-E0-9lZ"/>
                                                 <include reference="fet-1V-zLj"/>
@@ -670,9 +665,6 @@
                                         <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="18"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="44" y="40" width="176" height="21"/>
-                                        </variation>
                                     </label>
                                 </subviews>
                                 <animations/>
@@ -728,9 +720,6 @@
                                 <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="80"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="76" y="13" width="176" height="94"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-go-YmB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -764,9 +753,6 @@
                                 <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="80"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="74" y="14" width="176" height="94"/>
-                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boom" translatesAutoresizingMaskIntoConstraints="NO" id="ewB-2X-M0D">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -792,7 +778,7 @@
                                     <constraint firstAttribute="height" constant="50" id="mDO-b4-pFk"/>
                                     <constraint firstAttribute="width" constant="50" id="s1d-MJ-nU0"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="ButtonHeartPinkBackground">
+                                <state key="normal" title="Button" image="ButtonHeartSelected">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -971,7 +957,7 @@
         <image name="Boom" width="300" height="253"/>
         <image name="ButtonBack" width="96" height="96"/>
         <image name="ButtonBomb" width="126" height="126"/>
-        <image name="ButtonHeartPinkBackground" width="196" height="196"/>
+        <image name="ButtonHeartSelected" width="196" height="196"/>
         <image name="ButtonNo" width="196" height="196"/>
         <image name="DudesOn" width="371" height="217"/>
         <image name="LadiesOff" width="368" height="217"/>

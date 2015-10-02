@@ -53,7 +53,7 @@ NSString *const kFirebaseUrl = @"https://appcraft-chat-test.firebaseio.com";
 #pragma mark - Friends List Relation Button Image
 
 NSString *const kFriendsListRequestButtonImageInitialState       = @"ButtonBomb";
-NSString *const kFriendsListRequestButtonImageBangRequestPending = @"ButtonBombPinkBackground";
+NSString *const kFriendsListRequestButtonImageBangRequestPending = @"ButtonBombSelected";
 NSString *const kFriendsListRequestButtonImageBangList           = @"ButtonBoomerang";
-NSString *const kFriendsListRequestButtonImageHookRequestPending = @"ButtonBoomerangPinkBackground";
-NSString *const kFriendsListRequestButtonImageHookList           = @"ButtonHeartPinkBackground";
+NSString *const kFriendsListRequestButtonImageHookRequestPending = @"ButtonBoomerangSelected";
+NSString *const kFriendsListRequestButtonImageHookList           = @"ButtonHeartSelected";

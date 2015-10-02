@@ -9,7 +9,7 @@
 #import "FriendsListViewController.h"
 
 #import <UIView+Rounded.h>
-#import <SDWebImage/SDWebImageDownloader.h>
+#import <SDWebImageManager.h>
 
 #import "FriendTableViewCell.h"
 #import "GenderTableViewCell.h"
@@ -145,21 +145,16 @@
         
         NSString *profileUrl = [NSString stringWithFormat:kFacebookProfilePictureUrl, friend[kUserFacebookIdKey]];
         
-        [SDWebImageDownloader.sharedDownloader downloadImageWithURL:[NSURL URLWithString:profileUrl]
-                                                            options:0
-                                                           progress:^(NSInteger receivedSize, NSInteger expectedSize)
-         {
-         }
-                                                          completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished)
-         {
-             if (image && finished)
-             {
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     cell.avatarImage.image = [UIImage imageWithData:data];
-                     [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
-                 });
-             }
-         }];
+        
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        
+        [manager downloadImageWithURL:[NSURL URLWithString:profileUrl]
+                              options:SDWebImageRetryFailed
+                             progress:nil
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                [cell.avatarImage setImage:image];
+                                [cell.avatarImage circleWithBorderWidth:0 andBorderColor:[UIColor whiteColor]];
+                            }];
         
         cell.delegate = self;
         cell.cellIndex = indexPath.row - 1;

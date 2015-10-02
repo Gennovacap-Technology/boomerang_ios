@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -18,22 +18,25 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-aW-ZwB">
                     <rect key="frame" x="90" y="10" width="140" height="80"/>
+                    <animations/>
                     <fontDescription key="fontDescription" name="WolfintheCity" family="Wolf in the City" pointSize="80"/>
                     <color key="textColor" red="1" green="0.0" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7A-20-eK7">
                     <rect key="frame" x="254" y="25" width="50" height="50"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="X6K-3j-Mpq"/>
                         <constraint firstAttribute="height" constant="50" id="mAz-we-dp3"/>
                     </constraints>
-                    <state key="normal" title="Button" image="ButtonHeartPinkBackground">
+                    <state key="normal" title="Button" image="ButtonHeartSelected">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Viu-Xz-Ih1">
                     <rect key="frame" x="16" y="25" width="50" height="50"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8Gd-NT-NGl"/>
                         <constraint firstAttribute="width" constant="50" id="ERw-uM-ZSg"/>
@@ -43,6 +46,7 @@
                     </state>
                 </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Viu-Xz-Ih1" firstAttribute="centerY" secondItem="o5R-aW-ZwB" secondAttribute="centerY" id="214-tH-QeY"/>
@@ -64,6 +68,6 @@
     </objects>
     <resources>
         <image name="ButtonBack" width="96" height="96"/>
-        <image name="ButtonHeartPinkBackground" width="196" height="196"/>
+        <image name="ButtonHeartSelected" width="196" height="196"/>
     </resources>
 </document>
