@@ -12,6 +12,8 @@ class RequestsUITests: XCTestCase {
     
     let helen = "U3tQTKjE51"
     let mike = "ssCgbcjI89"
+    let james = "hAN4aHu9N1"
+    let dick = "gx8c9DvEBV"
     
     override func setUp() {
         super.setUp()
@@ -27,7 +29,8 @@ class RequestsUITests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        XCUIApplication().terminate()
+        
         self.removeAllRequests()
         self.removeAllRelations()
         
@@ -47,7 +50,7 @@ class RequestsUITests: XCTestCase {
         XCTAssert(app.staticTexts["Mike"].exists)
         XCTAssert(app.staticTexts["TO CONFIRM"].exists)
         
-        XCTAssert(cell.buttons["ButtonBombPinkBackground"].exists)
+        XCTAssert(cell.buttons["ButtonBombSelected"].exists)
     }
     
     func testConfirmBangRequest() {
@@ -108,11 +111,11 @@ class RequestsUITests: XCTestCase {
         
         cell.buttons["ButtonBoomerang"].tap()
         
-        app.buttons["ButtonHeartPinkBackground"].tap()
+        app.buttons["ButtonHeartSelected"].tap()
         
         NSThread.sleepForTimeInterval(2)
         
-        XCTAssert(cell.buttons["ButtonBoomerangPinkBackground"].exists)
+        XCTAssert(cell.buttons["ButtonBoomerangSelected"].exists)
     }
     
     func testConfirmHookRequest() {
@@ -138,18 +141,19 @@ class RequestsUITests: XCTestCase {
         
         cell.buttons["ButtonBoomerang"].tap()
         
-        app.buttons["ButtonHeartPinkBackground"].tap()
+        app.buttons["ButtonHeartSelected"].tap()
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        XCTAssert(app.images["Boom"].exists)
+        
+        NSThread.sleepForTimeInterval(2)
         
         app.buttons["ButtonBack"].tap()
         
         NSThread.sleepForTimeInterval(4)
         
-        //XCTAssert(cell.buttons["ButtonHeartPinkBackground"].exists)
-        
-        //XCUIApplication().navigationBars["Browse"].buttons["ButtonBombBlack"].tap()
-        
-        
-        
+        XCTAssert(cell.buttons["ButtonHeartSelected"].exists)
     }
     
     func testConfirmedHookRequest() {
@@ -167,13 +171,95 @@ class RequestsUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        NSThread.sleepForTimeInterval(5)
+        NSThread.sleepForTimeInterval(2)
+        
+        XCTAssert(app.images["Boom"].exists)
+        
+        NSThread.sleepForTimeInterval(2)
         
         app.buttons["ButtonBack"].tap()
         
         let cell = app.tables.cells.containingType(.StaticText, identifier:"Mike Sadanman")
         
-        XCTAssert(cell.buttons["ButtonHeartPinkBackground"].exists)
+        XCTAssert(cell.buttons["ButtonHeartSelected"].exists)
+    }
+    
+    func testMultipleConfirmedHookRequests() {
+        self.createRelation(kRequestTypeBang,
+            fromUser: helen,
+            toUser: mike)
+        
+        self.createRequest(kRequestTypeHook,
+            fromUser: helen,
+            toUser: mike,
+            fromUserRead: false,
+            toUserRead: true,
+            accepted: true)
+        
+        self.createRelation(kRequestTypeBang,
+            fromUser: helen,
+            toUser: dick)
+        
+        self.createRequest(kRequestTypeHook,
+            fromUser: helen,
+            toUser: dick,
+            fromUserRead: false,
+            toUserRead: true,
+            accepted: true)
+        
+        self.createRelation(kRequestTypeBang,
+            fromUser: helen,
+            toUser: james)
+        
+        self.createRequest(kRequestTypeHook,
+            fromUser: helen,
+            toUser: james,
+            fromUserRead: false,
+            toUserRead: true,
+            accepted: true)
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        XCTAssert(app.images["Boom"].exists)
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        app.buttons["ButtonBack"].tap()
+        
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        XCTAssert(app.images["Boom"].exists)
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        app.buttons["ButtonBack"].tap()
+        
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        XCTAssert(app.images["Boom"].exists)
+        
+        NSThread.sleepForTimeInterval(2)
+        
+        app.buttons["ButtonBack"].tap()
+        
+        
+        var cell = app.tables.cells.containingType(.StaticText, identifier:"Mike Sadanman")
+        
+        XCTAssert(cell.buttons["ButtonHeartSelected"].exists)
+        
+        cell = app.tables.cells.containingType(.StaticText, identifier:"Dick Thurnescu")
+        
+        XCTAssert(cell.buttons["ButtonHeartSelected"].exists)
+        
+        cell = app.tables.cells.containingType(.StaticText, identifier:"James Putnamsky")
+        
+        XCTAssert(cell.buttons["ButtonHeartSelected"].exists)
     }
     
     // Helper Methods
