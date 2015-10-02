@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -35,6 +37,7 @@
     [Parse setApplicationId:[parse objectForKey:@"Application ID"]
                   clientKey:[parse objectForKey:@"Client Key"]];*/
     
+    [Fabric with:@[[Crashlytics class]]];
     
     
     // Parse Facebook Utils

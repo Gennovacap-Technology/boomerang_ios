@@ -19,5 +19,7 @@ pod 'UIView+Rounded', '~> 0.1'
 pod 'SDWebImage', '~> 3.7'
 pod 'JSQMessagesViewController'
 pod 'Firebase', '>= 2.3.3'
+pod 'Fabric'
+pod 'Crashlytics'
 
 link_with 'BoomerangTests', 'BoomerangUITests'
